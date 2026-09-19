@@ -1,7 +1,8 @@
 export const SITE = {
-  title: "DAB on Data",
-  subtitle: "DAB ENERGY TRUST",
+  title: "DAB ENERGY TRUST",
+  subtitle: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition",
   coalition: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition",
+  handle: "DAB on Data",
   tag: "We like it here. Keep Frederick looking like Frederick.",
   date: "Sept 18, 2026",
   footer:
