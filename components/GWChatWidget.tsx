@@ -65,6 +65,8 @@ export function GWChatWidget() {
   const listRef = useId();
   const scrollerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const launcherRef = useRef<HTMLButtonElement>(null);
+  const wasOpen = useRef(false);
   const nextId = useRef(1);
 
   useEffect(() => {
@@ -74,8 +76,12 @@ export function GWChatWidget() {
   }, [messages, open]);
 
   useEffect(() => {
-    if (!open) return;
-    inputRef.current?.focus();
+    if (open) {
+      inputRef.current?.focus();
+    } else if (wasOpen.current) {
+      launcherRef.current?.focus();
+    }
+    wasOpen.current = open;
   }, [open]);
 
   function pushExchange(question: string, reply: ChatReply) {
@@ -178,7 +184,7 @@ export function GWChatWidget() {
                   className="gw-chat-chip"
                   onClick={() => ask(entry.prompt)}
                 >
-                  {entry.prompt}
+                  {entry.chip ?? entry.prompt}
                 </button>
               ))}
             </div>
@@ -204,19 +210,20 @@ export function GWChatWidget() {
         </div>
       ) : null}
 
-      <button
-        type="button"
-        className="gw-chat-launcher"
-        aria-expanded={open}
-        aria-controls={panelId}
-        onClick={() => setOpen((value) => !value)}
-        onKeyDown={onLauncherKey}
-      >
-        <span className="gw-chat-launcher-name">George Washington</span>
-        <span className="gw-chat-launcher-sub">
-          {open ? "Hide packet guide" : "Ask about the packet"}
-        </span>
-      </button>
+      {open ? null : (
+        <button
+          ref={launcherRef}
+          type="button"
+          className="gw-chat-launcher"
+          aria-expanded={false}
+          aria-controls={panelId}
+          onClick={() => setOpen(true)}
+          onKeyDown={onLauncherKey}
+        >
+          <span className="gw-chat-launcher-name">George Washington</span>
+          <span className="gw-chat-launcher-sub">Ask about the packet</span>
+        </button>
+      )}
     </div>
   );
 }

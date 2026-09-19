@@ -55,7 +55,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-height: min(34rem, calc(100dvh - 6.5rem));
+  max-height: min(38rem, calc(100dvh - 1.5rem));
   overflow: hidden;
   background-color: var(--color-parchment);
   background-image: var(--img-parchment);
@@ -118,7 +118,7 @@
 
 .gw-chat-log {
   flex: 1 1 auto;
-  min-height: 10rem;
+  min-height: 12rem;
   overflow-y: auto;
   padding: 0.7rem 0.7rem 0.35rem;
   display: flex;
@@ -266,6 +266,6 @@
   }
 
   .gw-chat-panel {
-    max-height: min(32rem, calc(100dvh - 6rem));
+    max-height: min(36rem, calc(100dvh - 1.25rem));
   }
 }

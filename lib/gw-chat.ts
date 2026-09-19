@@ -18,6 +18,7 @@ export type ChatReply = {
 export type KnowledgeEntry = {
   id: string;
   prompt: string;
+  chip?: string;
   keywords: string[];
   phrases: string[];
   answer: string;
@@ -60,6 +61,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "what-is-trust",
     prompt: "What is the DAB ENERGY TRUST?",
+    chip: "What is the Trust?",
     suggested: true,
     keywords: [
       "trust",
@@ -89,6 +91,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "tier-1",
     prompt: "Who is in Tier 1?",
+    chip: "Who is in Tier 1?",
     suggested: true,
     keywords: [
       "tier",
@@ -122,6 +125,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "floor-cap",
     prompt: "What is the proposed floor and cap?",
+    chip: "Floor and cap?",
     suggested: true,
     keywords: [
       "floor",
@@ -156,6 +160,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "get-involved",
     prompt: "How do I get involved?",
+    chip: "Get involved?",
     suggested: true,
     keywords: [
       "involved",
@@ -199,6 +204,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "grandfather",
     prompt: "What is the Grandfather Clause?",
+    chip: "Grandfather?",
     suggested: true,
     keywords: [
       "grandfather",
@@ -227,6 +233,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "rebate",
     prompt: "What is the host-community rebate?",
+    chip: "Host-community rebate?",
     suggested: true,
     keywords: [
       "rebate",
@@ -255,6 +262,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "candidates",
     prompt: "Why aren’t candidates listening?",
+    chip: "Candidates?",
     suggested: true,
     keywords: [
       "candidates",
