@@ -35,6 +35,7 @@
 .dab-sign-form button {
   margin-top: 0.35rem;
   padding: 0.6rem 0.9rem;
+  min-height: var(--tap);
   font-family: var(--font-display);
   font-size: 1rem;
   background: var(--color-navy);

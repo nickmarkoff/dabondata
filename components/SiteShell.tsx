@@ -15,11 +15,11 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
       />
       {showMasthead ? (
         <Image
-          src="/art/mastheads/masthead_dab_energy_trust_390.jpg"
+          src="/art/mobile/masthead_390_compact.png"
           alt={SITE.title}
           width={390}
-          height={219}
-          className="mx-auto mb-2 h-auto w-full max-w-[340px]"
+          height={101}
+          className="dab-masthead"
           priority
         />
       ) : (
@@ -31,10 +31,10 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
         </>
       )}
       <Image
-        src="/art/dividers/divider_gilt_electric.jpg"
+        src="/art/mobile/divider_390.jpg"
         alt=""
-        width={340}
-        height={24}
+        width={390}
+        height={84}
         className="dab-divider"
       />
     </header>
