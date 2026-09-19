@@ -1,5 +1,5 @@
 export const SITE = {
-  title: "DABonData",
+  title: "DAB on Data",
   subtitle: "DAB ENERGY TRUST",
   coalition: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition",
   tag: "We like it here. Keep Frederick looking like Frederick.",
@@ -43,14 +43,14 @@ export const DOCS: DocLink[] = [
   },
   {
     href: "/attachments",
-    title: "Attachments",
+    title: "Supporting Materials",
     short: "Attachments",
-    blurb: "Bylaws highlights, resident handout/script, proposal letter, change log.",
+    blurb: "Bylaws highlights, resident handout and script, proposal letter.",
   },
   {
     href: "/sources",
-    title: "Sources",
+    title: "Sources & Downloads",
     short: "Sources",
-    blurb: "Selected authorities for the September 18, 2026 compilation.",
+    blurb: "Download the September 18, 2026 packet (.md, .docx, .pdf).",
   },
 ];
