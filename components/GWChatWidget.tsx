@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -17,6 +18,26 @@ import {
   type ChatLink,
   type ChatReply,
 } from "@/lib/gw-chat";
+
+export const GW_CHAT_AVATAR = "/art/avatars/george-washington-chat.jpg";
+
+function GWAvatar({
+  size,
+  className,
+}: {
+  size: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={GW_CHAT_AVATAR}
+      alt=""
+      width={size}
+      height={size}
+      className={className ?? "gw-chat-avatar"}
+    />
+  );
+}
 
 const LIFT_PATHS = new Set(["/sign", "/involve"]);
 
@@ -152,11 +173,14 @@ export function GWChatWidget() {
           onKeyDown={onPanelKey}
         >
           <header className="gw-chat-head">
-            <div>
-              <p className="gw-chat-kicker">Packet guide</p>
-              <h2 id={`${panelId}-title`} className="gw-chat-title">
-                George Washington
-              </h2>
+            <div className="gw-chat-head-id">
+              <GWAvatar size={44} className="gw-chat-avatar gw-chat-avatar-head" />
+              <div>
+                <p className="gw-chat-kicker">Packet guide</p>
+                <h2 id={`${panelId}-title`} className="gw-chat-title">
+                  George Washington
+                </h2>
+              </div>
             </div>
             <button
               type="button"
@@ -241,12 +265,18 @@ export function GWChatWidget() {
           onClick={() => setOpen(true)}
           onKeyDown={onLauncherKey}
         >
-          <span className="gw-chat-launcher-name">
-            {lift ? "GW" : "George Washington"}
-          </span>
-          <span className="gw-chat-launcher-sub">
-            {lift ? "Ask" : "Ask about the packet"}
-          </span>
+          <GWAvatar
+            size={lift ? 52 : 56}
+            className="gw-chat-avatar gw-chat-avatar-fab"
+          />
+          {lift ? (
+            <span className="gw-chat-sr">George Washington, ask about the packet</span>
+          ) : (
+            <span className="gw-chat-launcher-copy">
+              <span className="gw-chat-launcher-name">George Washington</span>
+              <span className="gw-chat-launcher-sub">Ask about the packet</span>
+            </span>
+          )}
         </button>
       )}
     </div>
