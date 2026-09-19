@@ -8,6 +8,7 @@ export const SITE = {
   footer:
     "Compiled packet for County Executive, County Council, Planning Commission, and residents. Not a campaign committee filing.",
   author: "Nicholas Markoff",
+  updateNote: "This site is updated often — thank you for your patience.",
 } as const;
 
 export type DocLink = {

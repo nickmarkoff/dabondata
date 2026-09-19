@@ -40,6 +40,14 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
   );
 }
 
+export function SiteUpdateNote() {
+  return (
+    <p className="dab-update-note" role="note">
+      {SITE.updateNote}
+    </p>
+  );
+}
+
 export function SiteNav({ current }: { current?: string }) {
   return (
     <nav className="dab-nav" aria-label="Packet sections">
@@ -125,6 +133,7 @@ export function SiteShell({
         <div className="dab-shell">
           <SiteHeader showMasthead={showMasthead} />
           <SiteNav current={current} />
+          <SiteUpdateNote />
           <main>{children}</main>
           <SiteFooter />
         </div>

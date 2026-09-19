@@ -342,7 +342,24 @@
   gap: 0.25rem 0.5rem;
   justify-content: flex-start;
   font-size: 0.85rem;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0.55rem;
+}
+.dab-page .dab-update-note {
+  display: block;
+  margin: 0 0 1rem;
+  padding: 0.4rem 0.65rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--color-navy);
+  background-color: color-mix(in srgb, var(--color-parchment-deep) 70%, var(--color-parchment));
+  border-top: 1px solid var(--color-navy);
+  border-bottom: 1px solid var(--color-navy);
+  box-shadow: none;
 }
 .dab-nav a {
   color: var(--color-navy);
