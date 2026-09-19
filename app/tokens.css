@@ -31,42 +31,32 @@
   --lh-body: 1.45;
 
   --vp-mobile: 390px;
-  --pad-x: 28px;
-  --pad-y: 20px;
+  --page-max: var(--vp-mobile);
+  --pad-x: 48px;
+  --pad-y: 72px;
   --section-gap: 28px;
   --card-gap: 14px;
-  --border-w: 28px;
+  /* Art fringe @390×844 ≈ T69 / R45 / B69 / L45 — shell must clear this */
+  --border-w: 45px;
   --tap: 44px;
 
-  /* Pea Eye 390 locked pack — type-only masthead, parchment divider, phone frame */
+  /* Pea Eye 390 — type-only masthead, transparent PNG divider, phone frame */
   --img-parchment: url("/art/textures/parchment_tile.jpg");
   --img-border: url("/art/mobile/page_border_390x844_transparent.png");
   --img-border-desktop: url("/art/borders/page_border_portrait_transparent.png");
-  --img-divider: url("/art/mobile/divider_390.jpg");
+  --img-divider: url("/art/dividers/divider_rule_340.png");
   --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
   --img-masthead: url("/art/mobile/masthead_390_compact.png");
-
-  /* 9-slice from locked 390×844 frame (mid-rail ~45px; corners live in top/bottom) */
-  --frame-slice: 80 48 80 48;
-  --frame-w: 82px 48px 68px 48px;
-  --gutter-x: 28px;
 }
 
 .dab-page {
   position: relative;
   min-height: 100dvh;
   margin: 0 auto;
-  max-width: var(--vp-mobile);
+  max-width: var(--page-max);
   box-sizing: border-box;
-  /* Real border box — content cannot slide under rails (no overlay clip) */
-  border-style: solid;
-  border-width: var(--frame-w);
-  border-image-source: var(--img-border);
-  border-image-slice: var(--frame-slice);
-  /* stretch top/bottom; round left/right so tall /plan rails tile instead of smear */
-  border-image-repeat: stretch round;
-  /* ≥24–32px from rails; 82px top matches Pea HERO inset so title clears ornament */
-  padding: 4px var(--gutter-x) 16px;
+  /* No extra page pad — shell alone clears rails so the 390 column stays wide */
+  padding: 0;
   color: var(--color-ink);
   background-color: var(--color-parchment);
   background-image: var(--img-parchment);
@@ -74,6 +64,19 @@
   font-family: var(--font-body);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
+}
+/* Viewport-pinned frame: 100% 100% of 100dvh, never document height */
+.dab-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  width: 100%;
+  max-width: inherit;
+  margin: 0 auto;
+  background: var(--img-border) center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 5;
 }
 .dab-page > * {
   position: relative;
@@ -83,19 +86,31 @@
   position: relative;
   border: none;
   background: transparent;
-  padding: 0;
   min-width: 0;
+  /* ≥ fringe T69/R45/B69/L45 */
+  padding: 72px 48px;
 }
 
 .dab-title {
   font-family: var(--font-display);
-  font-size: var(--fs-title);
+  font-size: clamp(1.45rem, 6.4vw, var(--fs-title));
   font-weight: 700;
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
   margin: 0.2em 0 0.15em;
   color: var(--color-navy);
+}
+.dab-title-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .dab-subtitle {
   font-family: var(--font-display);
@@ -122,9 +137,9 @@
 .dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
 .dab-doc-card {
   border: 1.5px solid var(--color-gilt-deep);
-  box-shadow: inset 0 0 0 1px var(--color-navy);
+  box-shadow: none;
   background: #F7F0E2;
-  padding: 14px 14px 12px;
+  padding: 12px 12px 10px;
   text-decoration: none;
   color: inherit;
   display: block;
@@ -192,9 +207,11 @@
 .dab-back:hover { color: var(--color-gilt-deep); }
 .dab-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.35rem;
-  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 0.25rem 0.5rem;
+  justify-content: flex-start;
   font-size: 0.85rem;
   margin: 0.5rem 0 1rem;
 }
@@ -204,6 +221,8 @@
   border-bottom: 1px solid transparent;
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
+  white-space: nowrap;
   min-height: var(--tap);
   padding: 0.35em 0.45em;
 }
@@ -241,23 +260,18 @@
 }
 @media (min-width: 720px) {
   .dab-page {
-    max-width: 720px;
+    --page-max: 720px;
     --fs-title: 2.6rem;
     --img-border: var(--img-border-desktop);
-    /* Portrait 1200×1680: mid-rail ~137px; corners in 160px slice */
-    --frame-slice: 160 140 160 140;
-    --frame-w: 88px 88px 88px 88px;
-    --gutter-x: 32px;
   }
+  .dab-shell { padding: 88px 88px; }
+  .dab-nav { justify-content: center; }
   .dab-medallion { display: block; }
 }
 @media (min-width: 960px) {
-  .dab-page {
-    max-width: 960px;
-    /* Deeper side gutters so 2-col cards / "$250 floor" never enter rails */
-    --frame-w: 96px 120px 96px 120px;
-    --gutter-x: 36px;
-  }
+  .dab-page { --page-max: 960px; }
+  /* Deeper sides so 2-col cards / "$250 floor" stay inside portrait rails */
+  .dab-shell { padding: 96px 120px; }
   .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
 }
 
@@ -468,32 +482,49 @@
   margin-bottom: 1.25rem;
 }
 .dab-sign-form label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.dab-sign-form label:not(.dab-sign-consent) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  font-size: 0.82rem;
-  color: var(--color-navy);
 }
 .dab-sign-form input[type="text"],
 .dab-sign-form select,
 .dab-sign-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   font: inherit;
-  padding: 0.45rem 0.55rem;
+  padding: 0.55rem 0.65rem;
+  min-height: 48px;
   border: 1px solid var(--color-gilt);
   background: #fff;
   color: var(--color-ink);
 }
 .dab-sign-consent {
+  display: flex !important;
   flex-direction: row !important;
   align-items: flex-start;
   gap: 0.5rem !important;
   font-size: 0.78rem !important;
 }
-.dab-sign-consent input { margin-top: 0.15rem; }
+.dab-sign-consent input {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  margin-top: 0.15rem;
+  flex: 0 0 auto;
+}
 .dab-sign-form button {
+  display: block;
+  width: 100%;
   margin-top: 0.35rem;
   padding: 0.6rem 0.9rem;
-  min-height: var(--tap);
+  min-height: 48px;
   font-family: var(--font-display);
   font-size: 1rem;
   background: var(--color-navy);
@@ -505,7 +536,7 @@
 .dab-sign-error { color: #8b1a1a; font-size: 0.85rem; margin: 0; }
 .dab-sign-ok { color: var(--color-navy); font-size: 0.85rem; margin: 0; }
 .dab-sign-wall {
-  border: 2px double var(--color-navy);
+  border: 1px solid var(--color-gilt);
   background: #faf3e3;
   padding: 1rem 0.85rem 1.25rem;
 }

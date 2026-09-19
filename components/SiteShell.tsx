@@ -13,28 +13,20 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
         className="dab-medallion"
         priority
       />
-      {showMasthead ? (
-        <Image
-          src="/art/mobile/masthead_390_compact.png"
-          alt={SITE.title}
-          width={390}
-          height={101}
-          className="dab-masthead"
-          priority
-        />
-      ) : (
-        <>
-          <h1 className="dab-title">{SITE.title}</h1>
-          <p className="dab-coalition">{SITE.coalition}</p>
-          <p className="dab-tag">{SITE.tag}</p>
-          <p className="dab-date">{SITE.date}</p>
-        </>
-      )}
       <Image
-        src="/art/mobile/divider_390.jpg"
-        alt=""
+        src="/art/mobile/masthead_390_compact.png"
+        alt={showMasthead ? SITE.title : ""}
         width={390}
-        height={84}
+        height={101}
+        className="dab-masthead"
+        priority
+      />
+      {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
+      <Image
+        src="/art/dividers/divider_rule_340.png"
+        alt=""
+        width={340}
+        height={68}
         className="dab-divider"
       />
     </header>
