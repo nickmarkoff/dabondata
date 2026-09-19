@@ -54,6 +54,8 @@
   --img-divider: url("/art/dividers/divider_ink_rule_340.png");
   --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
   --img-masthead: url("/art/mobile/masthead_390_compact.png");
+  --masthead-w: 390px;
+  --masthead-h: 389px;
   /* 9-slice: capture fleurons, never squash 844 art to document height */
   --woodcut-slice: 40;
   --woodcut-outset: 40px;
@@ -154,7 +156,11 @@
   width: 100%;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 390 / 389;
+  object-fit: contain;
+  object-position: top center;
   margin: 0 auto 0.35rem;
+  /* Title rule is baked in the PNG with ≥18px gap — never CSS-underline */
   text-decoration: none;
   border-bottom: 0;
 }
@@ -301,6 +307,12 @@
     --woodcut-slice: 56;
     --woodcut-outset: 56px;
   }
+  /* Cartouche stays ornament; outer woodcut is the sheet — don't stretch D to page width */
+  .dab-masthead {
+    width: min(var(--masthead-w), 68%);
+    max-width: var(--masthead-w);
+    margin-bottom: 0.15rem;
+  }
   .dab-nav { justify-content: center; }
 }
 @media (min-width: 960px) {
@@ -308,6 +320,10 @@
     --page-max: 960px;
     --pad-y: 36px;
     --pad-x: 36px;
+  }
+  .dab-masthead {
+    width: min(var(--masthead-w), 52%);
+    max-width: var(--masthead-w);
   }
   .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
 }
