@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Suspense } from "react";
 import { GWChatWidget } from "@/components/GWChatWidget";
+import { PDF_BUCKETS } from "@/lib/downloads";
 import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
@@ -79,16 +80,23 @@ export function SiteFooter() {
         {SITE.author} · Buckeystown / DAB area, Frederick County, MD · {SITE.date}
       </p>
       <p style={{ marginTop: "0.35rem" }}>{SITE.handle}</p>
-      <div className="dab-downloads">
-        <a href="/docs/DABonData.md" download>
-          Download .md
-        </a>
-        <a href="/docs/DABonData.docx" download>
-          Download .docx
-        </a>
-        <a href="/docs/DABonData.pdf" download>
-          Download .pdf
-        </a>
+      <div className="dab-footer-downloads">
+        <p className="dab-footer-dl-kicker">
+          PDF downloads ·{" "}
+          <Link href="/sources">All on Sources</Link>
+        </p>
+        {PDF_BUCKETS.map((bucket) => (
+          <div key={bucket.id} className="dab-footer-dl-group">
+            <p className="dab-footer-dl-label">{bucket.title}</p>
+            <div className="dab-downloads">
+              {bucket.items.map((doc) => (
+                <a key={doc.href} href={doc.href} download>
+                  {doc.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </footer>
   );

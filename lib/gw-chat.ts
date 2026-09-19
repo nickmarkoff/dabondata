@@ -38,9 +38,9 @@ const LINK = {
   grandfather: { href: "/grandfather", label: "Grandfather Clause" },
   rebate: { href: "/rebate", label: "Host-community rebate" },
   sources: { href: "/sources", label: "Sources & downloads" },
-  pdf: { href: "/docs/DABonData.pdf", label: "Download the PDF" },
-  md: { href: "/docs/DABonData.md", label: "Download the .md" },
-  docx: { href: "/docs/DABonData.docx", label: "Download the .docx" },
+  pdf: { href: "/docs/DABonData.pdf", label: "Compiled packet (PDF)" },
+  memo: { href: "/docs/DAB_Energy_Trust_Memo.pdf", label: "Official memo (PDF)" },
+  bylaws: { href: "/docs/DAB_Energy_Trust_Bylaws.pdf", label: "Full bylaws (PDF)" },
 } as const;
 
 export const GW_CHAT_QCOUNT_KEY = "dab-gw-chat-qcount";
@@ -489,14 +489,14 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "supporting materials",
     ],
     answer:
-      "The memorandum stands at /plan. Supporting materials: /attachments. The packet itself: /docs/DABonData.pdf (and .md/.docx). Sources: /sources. Statement: /statement. Read what was written.",
+      "The memorandum stands at /plan. Supporting materials: /attachments. Compiled packet: /docs/DABonData.pdf. Official memo and full bylaws are PDFs on /sources. Statement: /statement. Read what was written.",
     links: [
       LINK.plan,
       LINK.attachments,
       LINK.sources,
       LINK.pdf,
-      LINK.md,
-      LINK.docx,
+      LINK.memo,
+      LINK.bylaws,
       LINK.statement,
     ],
   },

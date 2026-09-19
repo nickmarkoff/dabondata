@@ -28,9 +28,9 @@ npm run start
 
 Copied from `../site_art/` into `public/art/` (tokens, parchment tile, gilt-electric borders, masthead, medallion).
 
-## Packet downloads
+## Packet downloads (PDF only)
 
-`public/docs/DABonData.md` · `.docx` · `.pdf`
+`public/docs/DABonData.pdf` (compiled summary) · memo · bylaws · resident letter · script/handout · example email — listed on `/sources`.
 
 ## Deploy (Vercel)
 
