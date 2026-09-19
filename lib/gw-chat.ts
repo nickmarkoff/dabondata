@@ -1,7 +1,9 @@
 /**
  * George Washington packet guide — client-side knowledge base.
- * Primary answers are Woodrow Call’s Q1–Q15, dropped in as-is.
+ * Facts stay Q1–Q15 of the Call FAQ. Spoken lines are period Washington:
+ * patriotic, measured, resolute — never modern slang or Hat Creek banter.
  * Answer-only. No visitor path to edit the site, memorandum, or documents.
+ * Hard limit: 3 answered turns per browser (localStorage).
  */
 
 export type ChatLink = {
@@ -41,25 +43,87 @@ const LINK = {
   docx: { href: "/docs/DABonData.docx", label: "Download the .docx" },
 } as const;
 
+export const GW_CHAT_QCOUNT_KEY = "dab-gw-chat-qcount";
+export const GW_CHAT_QUESTION_LIMIT = 3;
+
+const PACKET_LINKS: ChatLink[] = [LINK.plan, LINK.attachments, LINK.pdf];
+
 export const WELCOME: ChatReply = {
   id: "welcome",
-  text: "Neighbors. I am George Washington — a firm, practical guide to this packet. Doubs, Adamstown, and Buckeystown have a plan: the DAB ENERGY TRUST. Not a protest. Not a campaign committee. I will orient you and point you to the pages that already exist. I cannot change this website, the memorandum, or any document. Guidance only.",
+  text: "Fellow citizens. I am General George Washington, and I stand as a measured guide to this packet. Doubs, Adamstown, and Buckeystown have laid before you a plan: the DAB ENERGY TRUST. Not a protest. Not a campaign committee. I shall orient you to the pages already written. I cannot alter this website, the memorandum, or any document. Guidance only — let the papers speak.",
   links: [LINK.plan, LINK.involve, LINK.sign],
 };
 
 export const EDIT_REFUSAL: ChatReply = {
   id: "edit-refusal",
-  text: "No. This guide cannot edit, sway, or change the website, the memorandum, or any document. Those papers stand as Nicholas Markoff filed them. If you mean to act as a neighbor, send the memo and sign the wall — the existing Get Involved and Sign pages. Our community knows better than the candidates. Make them serve us.",
+  text: "I cannot. This guide holds no authority to edit, sway, or change the website, the memorandum, or any document. Those papers stand as Nicholas Markoff filed them. If you mean to act as a neighbor, send the memorandum and sign the wall — the Get Involved and Sign pages already prepared. Our community knows better than the candidates. Hold those who speak for you to their duty.",
   links: [LINK.involve, LINK.sign, LINK.plan],
 };
 
 export const FALLBACK: ChatReply = {
   id: "fallback",
-  text: "I speak from this packet alone and will not invent figures. No matter who you vote for, data centers are still going to be built here. Get what the community is due, and a boundary that holds. Read the memo, then email County leaders and sign. Candidates who stall leave the community waiting on weak-willed unplanned action. Be vocal, not violent — emails, signatures, the memo.",
+  text: "I speak from this packet alone and shall not invent figures. No matter whom you favor at the polls, data centers are still going to be built here. Secure what the community is due, and a boundary that holds. Read the memorandum, then write to the County and affix your name. Candidates who stall leave the people waiting upon weak-willed unplanned action. Be vocal, not violent — letters, signatures, the memorandum itself.",
   links: [LINK.plan, LINK.involve, LINK.sign, LINK.sources],
 };
 
-/** Call Q1–Q15 — answer text is the canonical cut. */
+/** Spoken after the third answered turn. Input locks; the engine is not called again. */
+export const LOCKED_CLOSING: ChatReply = {
+  id: "limit-closing",
+  text: "The founders believed in us to read what they wrote. I have answered thrice; that is my allowance. Open the Official Plan, the supporting papers, or the packet itself — and let those documents speak. I shall take no further questions.",
+  links: PACKET_LINKS,
+};
+
+/** Shown if the visitor reopens the widget after the limit. */
+export const LOCKED_NOTICE: ChatReply = {
+  id: "limit-notice",
+  text: "I have already given three answers in this chamber. The papers remain: the Official Plan, the attachments, and the packet downloads. The founders trusted us to read what they wrote. I can answer no more.",
+  links: PACKET_LINKS,
+};
+
+export const EMPTY_REPLY: ChatReply = {
+  id: "empty",
+  text: "Put a question to me concerning the Trust, Tier 1, the proposed floor and cap, or how a citizen may act. I shall not invent numbers beyond this packet.",
+  links: [LINK.plan, LINK.involve],
+};
+
+export function readStoredQuestionCount(): number {
+  if (typeof window === "undefined") return 0;
+  try {
+    const raw = window.localStorage.getItem(GW_CHAT_QCOUNT_KEY);
+    const n = Number.parseInt(raw ?? "", 10);
+    if (!Number.isFinite(n) || n < 0) return 0;
+    return Math.min(Math.floor(n), GW_CHAT_QUESTION_LIMIT);
+  } catch {
+    return 0;
+  }
+}
+
+export function writeStoredQuestionCount(count: number): number {
+  const next = Math.min(
+    Math.max(0, Math.floor(count)),
+    GW_CHAT_QUESTION_LIMIT,
+  );
+  if (typeof window === "undefined") return next;
+  try {
+    window.localStorage.setItem(GW_CHAT_QCOUNT_KEY, String(next));
+  } catch {
+    // Private mode or quota — in-memory count still governs this session.
+  }
+  return next;
+}
+
+export function isQuestionLimitReached(count: number): boolean {
+  return count >= GW_CHAT_QUESTION_LIMIT;
+}
+
+export type GuideTurn = {
+  reply: ChatReply;
+  count: number;
+  locked: boolean;
+  closing?: ChatReply;
+};
+
+/** Call FAQ Q1–Q15 — matching and facts stay; spoken lines are Washington. */
 export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "q1",
@@ -89,7 +153,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "neighbors with a plan",
     ],
     answer:
-      "Public packet for the **DAB ENERGY TRUST** — Doubs · Adamstown · Buckeystown. Neighbors with a plan, not a campaign committee. Site handle: DAB on Data (dab-on-data.vercel.app).",
+      "This public packet belongs to the **DAB ENERGY TRUST** — Doubs · Adamstown · Buckeystown. Neighbors with a plan, not a campaign committee. The site handle is DAB on Data (dab-on-data.vercel.app). I commend these papers to your careful reading.",
     links: [LINK.home, LINK.plan, LINK.statement],
   },
   {
@@ -120,7 +184,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "datacenter agreement",
     ],
     answer:
-      "Enact the Trust and attach it as a ride-on to the next datacenter agreement / community-benefits package (DRRA / CDI load). Operator-funded meter credits for the three host communities. See /plan.",
+      "The County is asked to enact the Trust and attach it as a ride-on to the next datacenter agreement / community-benefits package (DRRA / CDI load). Operator-funded meter credits for the three host communities. See the Official Plan at /plan.",
     links: [LINK.plan],
   },
   {
@@ -150,7 +214,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "other communities",
     ],
     answer:
-      "They sit on the rural-industrial and grid edge of the CDI overlay (Ord. 26-01-001, effective Jan 20, 2026). Exclusive by design — not Frederick City. Boundary = wall against freeloaders and the apartment/sprawl wave that tends to follow.",
+      "These three places sit on the rural-industrial and grid edge of the CDI overlay (Ord. 26-01-001, effective Jan 20, 2026). Exclusive by design — not Frederick City. The boundary is a wall against freeloaders and the apartment/sprawl wave that tends to follow.",
     links: [LINK.plan, LINK.grandfather],
   },
   {
@@ -189,7 +253,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "census",
     ],
     answer:
-      "Residential meters in the **Adamstown CDP**, **Buckeystown CDP**, or on a **published Doubs list** (Doubs is a hamlet, not a Census CDP). ZIP codes are **not** the eligibility lock (21710/21717/21704 are too messy). Hard Census for the two CDPs: 710 + 499 = **1,209** households; Doubs count TBD when the list exists.",
+      "The dividend is due to residential meters in the **Adamstown CDP**, **Buckeystown CDP**, or on a **published Doubs list** (Doubs is a hamlet, not a Census CDP). ZIP codes are **not** the eligibility lock (21710/21717/21704 are too messy). Hard Census for the two CDPs: 710 + 499 = **1,209** households; Doubs count TBD when the list exists.",
     links: [LINK.plan, LINK.attachments],
   },
   {
@@ -232,7 +296,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "tax hike",
     ],
     answer:
-      "**Proposed** (not law): annual credit = **$1 per MWh** of prior-12-month campus IT load, **not less than $250** and **not more than $1,000** per meter per year. Do **not** say “varies with usage” in formal voice — the formula carries it. Funded by operators, not by raising local property-tax rates.",
+      "**Proposed** (not law): the annual credit shall be **$1 per MWh** of prior-12-month campus IT load, **not less than $250** and **not more than $1,000** per meter per year. Do **not** say “varies with usage” in formal voice — the formula carries it. Funded by operators, not by raising local property-tax rates.",
     links: [LINK.plan, LINK.attachments],
   },
   {
@@ -248,7 +312,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "until adopted",
     ],
     answer:
-      "No. Floor/cap and Trust are proposed ordinance figures for Council to enact. Not current law until adopted.",
+      "No. The floor, the cap, and the Trust are proposed ordinance figures for Council to enact. They are not current law until adopted.",
     links: [LINK.plan],
   },
   {
@@ -276,7 +340,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "slogan does not",
     ],
     answer:
-      "No matter who you vote for, data centers are still going to be built here. The ask is to get what the community is due and be protected financially (and by boundary) from further expansion.",
+      "No matter whom you favor at the polls, data centers are still going to be built here. The ask is to secure what the community is due and be protected financially (and by boundary) from further expansion.",
     links: [LINK.plan, LINK.involve],
   },
   {
@@ -300,7 +364,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "one-time",
     ],
     answer:
-      "County Executive rejected that one-time DRRA package (Sept 14, 2026). The Trust is a different instrument: ongoing megawatt-funded meter credit for DAB, not a one-time benefits list or a multi-year zoning freeze swap.",
+      "The County Executive rejected that one-time DRRA package (Sept 14, 2026). The Trust is a different instrument: an ongoing megawatt-funded meter credit for DAB, not a one-time benefits list or a multi-year zoning freeze swap.",
     links: [LINK.plan, LINK.rebate, LINK.sources],
   },
   {
@@ -330,7 +394,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "existing buildings",
     ],
     answer:
-      "Keep this version of Frederick. Only **existing** buildings/dwellings/lawful uses as of **Jan 20, 2026** get grandfather preference; new construction/apartments after that cutoff are not grandfathered. Still need Tier 1 geography. See /grandfather.",
+      "Keep this version of Frederick. Only **existing** buildings, dwellings, and lawful uses as of **Jan 20, 2026** receive grandfather preference; new construction and apartments after that cutoff are not grandfathered. Tier 1 geography is still required. See /grandfather.",
     links: [LINK.grandfather, LINK.plan],
   },
   {
@@ -356,7 +420,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "not pocket money",
     ],
     answer:
-      "DAB host communities are why this revenue exists; Winchester Hall numbers came off Manor Woods ground. Trust dividend = rebate due for lived burden — not an allegation of criminal theft. See /rebate.",
+      "The DAB host communities are why this revenue exists; Winchester Hall numbers came off Manor Woods ground. The Trust dividend is a rebate due for lived burden — not an allegation of criminal theft. See /rebate.",
     links: [LINK.rebate, LINK.plan],
   },
   {
@@ -396,7 +460,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "add my name",
     ],
     answer:
-      "Open /involve → use the prefilled email buttons (County Executive, Council, Planning) → optional hand-deliver to Winchester Hall, 12 E. Church St. → share script/letter with DAB neighbors → /sign the wall. Lede: “Our community knows better than the candidates!”",
+      "Open /involve, use the prefilled email buttons (County Executive, Council, Planning), optionally hand-deliver to Winchester Hall, 12 E. Church St., share the script and letter with DAB neighbors, and /sign the wall. The lede remains: “Our community knows better than the candidates!”",
     links: [LINK.involve, LINK.sign, LINK.attachments],
   },
   {
@@ -425,7 +489,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "supporting materials",
     ],
     answer:
-      "Memo: /plan · Supporting materials: /attachments · PDF/MD/DOCX: /docs/DABonData.pdf (and .md/.docx) · Sources: /sources · Statement: /statement.",
+      "The memorandum stands at /plan. Supporting materials: /attachments. The packet itself: /docs/DABonData.pdf (and .md/.docx). Sources: /sources. Statement: /statement. Read what was written.",
     links: [
       LINK.plan,
       LINK.attachments,
@@ -461,7 +525,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "legal advice",
     ],
     answer:
-      "Not a campaign committee. Not a tax hike on DAB. Not a ZIP-code subsidy. Not Frederick City freeloading. Not legal advice. Not a lawsuit or a protest.",
+      "This filing is not a campaign committee. Not a tax hike on DAB. Not a ZIP-code subsidy. Not Frederick City freeloading. Not legal advice. Not a lawsuit or a protest.",
     links: [LINK.statement, LINK.plan],
   },
   {
@@ -485,7 +549,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "five voting",
     ],
     answer:
-      "Five voting members; each of Doubs/Adamstown/Buckeystown holds at least one seat (default 2/2/1). Elder consult (advisory) before Tier 1 geography changes.",
+      "Five voting members govern the Trust; each of Doubs, Adamstown, and Buckeystown holds at least one seat (default 2/2/1). Elder consult (advisory) before Tier 1 geography changes.",
     links: [LINK.attachments, LINK.plan],
   },
   {
@@ -523,7 +587,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "who are you",
     ],
     answer:
-      "Push the Trust. Local people have authority over those who speak for them. Candidates who stall leave the community waiting on weak-willed unplanned action. Militia metaphor = **vocal, not violent**. Formal author: Nicholas Markoff.",
+      "Push the Trust. Local people have authority over those who speak for them. Candidates who stall leave the community waiting on weak-willed unplanned action. The militia metaphor means **vocal, not violent**. Formal author: Nicholas Markoff.",
     links: [LINK.involve, LINK.sign, LINK.statement],
   },
 ];
@@ -579,13 +643,7 @@ function scoreEntry(query: string, entry: KnowledgeEntry): number {
 
 export function answerVisitor(raw: string): ChatReply {
   const query = normalize(raw);
-  if (!query) {
-    return {
-      id: "empty",
-      text: "Ask a question about the Trust, Tier 1, the proposed floor and cap, or how to get involved. I will not invent numbers beyond this packet.",
-      links: [LINK.plan, LINK.involve],
-    };
-  }
+  if (!query) return EMPTY_REPLY;
 
   if (isEditIntent(raw)) return EDIT_REFUSAL;
 
@@ -608,4 +666,21 @@ export function answerVisitor(raw: string): ChatReply {
   }
 
   return FALLBACK;
+}
+
+/** One answered turn, or null when the visitor is already locked. */
+export function takeGuideTurn(
+  raw: string,
+  currentCount: number,
+): GuideTurn | null {
+  if (isQuestionLimitReached(currentCount)) return null;
+  const reply = answerVisitor(raw);
+  const count = currentCount + 1;
+  const locked = isQuestionLimitReached(count);
+  return {
+    reply,
+    count,
+    locked,
+    closing: locked ? LOCKED_CLOSING : undefined,
+  };
 }

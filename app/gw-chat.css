@@ -152,6 +152,23 @@
   color: var(--color-navy);
 }
 
+.gw-chat-head-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.28rem;
+  flex: 0 0 auto;
+}
+
+.gw-chat-meter {
+  margin: 0;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gilt-deep);
+  white-space: nowrap;
+}
+
 .gw-chat-close {
   flex: 0 0 auto;
   padding: 0.25rem 0.45rem;
@@ -275,6 +292,16 @@
 .gw-chat-chip:focus-visible {
   background: #fff;
   border-color: var(--color-navy);
+}
+
+.gw-chat-locked {
+  margin: 0;
+  padding: 0.55rem 0.75rem 0.7rem;
+  border-top: 1px solid #c5a05966;
+  background: #fff8ea;
+  color: var(--color-navy);
+  font-size: 0.74rem;
+  line-height: 1.4;
 }
 
 .gw-chat-form {
