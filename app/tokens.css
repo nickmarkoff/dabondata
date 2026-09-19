@@ -216,6 +216,21 @@
   filter: none;
 }
 .dab-divider { display: block; width: 100%; max-width: 100%; height: auto; margin: 0.75rem auto 1.1rem; }
+.dab-update-note {
+  margin: -0.45rem 0 0.55rem;
+  padding: 0.32rem 0.55rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: var(--color-navy);
+  background: color-mix(in srgb, var(--color-parchment-deep) 62%, #fff8ea);
+  border-top: 1px solid color-mix(in srgb, var(--color-levy-gilt) 72%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-levy-gilt) 72%, transparent);
+}
 .dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
 .dab-doc-card {
   border: 1.5px solid var(--color-levy-gilt);

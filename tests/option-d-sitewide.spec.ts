@@ -23,6 +23,10 @@ test.describe("Option D sitewide style", () => {
     });
     expect(pad.padLeft).toBeGreaterThanOrEqual(48);
     expect(pad.padRight).toBeGreaterThanOrEqual(48);
+
+    await expect(page.locator(".dab-update-note")).toHaveText(
+      "This website is updated frequently. Thank you for your patience.",
+    );
   });
 
   test("inner routes use wordmark + fleuron rule, not a second cartouche", async ({
@@ -37,6 +41,7 @@ test.describe("Option D sitewide style", () => {
       await expect(page.locator(".dab-page")).toHaveClass(/dab-page-inner/);
       await expect(page.locator(".dab-inner-rail")).toBeVisible();
       await expect(page.locator("img.dab-divider")).toBeVisible();
+      await expect(page.locator(".dab-update-note")).toBeVisible();
 
       const h2 = page.locator(".dab-prose h2").first();
       await expect(h2).toBeVisible();

@@ -124,6 +124,9 @@ export function SiteShell({
       >
         <div className="dab-shell">
           <SiteHeader showMasthead={showMasthead} />
+          <p className="dab-update-note" role="status">
+            {SITE.updateNote}
+          </p>
           <SiteNav current={current} />
           <main>{children}</main>
           <SiteFooter />
