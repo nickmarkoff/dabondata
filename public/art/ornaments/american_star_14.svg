@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-  <!-- Woodcut five-point star  navy ink, hairline gilt. Sized for 14px list markers. -->
-  <path
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <polygon
     fill="#08162d"
     stroke="#C5A059"
-    stroke-width="0.35"
+    stroke-width="0.4"
     stroke-linejoin="miter"
-    d="M7.02 1.42 8.38 5.2l4.02.2-3.15 2.52 1.06 3.86L7 9.42l-3.31 2.36 1.06-3.86L1.6 5.4l4.02-.2Z"
+    points="7,1.15 8.62,5.12 12.85,5.28 9.5,7.82 10.72,11.95 7,9.72 3.28,11.95 4.5,7.82 1.15,5.28 5.38,5.12"
   />
 </svg>
