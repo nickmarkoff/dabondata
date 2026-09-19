@@ -5,31 +5,17 @@ import { GWChatWidget } from "@/components/GWChatWidget";
 import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
-  const [townsLine, coalitionLine] = SITE.subtitle.split(" — ");
-
   return (
     <header>
-      {showMasthead ? (
-        <div className="dab-masthead dab-masthead-type">
-          <p className="dab-coalition">{townsLine}</p>
-          <h1 className="dab-title">{SITE.title}</h1>
-          {coalitionLine ? <p className="dab-coalition">{coalitionLine}</p> : null}
-          <p className="dab-tag">{SITE.tag}</p>
-          <p className="dab-date">— {SITE.date} —</p>
-        </div>
-      ) : (
-        <>
-          <Image
-            src="/art/mobile/masthead_390_compact.png"
-            alt=""
-            width={390}
-            height={105}
-            className="dab-masthead"
-            priority
-          />
-          <h1 className="dab-title-sr">{SITE.title}</h1>
-        </>
-      )}
+      <Image
+        src="/art/mobile/masthead_390_compact.png"
+        alt={showMasthead ? SITE.title : ""}
+        width={390}
+        height={147}
+        className="dab-masthead"
+        priority
+      />
+      {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
       <Image
         src="/art/dividers/divider_ink_rule_340.png"
         alt=""
