@@ -19,11 +19,7 @@ export type SignatureInput = {
 };
 
 const DATA_PATH = path.join(process.cwd(), "data", "signatures.json");
-const TMP_PATH = path.join("/tmp", "dabondata-signatures.json");
 const BLOB_PATHNAME = "dabondata/signatures.json";
-
-/** Per-isolate fallback when Blob is unset. Lost on cold start / other instances. */
-const memoryStore: Signature[] = [];
 
 function isVercel(): boolean {
   return Boolean(process.env.VERCEL);
@@ -64,31 +60,6 @@ async function readBlobStore(): Promise<Signature[] | null> {
   }
 }
 
-async function readEphemeralStore(): Promise<Signature[]> {
-  try {
-    const raw = await fs.readFile(TMP_PATH, "utf8");
-    const parsed = JSON.parse(raw) as Signature[];
-    if (Array.isArray(parsed) && parsed.length) {
-      memoryStore.length = 0;
-      memoryStore.push(...parsed);
-      return parsed;
-    }
-  } catch {
-    /* /tmp empty or unreadable */
-  }
-  return memoryStore.slice();
-}
-
-async function writeEphemeralStore(list: Signature[]): Promise<void> {
-  memoryStore.length = 0;
-  memoryStore.push(...list);
-  try {
-    await fs.writeFile(TMP_PATH, JSON.stringify(list, null, 2) + "\n", "utf8");
-  } catch {
-    /* memory still holds this instance */
-  }
-}
-
 async function writeBlobStore(list: Signature[]): Promise<boolean> {
   if (!hasBlobToken()) return false;
   try {
@@ -108,10 +79,6 @@ async function writeBlobStore(list: Signature[]): Promise<boolean> {
 export async function listSignatures(): Promise<Signature[]> {
   const fromBlob = await readBlobStore();
   if (fromBlob) return fromBlob.slice().reverse();
-  if (isVercel()) {
-    const ephemeral = await readEphemeralStore();
-    return ephemeral.slice().reverse();
-  }
   const fromFile = await readFileStore();
   return fromFile.slice().reverse();
 }
@@ -164,9 +131,12 @@ export async function addSignature(
   }
 
   if (isVercel()) {
-    const existing = await readEphemeralStore();
-    await writeEphemeralStore([...existing, signature]);
-    return { ok: true, signature };
+    return {
+      ok: false,
+      error:
+        "Signature storage on Vercel needs BLOB_READ_WRITE_TOKEN (Vercel Blob). Locally, signatures save to data/signatures.json.",
+      status: 503,
+    };
   }
 
   const existing = await readFileStore();

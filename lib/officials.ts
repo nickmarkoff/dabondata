@@ -19,7 +19,7 @@ export const CONSTITUENT_SERVICES_EMAIL =
 /** Shared County Council inbox. */
 export const COUNCIL_GROUP_EMAIL = "councilmembers@frederickcountymd.gov";
 
-/** Planning Commission staff / commission inbox. */
+/** Planning Commission staff inbox. */
 export const PLANNING_COMMISSION_EMAIL =
   "PlanningCommission@FrederickCountyMD.gov";
 
