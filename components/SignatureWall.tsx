@@ -68,7 +68,7 @@ export function SignatureWall() {
   return (
     <div className="dab-sign">
       <aside className="dab-sign-oath" aria-label="Residency affirmation">
-        <h3>Affirmation before you sign</h3>
+        <h3 className="dab-iron-phrase">Affirmation before you sign</h3>
         <p>
           By putting my name on this wall, I affirm — as a matter of honor among
           neighbors — that I am a resident of the proposed{" "}

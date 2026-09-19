@@ -19,13 +19,20 @@ html, body {
 a { color: inherit; }
 
 /* Stamped filing titles — beat Tailwind preflight (h1–h6 { font-weight: inherit }).
-   Unlayered + .dab-page ancestor so computed weight is 800 and color is ink #1A1814. */
+   Unlayered + .dab-page ancestor so computed weight and ink land. */
 .dab-page .dab-doc-card h3,
 .dab-page .involve-banner,
 .dab-page .dab-involve-lede,
 .dab-page .sign-scroll-title,
 .dab-page .dab-sign-wall h3 {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: var(--fw-card-title);
   color: var(--color-ink);
+}
+
+/* Never draw a CSS rule through the PNG / H1 title glyphs */
+.dab-masthead,
+h1.dab-title {
+  text-decoration: none;
+  border-bottom: 0;
 }
