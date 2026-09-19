@@ -31,9 +31,11 @@ a { color: inherit; }
   color: var(--color-ink);
 }
 
-/* Never draw a CSS rule through the PNG / H1 title glyphs */
+/* Never draw a CSS rule through the H1 title glyphs */
 .dab-masthead,
+.dab-masthead-lockup,
 h1.dab-title {
   text-decoration: none;
   border-bottom: 0;
+  box-shadow: none;
 }

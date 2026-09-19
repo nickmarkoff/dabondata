@@ -101,6 +101,16 @@
   padding: var(--pad-y) var(--pad-x);
 }
 
+.dab-masthead-lockup {
+  text-align: center;
+}
+.dab-masthead-pin {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 0.1rem;
+}
 .dab-title {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 6.4vw, var(--fs-title));
@@ -108,11 +118,24 @@
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
-  margin: 0.2em 0 0.15em;
+  margin: 0.05em 0 0;
+  padding: 0.08em 0.15em 0.42em;
   color: var(--color-ink);
-  /* Masthead is a PNG — never draw a CSS rule through the title glyphs */
+  /* Rule is a sibling (.dab-title-rule) — never underline through glyphs */
   text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.45em;
   border-bottom: 0;
+  box-shadow: none;
+}
+.dab-title-rule {
+  display: block;
+  width: min(86%, 340px);
+  height: 1px;
+  margin: 0 auto 0.85rem;
+  background: #1A1814;
+  opacity: 0.88;
+  border: 0;
 }
 .dab-title-sr {
   position: absolute;
@@ -362,12 +385,48 @@ a.involve-btn.primary {
   justify-content: center;
   gap: 0.45rem;
   max-width: 100%;
-  padding: 0.4rem 0.9rem;
-  background: url("/art/ornaments/iron_word_frame_340.png") center / 100% 100% no-repeat;
+  min-height: 52px;
+  padding: 0.55rem 1.05rem;
+  /* 9-slice so Pea’s cartouche rails stay outside the glyphs */
+  background: none;
+  border: 10px solid transparent;
+  border-image-source: url("/art/ornaments/iron_word_frame_340.png");
+  border-image-slice: 10 fill;
+  border-image-width: 10px;
+  border-image-repeat: stretch;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-ink);
   text-align: center;
+  text-decoration: none;
+}
+/* Optional Pea hooks — brackets / date cartouche, unused until art is wired */
+.dab-iron-brackets {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.dab-iron-brackets::before,
+.dab-iron-brackets::after {
+  content: "";
+  width: 20px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 0 0 auto;
+}
+.dab-iron-brackets::before {
+  background-image: url("/art/ornaments/iron_bracket_left_bold.png");
+}
+.dab-iron-brackets::after {
+  background-image: url("/art/ornaments/iron_bracket_right_bold.png");
+}
+.dab-iron-cartouche {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: url("/art/ornaments/iron_cartouche_date.png") center / 100% 100% no-repeat;
 }
 .dab-iron-follow {
   display: block;

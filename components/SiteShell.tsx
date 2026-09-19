@@ -6,16 +6,25 @@ import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
   return (
-    <header>
+    <header className="dab-masthead-lockup">
       <Image
-        src="/art/mobile/masthead_390_compact.png"
-        alt={showMasthead ? SITE.title : ""}
+        src="/art/mobile/masthead_390_pin.png"
+        alt=""
         width={390}
-        height={250}
-        className="dab-masthead"
+        height={14}
+        className="dab-masthead-pin"
         priority
       />
-      {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
+      <h1 className="dab-title">{SITE.title}</h1>
+      <span className="dab-title-rule" aria-hidden />
+      <Image
+        src="/art/mobile/masthead_390_below.png"
+        alt=""
+        width={390}
+        height={172}
+        className="dab-masthead"
+        priority={showMasthead}
+      />
       <Image
         src="/art/dividers/divider_ink_rule_340.png"
         alt=""
