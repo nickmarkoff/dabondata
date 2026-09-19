@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { DOCS, SITE } from "@/lib/nav";
+import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
   return (
@@ -49,6 +49,19 @@ export function SiteNav({ current }: { current?: string }) {
         <Link
           key={d.href}
           href={d.href}
+          aria-current={current === d.href ? "page" : undefined}
+        >
+          {d.short}
+        </Link>
+      ))}
+      <span className="dab-nav-sep" aria-hidden>
+        ·
+      </span>
+      {ACTIONS.map((d) => (
+        <Link
+          key={d.href}
+          href={d.href}
+          className="dab-nav-action"
           aria-current={current === d.href ? "page" : undefined}
         >
           {d.short}

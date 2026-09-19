@@ -1,0 +1,482 @@
+/* DABonData / DAB ENERGY TRUST — site tokens (paths for /public/art) */
+:root {
+  --dab-title: "DAB on Data";
+  --dab-subtitle: "DAB ENERGY TRUST";
+  --dab-coalition: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition";
+  --dab-tag: "We like it here. Keep Frederick looking like Frederick.";
+  --dab-date: "Sept 18, 2026";
+  --dab-footer: "Compiled packet for County Executive, County Council, Planning Commission, and residents. Not a campaign committee filing.";
+
+  --color-parchment: #F2E8D5;
+  --color-parchment-deep: #E6D5B8;
+  --color-ink: #1A1A1B;
+  --color-ink-soft: #2E2E2E;
+  --color-navy: #0A1A33;
+  --color-navy-mid: #1A2A3A;
+  --color-gilt: #C5A059;
+  --color-gilt-bright: #E2BC74;
+  --color-gilt-deep: #A6834C;
+  --color-filament: #FFB347;
+  --color-rule: #3D2E1A;
+
+  --font-display: "Playfair Display", "Libre Baskerville", "Source Serif 4", Georgia, serif;
+  --font-body: "Source Serif 4", "Libre Baskerville", Georgia, serif;
+  --fs-title: 2.1rem;
+  --fs-subtitle: 0.95rem;
+  --fs-coalition: 0.78rem;
+  --fs-tag: 0.85rem;
+  --fs-body: 1rem;
+  --fs-footer: 0.7rem;
+  --lh-tight: 1.15;
+  --lh-body: 1.45;
+
+  --vp-mobile: 390px;
+  --pad-x: 16px;
+  --pad-y: 20px;
+  --section-gap: 28px;
+  --card-gap: 14px;
+  --border-w: 28px;
+
+  --img-parchment: url("/art/textures/parchment_tile.jpg");
+  --img-border: none;
+  --img-divider: url("/art/dividers/divider_gilt_electric.jpg");
+  --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
+  --img-masthead: url("/art/mastheads/masthead_dabondata_390.jpg");
+}
+
+.dab-page {
+  min-height: 100dvh;
+  margin: 0 auto;
+  max-width: var(--vp-mobile);
+  padding: var(--pad-y) var(--pad-x);
+  color: var(--color-ink);
+  background-color: var(--color-parchment);
+  background-image: var(--img-parchment);
+  background-size: 480px auto;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.dab-shell {
+  border: var(--border-w) solid transparent;
+  border-image-source: var(--img-border);
+  border-image-slice: 18% fill;
+  border-image-width: var(--border-w);
+  border-image-repeat: stretch;
+  background: var(--color-parchment);
+  padding: 18px 14px 22px;
+}
+.dab-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: var(--lh-tight);
+  margin: 0.2em 0 0.15em;
+  color: var(--color-navy);
+}
+.dab-subtitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-subtitle);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: var(--color-navy);
+}
+.dab-coalition, .dab-tag, .dab-date { text-align: center; color: var(--color-ink-soft); }
+.dab-coalition { font-size: var(--fs-coalition); margin: 0.55em 0 0.35em; }
+.dab-tag { font-size: var(--fs-tag); font-style: italic; margin: 0.25em 0; }
+.dab-date { font-size: var(--fs-footer); letter-spacing: 0.04em; margin: 0.6em 0 1em; }
+.dab-divider { display: block; width: 100%; max-width: 340px; height: auto; margin: 0.75rem auto 1.1rem; }
+.dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.dab-doc-card {
+  border: 1.5px solid var(--color-gilt-deep);
+  box-shadow: inset 0 0 0 1px var(--color-navy);
+  background: #F7F0E2;
+  padding: 14px 14px 12px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: background 0.15s ease;
+}
+.dab-doc-card:hover { background: #fff8ea; }
+.dab-doc-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 0.35em; color: var(--color-navy); }
+.dab-doc-card p { margin: 0; font-size: 0.82rem; color: var(--color-ink-soft); }
+.dab-footer {
+  font-size: var(--fs-footer);
+  text-align: center;
+  color: var(--color-ink-soft);
+  border-top: 1px solid #C5A05988;
+  padding-top: 0.85rem;
+  margin-top: 0.5rem;
+  line-height: 1.35;
+}
+.dab-prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  margin: 1.4em 0 0.5em;
+  border-bottom: 1px solid #C5A05966;
+  padding-bottom: 0.25em;
+}
+.dab-prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-navy);
+  margin: 1.1em 0 0.4em;
+}
+.dab-prose p { margin: 0.65em 0; }
+.dab-prose ul, .dab-prose ol { margin: 0.5em 0 0.5em 1.2em; padding: 0; }
+.dab-prose li { margin: 0.35em 0; }
+.dab-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 0.85em 0;
+}
+.dab-prose th, .dab-prose td {
+  border: 1px solid #C5A05988;
+  padding: 0.45em 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+.dab-prose th { background: #E6D5B8; color: var(--color-navy); font-family: var(--font-display); }
+.dab-prose strong { color: var(--color-navy); }
+.dab-prose em { color: var(--color-ink-soft); }
+.dab-back {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--color-navy);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-gilt);
+}
+.dab-back:hover { color: var(--color-gilt-deep); }
+.dab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  justify-content: center;
+  font-size: 0.72rem;
+  margin: 0.5rem 0 1rem;
+}
+.dab-nav a {
+  color: var(--color-navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.dab-nav a:hover, .dab-nav a[aria-current="page"] {
+  border-bottom-color: var(--color-gilt);
+  color: var(--color-gilt-deep);
+}
+.dab-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.78rem;
+}
+.dab-downloads a {
+  border: 1px solid var(--color-gilt-deep);
+  padding: 0.35em 0.7em;
+  text-decoration: none;
+  color: var(--color-navy);
+  background: #F7F0E2;
+}
+.dab-downloads a:hover { background: #fff8ea; }
+.dab-sig { margin-top: 1.25rem; }
+.dab-medallion {
+  display: block;
+  width: 64px;
+  height: auto;
+  margin: 0 auto 0.35rem;
+}
+@media (min-width: 720px) {
+  .dab-page { max-width: 720px; --fs-title: 2.6rem; --border-w: 36px; }
+}
+@media (min-width: 960px) {
+  .dab-page { max-width: 960px; }
+  .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+
+/* —— Get Involved / Sign wall —— */
+.involve-banner {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--color-navy);
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 0.75rem 0.9rem;
+  margin: 0.75rem 0 1rem;
+}
+.involve-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.75rem 0 1rem;
+}
+.involve-btn {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--color-navy);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  background: #fff;
+  color: var(--color-navy);
+}
+.involve-btn.primary {
+  background: var(--color-navy);
+  color: #fff8ea;
+}
+.involve-btn:hover { opacity: 0.92; }
+.involve-emails {
+  list-style: none;
+  margin: 0.75rem 0 1.25rem;
+  padding: 0;
+}
+.involve-emails li {
+  border-bottom: 1px dotted var(--color-gilt);
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+}
+.involve-emails .mono {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  word-break: break-all;
+}
+.sign-wall { margin-top: 1rem; }
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.sign-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.sign-form input {
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-gilt);
+  background: #fff;
+  color: var(--color-ink);
+}
+.sign-form button {
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  background: var(--color-navy);
+  color: #fff8ea;
+  border: none;
+  cursor: pointer;
+}
+.sign-form button:disabled { opacity: 0.6; cursor: wait; }
+.sign-status { margin: 0.35rem 0 0; font-size: 0.85rem; color: var(--color-navy); }
+.sign-scroll {
+  border: 2px double var(--color-navy);
+  background: #faf3e3;
+  padding: 1rem 0.85rem 1.25rem;
+}
+.sign-scroll-title {
+  font-family: var(--font-display);
+  text-align: center;
+  margin: 0 0 0.25rem;
+  color: var(--color-navy);
+}
+.sign-scroll-lede {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 1rem;
+}
+.sign-empty { text-align: center; font-style: italic; color: var(--color-ink-soft); }
+.sign-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 1;
+}
+@media (min-width: 640px) {
+  .sign-list { columns: 2; column-gap: 1.25rem; }
+}
+.sign-item {
+  break-inside: avoid;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.sign-cursive {
+  display: block;
+  font-family: var(--font-signature), "Great Vibes", "Segoe Script", cursive;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+.sign-meta {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.15rem;
+}
+
+.dab-nav-sep {
+  color: var(--color-gilt-deep);
+  opacity: 0.7;
+}
+.dab-nav-action {
+  font-weight: 600;
+}
+
+.dab-involve-lede {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  text-align: center;
+  color: var(--color-navy);
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 0.75rem 0.9rem;
+}
+.dab-mail-grid {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1.1rem;
+}
+@media (min-width: 640px) {
+  .dab-mail-grid { grid-template-columns: 1fr 1fr; }
+}
+.dab-mail-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--color-gilt-deep);
+  box-shadow: inset 0 0 0 1px var(--color-navy);
+  background: #F7F0E2;
+  text-decoration: none;
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+.dab-mail-btn span {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  word-break: break-all;
+}
+.dab-mail-btn:hover { background: #fff8ea; }
+.dab-mail-btn-secondary {
+  background: #fff;
+}
+.dab-cite {
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+  margin-top: 1.25rem;
+}
+
+.dab-sign { margin-top: 1rem; }
+.dab-sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.dab-sign-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.dab-sign-form input[type="text"],
+.dab-sign-form select,
+.dab-sign-form textarea {
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-gilt);
+  background: #fff;
+  color: var(--color-ink);
+}
+.dab-sign-consent {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 0.5rem !important;
+}
+.dab-sign-consent input { margin-top: 0.15rem; }
+.dab-sign-error { margin: 0; font-size: 0.85rem; color: #7a1f1f; }
+.dab-sign-ok { margin: 0; font-size: 0.85rem; color: var(--color-navy); }
+.dab-sign-form button {
+  margin-top: 0.2rem;
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  background: var(--color-navy);
+  color: #fff8ea;
+  border: none;
+  cursor: pointer;
+}
+.dab-sign-form button:disabled { opacity: 0.6; cursor: wait; }
+.dab-sign-wall {
+  border: 2px double var(--color-navy);
+  background: #faf3e3;
+  padding: 1rem 0.85rem 1.25rem;
+}
+.dab-sign-wall h3 {
+  font-family: var(--font-display);
+  text-align: center;
+  margin: 0 0 0.65rem;
+  color: var(--color-navy);
+}
+.dab-sign-meta {
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-ink-soft);
+}
+.dab-sign-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+.dab-sign-list li {
+  margin: 0 0 0.95rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.dab-sign-name {
+  display: block;
+  font-family: var(--font-signature), "Great Vibes", cursive;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--color-ink);
+  transform: rotate(var(--rot, 0deg));
+  transform-origin: left center;
+}
+.dab-sign-ink-a .dab-sign-name { color: #1a1a1b; }
+.dab-sign-ink-b .dab-sign-name { color: #2a1f14; }
+.dab-sign-place,
+.dab-sign-note {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.1rem;
+}

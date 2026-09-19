@@ -54,3 +54,19 @@ export const DOCS: DocLink[] = [
     blurb: "Download the September 18, 2026 packet (.md, .docx, .pdf).",
   },
 ];
+
+/** Action pages (not packet docs). */
+export const ACTIONS: DocLink[] = [
+  {
+    href: "/involve",
+    title: "How to Get Involved",
+    short: "Get Involved",
+    blurb: "Email County leaders — attach DAB ENERGY TRUST as a ride-on to the next datacenter / DRRA agreement.",
+  },
+  {
+    href: "/sign",
+    title: "Public Signature Wall",
+    short: "Sign",
+    blurb: "Public cursive wall — Declaration style. Neighbors with a plan.",
+  },
+];
