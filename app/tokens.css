@@ -39,13 +39,13 @@
 
   --vp-mobile: 390px;
   --page-max: var(--vp-mobile);
-  --pad-x: 32px;
-  --pad-y: 32px;
   --section-gap: 28px;
   --card-gap: 14px;
   /* Woodcut hairline rails — modest inset, not gilt 3D fringe */
   --border-w: 8px;
   --tap: 44px;
+  /* Content must clear the 9-slice rails (outset + gutter), 390 and desktop */
+  --rail-gutter: 16px;
 
   /* Pea Eye woodcut broadside — fiber paper + thin ink frame */
   --img-parchment: url("/art/woodcut/paper_tile.png");
@@ -59,6 +59,8 @@
   /* 9-slice: capture fleurons, never squash 844 art to document height */
   --woodcut-slice: 40;
   --woodcut-outset: 40px;
+  --pad-x: calc(var(--woodcut-outset) + var(--rail-gutter));
+  --pad-y: calc(var(--woodcut-outset) + 12px);
 }
 
 .dab-page {
@@ -111,6 +113,44 @@
   max-height: none;
   overflow: visible;
   padding: var(--pad-y) var(--pad-x);
+}
+
+/* Inner routes: ornamental rail + wordmark — not a second cartouche cage */
+.dab-header-inner {
+  text-align: center;
+}
+.dab-inner-rail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0 0 0.25rem;
+  pointer-events: none;
+}
+.dab-inner-rail-rule {
+  flex: 1 1 auto;
+  height: 14px;
+  max-width: 7.5rem;
+  background: var(--img-divider) center / 100% 14px no-repeat;
+}
+.dab-fleuron {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  background: var(--img-medallion) center / contain no-repeat;
+}
+.dab-wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 5vw, 1.5rem);
+  font-weight: var(--fw-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: var(--lh-tight);
+  margin: 0.1em 0 0;
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 0;
 }
 
 .dab-title {
@@ -167,7 +207,7 @@
 .dab-divider { display: block; width: 100%; max-width: 100%; height: auto; margin: 0.75rem auto 1.1rem; }
 .dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
 .dab-doc-card {
-  border: 1.5px solid var(--color-gilt-deep);
+  border: 1.5px solid var(--color-levy-gilt);
   box-shadow: none;
   background: #F7F0E2;
   padding: 12px 12px 10px;
@@ -186,30 +226,69 @@
   color: var(--color-ink);
 }
 .dab-doc-card p { margin: 0; font-size: 0.82rem; color: var(--color-ink-soft); }
+.dab-doc-card .dab-doc-eyebrow {
+  display: inline-flex;
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.7rem;
+  background-image: url("/art/ornaments/iron_word_frame_200.png");
+}
 .dab-footer {
   font-size: var(--fs-footer);
   text-align: center;
   color: var(--color-ink-soft);
-  border-top: 1px solid #C5A05988;
+  border-top: 1px solid color-mix(in srgb, var(--color-levy-gilt) 55%, transparent);
   padding-top: 0.85rem;
   margin-top: 0.5rem;
   line-height: 1.35;
 }
 .dab-prose h2 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: var(--fw-display);
   color: var(--color-ink);
-  margin: 1.4em 0 0.5em;
-  border-bottom: 1px solid #C5A05966;
-  padding-bottom: 0.25em;
+  margin: 1.15em 0 0.65em;
+  padding-bottom: 0;
+  border-bottom: 0;
+  text-decoration: none;
+  text-align: center;
+  line-height: var(--lh-tight);
+}
+/* Fleuron + ink rule UNDER the title — never a CSS underline through glyphs */
+.dab-prose h2::after {
+  content: "";
+  display: block;
+  width: min(16rem, 100%);
+  height: 22px;
+  margin: 0.4em auto 0;
+  background:
+    var(--img-medallion) center / 15px 15px no-repeat,
+    var(--img-divider) center / 100% 16px no-repeat;
 }
 .dab-prose h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: var(--fw-card-title);
   color: var(--color-ink);
   margin: 1.1em 0 0.4em;
+  padding-bottom: 0;
+  border-bottom: 0;
+  text-decoration: none;
+}
+.dab-prose h3::after {
+  content: "";
+  display: block;
+  width: 4.25rem;
+  height: 5px;
+  margin-top: 0.35em;
+  border-top: 1px solid var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+}
+/* Iron-framed oath title already has its ornament — no second rule */
+.dab-prose h3.dab-iron-phrase::after {
+  display: none;
 }
 .dab-prose p { margin: 0.65em 0; }
 .dab-prose ul, .dab-prose ol { margin: 0.5em 0 0.5em 1.2em; padding: 0; }
@@ -241,9 +320,9 @@
   color: var(--color-navy);
   text-decoration: none;
   margin-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-gilt);
+  border-bottom: 1px solid var(--color-levy-gilt);
 }
-.dab-back:hover { color: var(--color-gilt-deep); }
+.dab-back:hover { color: var(--color-navy); }
 .dab-nav {
   display: flex;
   flex-wrap: nowrap;
@@ -266,8 +345,8 @@
   padding: 0.35em 0.45em;
 }
 .dab-nav a:hover, .dab-nav a[aria-current="page"] {
-  border-bottom-color: var(--color-gilt);
-  color: var(--color-gilt-deep);
+  border-bottom-color: var(--color-levy-gilt);
+  color: var(--color-navy);
 }
 .dab-downloads {
   display: flex;
@@ -278,17 +357,23 @@
   font-size: 0.78rem;
 }
 .dab-downloads a {
-  border: 1px solid var(--color-gilt-deep);
+  border: 1px solid var(--color-levy-gilt);
   padding: 0.45em 0.8em;
   text-decoration: none;
   color: var(--color-navy);
-  background: #F7F0E2;
+  background-color: #fff8ea;
+  background-image: url("/art/cta/plate_secondary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.03em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: var(--tap);
 }
-.dab-downloads a:hover { background: #fff8ea; }
+.dab-downloads a:hover { opacity: 0.92; }
 .dab-sig { margin-top: 1.25rem; }
 .dab-medallion {
   /* No separate corner-bulb overlays — woodcut frame is the only chrome */
@@ -302,10 +387,11 @@
     --page-max: 720px;
     --fs-title: 2.6rem;
     --img-border: var(--img-border-desktop);
-    --pad-y: 36px;
-    --pad-x: 36px;
     --woodcut-slice: 56;
     --woodcut-outset: 56px;
+    --rail-gutter: 20px;
+    --pad-x: calc(var(--woodcut-outset) + var(--rail-gutter));
+    --pad-y: calc(var(--woodcut-outset) + 16px);
   }
   /* Cartouche stays ornament; outer woodcut is the sheet — don't stretch D to page width */
   .dab-masthead {
@@ -318,8 +404,9 @@
 @media (min-width: 960px) {
   .dab-page {
     --page-max: 960px;
-    --pad-y: 36px;
-    --pad-x: 36px;
+    --rail-gutter: 24px;
+    --pad-x: calc(var(--woodcut-outset) + var(--rail-gutter));
+    --pad-y: calc(var(--woodcut-outset) + 16px);
   }
   .dab-masthead {
     width: min(var(--masthead-w), 52%);
@@ -528,25 +615,37 @@ a.involve-btn.primary {
   gap: 0.2rem;
   min-height: var(--tap);
   padding: 0.65rem 0.85rem;
-  border: 1px solid var(--color-navy);
-  border-radius: 4px;
+  border: 1px solid var(--color-levy-gilt);
+  border-radius: 0;
   text-decoration: none;
-  background: #fff;
-  color: var(--color-navy);
+  background-color: var(--color-navy);
+  background-image: url("/art/cta/plate_primary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff8ea;
   font-family: var(--font-display);
   font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 234, 0.12);
 }
 .dab-mail-btn span {
   font-family: var(--font-body);
   font-size: 0.72rem;
-  color: var(--color-ink-soft);
+  color: #e8dcc0;
   font-weight: 400;
   word-break: break-all;
 }
-.dab-mail-btn:hover { background: #fff8ea; }
+.dab-mail-btn:hover { opacity: 0.92; }
 .dab-mail-btn-secondary {
-  border-style: dashed;
-  background: #faf3e3;
+  border: 2px solid var(--color-navy);
+  background-color: #fff8ea;
+  background-image: url("/art/cta/plate_secondary.png");
+  color: var(--color-navy);
+  box-shadow: none;
+}
+.dab-mail-btn-secondary span {
+  color: var(--color-ink-soft);
 }
 .dab-back {
   display: inline-block;
@@ -554,6 +653,7 @@ a.involve-btn.primary {
   font-size: 0.85rem;
   color: var(--color-ink-soft);
   text-decoration: none;
+  border-bottom: 1px solid var(--color-levy-gilt);
 }
 .dab-back:hover { color: var(--color-navy); }
 .dab-cite { font-size: 0.78rem; color: var(--color-ink-soft); }
@@ -727,7 +827,7 @@ a.involve-btn.primary {
 .dab-example-email {
   margin: 0.75rem 0 1rem;
   padding: 0.75rem 0.9rem;
-  border-left: 3px solid var(--color-gilt);
+  border-left: 3px solid var(--color-levy-gilt);
   background: #fff8ea;
 }
 .dab-example-email pre {

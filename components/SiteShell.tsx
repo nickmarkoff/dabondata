@@ -6,17 +6,28 @@ import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
   return (
-    <header>
-      <Image
-        src="/art/mobile/masthead_390_compact.png"
-        alt={showMasthead ? SITE.title : ""}
-        width={390}
-        height={389}
-        className="dab-masthead"
-        sizes="(min-width: 720px) 390px, 100vw"
-        priority
-      />
-      {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
+    <header className={showMasthead ? "dab-header dab-header-hero" : "dab-header dab-header-inner"}>
+      {showMasthead ? (
+        <Image
+          src="/art/mobile/masthead_390_compact.png"
+          alt={SITE.title}
+          width={390}
+          height={389}
+          className="dab-masthead"
+          sizes="(min-width: 720px) 390px, 100vw"
+          priority
+        />
+      ) : (
+        <>
+          <div className="dab-inner-rail" aria-hidden="true">
+            <span className="dab-inner-rail-rule" />
+            <span className="dab-fleuron" />
+            <span className="dab-inner-rail-rule" />
+          </div>
+          <p className="dab-wordmark">{SITE.title}</p>
+          <h1 className="dab-title-sr">{SITE.title}</h1>
+        </>
+      )}
       <Image
         src="/art/dividers/divider_ink_rule_340.png"
         alt=""
@@ -95,11 +106,13 @@ export function SiteShell({
   return (
     <>
       <div
-        className={
-          current === "/sign" || current === "/involve"
-            ? "dab-page dab-page-fab-clear"
-            : "dab-page"
-        }
+        className={[
+          "dab-page",
+          showMasthead ? "dab-page-home" : "dab-page-inner",
+          current === "/sign" || current === "/involve" ? "dab-page-fab-clear" : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
       >
         <div className="dab-shell">
           <SiteHeader showMasthead={showMasthead} />

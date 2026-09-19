@@ -26,9 +26,12 @@ export default function HomePage() {
         </Link>
       </p>
       <ul className="dab-doc-list">
-        {FEATURED_CARDS.map((doc) => (
+        {FEATURED_CARDS.map((doc, i) => (
           <li key={doc.href}>
             <Link href={doc.href} className="dab-doc-card">
+              {i === 0 ? (
+                <span className="dab-doc-eyebrow dab-iron-phrase">{SITE.handle}</span>
+              ) : null}
               <h3>{doc.title}</h3>
               <p>{doc.blurb}</p>
             </Link>
