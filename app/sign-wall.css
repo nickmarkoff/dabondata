@@ -1,0 +1,96 @@
+/* —— Public signature wall (Declaration cursive) —— */
+.dab-sign { margin-top: 1rem; }
+.dab-sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.dab-sign-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.dab-sign-form input[type="text"],
+.dab-sign-form select,
+.dab-sign-form textarea {
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-gilt);
+  background: #fff;
+  color: var(--color-ink);
+}
+.dab-sign-consent {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 0.5rem !important;
+  font-size: 0.78rem !important;
+}
+.dab-sign-consent input { margin-top: 0.15rem; }
+.dab-sign-form button {
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  background: var(--color-navy);
+  color: #fff8ea;
+  border: none;
+  cursor: pointer;
+}
+.dab-sign-form button:disabled { opacity: 0.6; cursor: wait; }
+.dab-sign-error { color: #8b1a1a; font-size: 0.85rem; margin: 0; }
+.dab-sign-ok { color: var(--color-navy); font-size: 0.85rem; margin: 0; }
+.dab-sign-wall {
+  border: 2px double var(--color-navy);
+  background: #faf3e3;
+  padding: 1rem 0.85rem 1.25rem;
+}
+.dab-sign-wall h3 {
+  font-family: var(--font-display);
+  text-align: center;
+  margin: 0 0 0.75rem;
+  color: var(--color-navy);
+}
+.dab-sign-meta {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+.dab-sign-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 1;
+}
+@media (min-width: 640px) {
+  .dab-sign-list { columns: 2; column-gap: 1.25rem; }
+}
+.dab-sign-list li {
+  break-inside: avoid;
+  margin: 0 0 0.95rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transform: rotate(var(--rot, 0deg));
+}
+.dab-sign-name {
+  display: block;
+  font-family: var(--font-signature), "Great Vibes", "Segoe Script", cursive;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+.dab-sign-ink-a .dab-sign-name { color: #1a1a1a; }
+.dab-sign-ink-b .dab-sign-name { color: #2c1810; }
+.dab-sign-place,
+.dab-sign-note {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.1rem;
+}
