@@ -7,6 +7,10 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: auto;
+  max-height: none;
+  overflow-x: clip;
+  overflow-y: auto;
   background-color: #F2E8D5;
   background-image: url("/art/woodcut/paper_tile.png");
   background-size: 480px;

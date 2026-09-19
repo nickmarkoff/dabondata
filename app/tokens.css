@@ -61,7 +61,10 @@
 
 .dab-page {
   position: relative;
+  height: auto;
   min-height: 100dvh;
+  max-height: none;
+  overflow: visible;
   margin: 0 auto;
   max-width: var(--page-max);
   box-sizing: border-box;
@@ -102,6 +105,9 @@
   border: none;
   background: transparent;
   min-width: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
   padding: var(--pad-y) var(--pad-x);
 }
 
@@ -538,7 +544,12 @@ a.involve-btn.primary {
 
 
 /* —— Public signature wall (Declaration cursive) —— */
-.dab-sign { margin-top: 1rem; }
+.dab-sign {
+  margin-top: 1rem;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
 .dab-sign-form {
   display: flex;
   flex-direction: column;
@@ -613,6 +624,9 @@ a.involve-btn.primary {
   border: 1px solid var(--color-gilt);
   background: #faf3e3;
   padding: 1rem 0.85rem 1.25rem;
+  height: auto;
+  max-height: none;
+  overflow: visible;
 }
 .dab-sign-wall h3 {
   font-family: var(--font-display);
@@ -629,19 +643,27 @@ a.involve-btn.primary {
 }
 .dab-sign-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  columns: 1;
+  height: auto;
+  max-height: none;
+  overflow: visible;
 }
 @media (min-width: 640px) {
-  .dab-sign-list { columns: 2; column-gap: 1.25rem; }
+  .dab-sign-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.25rem;
+  }
 }
 .dab-sign-list li {
-  break-inside: avoid;
   margin: 0 0 0.95rem;
   padding-bottom: 0.35rem;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   transform: rotate(var(--rot, 0deg));
+  overflow: visible;
 }
 .dab-sign-name {
   display: block;
@@ -650,6 +672,8 @@ a.involve-btn.primary {
   font-size: var(--fs-signature);
   line-height: var(--lh-signature);
   color: var(--color-signature);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .dab-sign-place,
 .dab-sign-note {
@@ -657,6 +681,9 @@ a.involve-btn.primary {
   font-size: 0.72rem;
   color: var(--color-ink-soft);
   margin-top: 0.1rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
 }
 
 

@@ -24,6 +24,8 @@ const DATA_PATH = path.join(process.cwd(), "data", "signatures.json");
 const BLOB_PATHNAME = "dabondata/signatures.json";
 export const QC_PROBE_ID = "mu7v0ye3-6xmheb";
 export const QC_PROBE_NAME = "gus qc probe";
+/** Live neighbor row — never drop this id when stripping the QC probe. */
+export const KEPT_SIGNATURE_ID = "mu7w3hsl-u7i2bv";
 
 function isVercel(): boolean {
   return Boolean(process.env.VERCEL);
@@ -34,12 +36,23 @@ function hasBlobToken(): boolean {
 }
 
 export function isQcProbe(signature: Pick<Signature, "id" | "name">): boolean {
+  if (signature.id === KEPT_SIGNATURE_ID) return false;
   if (signature.id === QC_PROBE_ID) return true;
   return signature.name.trim().toLowerCase() === QC_PROBE_NAME;
 }
 
 export function withoutQcProbes(list: Signature[]): Signature[] {
   return list.filter((s) => !isQcProbe(s));
+}
+
+/** Probe-only rewrite. Never persist [] when real rows (e.g. Nick) are still in the store. */
+export function probeOnlyRewrite(existing: Signature[]): Signature[] {
+  const cleaned = withoutQcProbes(existing);
+  const realRows = existing.filter((s) => !isQcProbe(s));
+  if (cleaned.length === 0 && realRows.length > 0) {
+    return realRows;
+  }
+  return cleaned;
 }
 
 async function readFileStore(): Promise<Signature[]> {
@@ -105,14 +118,14 @@ async function persistStore(list: Signature[]): Promise<boolean> {
 async function loadCleanStore(): Promise<Signature[]> {
   const fromBlob = hasBlobToken() ? await readBlobStore() : null;
   if (fromBlob) {
-    const cleaned = withoutQcProbes(fromBlob);
+    const cleaned = probeOnlyRewrite(fromBlob);
     if (cleaned.length !== fromBlob.length) {
       await writeBlobStore(cleaned);
     }
     return cleaned;
   }
   const fromFile = await readFileStore();
-  const cleaned = withoutQcProbes(fromFile);
+  const cleaned = probeOnlyRewrite(fromFile);
   if (cleaned.length !== fromFile.length && !isVercel()) {
     await writeFileStore(cleaned);
   }
@@ -141,6 +154,7 @@ export async function removeSignatures(filter: {
   }
   const existing = fromBlob ?? (await readFileStore());
   const remaining = existing.filter((s) => {
+    if (s.id === KEPT_SIGNATURE_ID) return true;
     if (id && s.id === id) return false;
     if (name && s.name.trim().toLowerCase() === name.toLowerCase()) return false;
     return !isQcProbe(s);
