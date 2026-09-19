@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SiteShell } from "@/components/SiteShell";
-import { DOCS, SITE } from "@/lib/nav";
+import { FEATURED_CARDS, OTHER_LINKS, SITE } from "@/lib/nav";
 
 export default function HomePage() {
   return (
@@ -22,12 +22,19 @@ export default function HomePage() {
         </Link>
       </p>
       <ul className="dab-doc-list">
-        {DOCS.map((doc) => (
+        {FEATURED_CARDS.map((doc) => (
           <li key={doc.href}>
             <Link href={doc.href} className="dab-doc-card">
               <h3>{doc.title}</h3>
               <p>{doc.blurb}</p>
             </Link>
+          </li>
+        ))}
+      </ul>
+      <ul className="dab-bullet-list">
+        {OTHER_LINKS.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href}>{link.title}</Link>
           </li>
         ))}
       </ul>
