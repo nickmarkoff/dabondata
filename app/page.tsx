@@ -5,9 +5,21 @@ import { DOCS, SITE } from "@/lib/nav";
 export default function HomePage() {
   return (
     <SiteShell current="/" showMasthead>
-      <p className="text-center text-[0.85rem] text-[var(--color-ink-soft)] mb-4">
-        Docs-only public archive of the {SITE.date} <strong>DAB on Data</strong> packet.
-        No petition. No donate form. Neighbors with a plan.
+      <p className="text-center text-[0.85rem] text-[var(--color-ink-soft)] mb-3">
+        Public archive of the {SITE.date} <strong>DAB on Data</strong> packet.
+        Neighbors with a plan — not a campaign committee.
+      </p>
+      <p className="involve-banner" style={{ marginBottom: "1rem" }}>
+        Our community knows better than the candidates! Let’s make them serve{" "}
+        <em>US</em>.
+      </p>
+      <p className="involve-actions" style={{ marginBottom: "1.25rem" }}>
+        <Link className="involve-btn primary" href="/involve">
+          Get Involved
+        </Link>{" "}
+        <Link className="involve-btn" href="/sign">
+          Sign the Declaration
+        </Link>
       </p>
       <ul className="dab-doc-list">
         {DOCS.map((doc) => (
