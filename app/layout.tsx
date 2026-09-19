@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Source_Serif_4, Great_Vibes } from "next/font/google";
-import "./globals.css";
+import { GWChatWidget } from "@/components/GWChatWidget";
 import { SITE } from "@/lib/nav";
+import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
         }}
       >
         {children}
+        <GWChatWidget />
       </body>
     </html>
   );
