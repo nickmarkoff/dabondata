@@ -70,9 +70,10 @@
 }
 .dab-sign-wall h3 {
   font-family: var(--font-display);
+  font-weight: 800;
   text-align: center;
   margin: 0 0 0.75rem;
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 .dab-sign-meta {
   text-align: center;

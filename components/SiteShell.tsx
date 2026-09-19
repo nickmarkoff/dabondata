@@ -11,16 +11,16 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
         src="/art/mobile/masthead_390_compact.png"
         alt={showMasthead ? SITE.title : ""}
         width={390}
-        height={101}
+        height={105}
         className="dab-masthead"
         priority
       />
       {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
       <Image
-        src="/art/dividers/divider_rule_340.png"
+        src="/art/dividers/divider_ink_rule_340.png"
         alt=""
         width={340}
-        height={68}
+        height={28}
         className="dab-divider"
       />
     </header>

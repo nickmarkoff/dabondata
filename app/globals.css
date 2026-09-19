@@ -17,3 +17,15 @@ html, body {
 * { box-sizing: border-box; }
 
 a { color: inherit; }
+
+/* Stamped filing titles — beat Tailwind preflight (h1–h6 { font-weight: inherit }).
+   Unlayered + .dab-page ancestor so computed weight is 800 and color is ink #1A1814. */
+.dab-page .dab-doc-card h3,
+.dab-page .involve-banner,
+.dab-page .dab-involve-lede,
+.dab-page .sign-scroll-title,
+.dab-page .dab-sign-wall h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-ink);
+}

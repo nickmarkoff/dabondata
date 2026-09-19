@@ -44,9 +44,12 @@
   --img-parchment: url("/art/woodcut/paper_tile.png");
   --img-border: url("/art/woodcut/border_390x844_transparent.png");
   --img-border-desktop: url("/art/woodcut/border_portrait_transparent.png");
-  --img-divider: url("/art/dividers/divider_rule_340.png");
+  --img-divider: url("/art/dividers/divider_ink_rule_340.png");
   --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
   --img-masthead: url("/art/mobile/masthead_390_compact.png");
+  /* 9-slice: capture fleurons, never squash 844 art to document height */
+  --woodcut-slice: 40;
+  --woodcut-outset: 40px;
 }
 
 .dab-page {
@@ -65,14 +68,23 @@
   font-size: var(--fs-body);
   line-height: var(--lh-body);
 }
-/* Ink on the sheet — absolute overlay grows with .dab-page, scrolls with it */
+/* Ink on the sheet — absolute overlay grows with .dab-page, scrolls with it.
+   9-slice keeps fleuron corners; hairline rails stretch. Do not use
+   background-size: 100% 100% (smears 844 art to full document height). */
 .dab-page::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--img-border) center / 100% 100% no-repeat;
   pointer-events: none;
   z-index: 5;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+  border-width: var(--woodcut-outset);
+  border-image-source: var(--img-border);
+  border-image-slice: var(--woodcut-slice) fill;
+  border-image-width: var(--woodcut-outset);
+  border-image-repeat: stretch;
 }
 .dab-page > * {
   position: relative;
@@ -142,7 +154,13 @@
   transition: background 0.15s ease;
 }
 .dab-doc-card:hover { background: #fff8ea; }
-.dab-doc-card h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 0.35em; color: var(--color-navy); }
+.dab-doc-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 0.35em;
+  color: var(--color-ink);
+}
 .dab-doc-card p { margin: 0; font-size: 0.82rem; color: var(--color-ink-soft); }
 .dab-footer {
   font-size: var(--fs-footer);
@@ -262,6 +280,8 @@
     --img-border: var(--img-border-desktop);
     --pad-y: 36px;
     --pad-x: 36px;
+    --woodcut-slice: 56;
+    --woodcut-outset: 56px;
   }
   .dab-nav { justify-content: center; }
 }
@@ -279,8 +299,9 @@
 .involve-banner {
   font-family: var(--font-display);
   font-size: 1.05rem;
+  font-weight: 800;
   text-align: center;
-  color: var(--color-navy);
+  color: var(--color-ink);
   background: #fff8ea;
   border: 1px solid var(--color-gilt);
   padding: 0.75rem 0.9rem;
@@ -371,9 +392,10 @@
 }
 .sign-scroll-title {
   font-family: var(--font-display);
+  font-weight: 800;
   text-align: center;
   margin: 0 0 0.25rem;
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 .sign-scroll-lede {
   text-align: center;
@@ -418,8 +440,9 @@
 .dab-involve-lede {
   font-family: var(--font-display);
   font-size: 1.05rem;
+  font-weight: 800;
   text-align: center;
-  color: var(--color-navy);
+  color: var(--color-ink);
   background: #fff8ea;
   border: 1px solid var(--color-gilt);
   padding: 0.75rem 0.9rem;
@@ -541,9 +564,10 @@
 }
 .dab-sign-wall h3 {
   font-family: var(--font-display);
+  font-weight: 800;
   text-align: center;
   margin: 0 0 0.75rem;
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 .dab-sign-meta {
   text-align: center;
