@@ -22,6 +22,7 @@ export type SignatureInput = {
 
 const DATA_PATH = path.join(process.cwd(), "data", "signatures.json");
 const BLOB_PATHNAME = "dabondata/signatures.json";
+const QC_PROBE_NAME = "gus qc probe";
 
 function isVercel(): boolean {
   return Boolean(process.env.VERCEL);
@@ -29,6 +30,10 @@ function isVercel(): boolean {
 
 function hasBlobToken(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+}
+
+function isQcProbe(signature: Signature): boolean {
+  return signature.name.trim().toLowerCase() === QC_PROBE_NAME;
 }
 
 async function readFileStore(): Promise<Signature[]> {
@@ -78,11 +83,71 @@ async function writeBlobStore(list: Signature[]): Promise<boolean> {
   }
 }
 
-export async function listSignatures(): Promise<Signature[]> {
-  const fromBlob = await readBlobStore();
-  if (fromBlob) return fromBlob.slice().reverse();
+async function persistStore(list: Signature[]): Promise<boolean> {
+  if (hasBlobToken()) {
+    const wrote = await writeBlobStore(list);
+    if (wrote) return true;
+    if (isVercel()) return false;
+  } else if (isVercel()) {
+    return false;
+  }
+  await writeFileStore(list);
+  return true;
+}
+
+/** Live store, minus the QC probe. Rewrites Blob/file when the probe is present. */
+async function loadCleanStore(): Promise<Signature[]> {
+  const fromBlob = hasBlobToken() ? await readBlobStore() : null;
+  if (fromBlob) {
+    const cleaned = fromBlob.filter((s) => !isQcProbe(s));
+    if (cleaned.length !== fromBlob.length) {
+      await writeBlobStore(cleaned);
+    }
+    return cleaned;
+  }
   const fromFile = await readFileStore();
-  return fromFile.slice().reverse();
+  const cleaned = fromFile.filter((s) => !isQcProbe(s));
+  if (cleaned.length !== fromFile.length && !isVercel()) {
+    await writeFileStore(cleaned);
+  }
+  return cleaned;
+}
+
+export async function listSignatures(): Promise<Signature[]> {
+  const cleaned = await loadCleanStore();
+  return cleaned.slice().reverse();
+}
+
+export async function removeSignatures(filter: {
+  id?: string;
+  name?: string;
+}): Promise<
+  { ok: true; removed: number } | { ok: false; error: string; status: number }
+> {
+  const id = filter.id?.trim();
+  const name = filter.name?.trim();
+  if (!id && !name) {
+    return { ok: false, error: "Provide id or name to remove.", status: 400 };
+  }
+  const fromBlob = hasBlobToken() ? await readBlobStore() : null;
+  if (hasBlobToken() && fromBlob === null) {
+    return { ok: false, error: "Could not read signature store.", status: 500 };
+  }
+  const existing = fromBlob ?? (await readFileStore());
+  const remaining = existing.filter((s) => {
+    if (id && s.id === id) return false;
+    if (name && s.name.trim().toLowerCase() === name.toLowerCase()) return false;
+    return true;
+  });
+  const removed = existing.length - remaining.length;
+  if (removed === 0) {
+    return { ok: true, removed: 0 };
+  }
+  const wrote = await persistStore(remaining);
+  if (!wrote) {
+    return { ok: false, error: "Could not write signature store.", status: 500 };
+  }
+  return { ok: true, removed };
 }
 
 export async function addSignature(
@@ -132,7 +197,7 @@ export async function addSignature(
   };
 
   if (hasBlobToken()) {
-    const existing = (await readBlobStore()) ?? (await readFileStore());
+    const existing = await loadCleanStore();
     const wrote = await writeBlobStore([...existing, signature]);
     if (!wrote) {
       return {
@@ -153,7 +218,7 @@ export async function addSignature(
     };
   }
 
-  const existing = await readFileStore();
+  const existing = await loadCleanStore();
   await writeFileStore([...existing, signature]);
   return { ok: true, signature };
 }
