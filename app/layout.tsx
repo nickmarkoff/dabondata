@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Serif_4, Great_Vibes } from "next/font/google";
+import { Source_Serif_4, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/nav";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
 
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
@@ -47,9 +41,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${sourceSerif.variable} ${greatVibes.variable} antialiased`}
+        className={`${sourceSerif.variable} ${greatVibes.variable} antialiased`}
         style={{
-          ["--font-display" as string]: "var(--font-playfair), Georgia, serif",
+          ["--font-display" as string]: "var(--font-source-serif), Georgia, serif",
           ["--font-body" as string]: "var(--font-source-serif), Georgia, serif",
           ["--font-signature" as string]: "var(--font-cursive), cursive",
         }}

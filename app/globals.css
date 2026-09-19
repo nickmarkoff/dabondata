@@ -5,9 +5,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background: var(--color-parchment);
+  background-color: #F2E8D5;
+  background-image: url("/art/woodcut/paper_tile.png");
+  background-size: 480px;
+  background-repeat: repeat;
   color: var(--color-ink);
 }
 
