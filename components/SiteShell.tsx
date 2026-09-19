@@ -125,7 +125,11 @@ export function SiteShell({
         className={[
           "dab-page",
           showMasthead ? "dab-page-home" : "dab-page-inner",
-          current === "/sign" || current === "/involve" ? "dab-page-fab-clear" : "",
+          current === "/sign" ||
+          current === "/involve" ||
+          current === "/involve/ads"
+            ? "dab-page-fab-clear"
+            : "",
         ]
           .filter(Boolean)
           .join(" ")}

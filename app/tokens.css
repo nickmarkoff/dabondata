@@ -920,3 +920,77 @@ a.involve-btn.primary {
   line-height: 1.45;
   color: var(--color-ink);
 }
+
+/* —— Shareable ads gallery (/involve/ads) —— */
+.dab-page ul.dab-ads-grid {
+  list-style: none;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+}
+.dab-ads-card {
+  border: 1.5px solid var(--color-levy-gilt);
+  box-shadow: none;
+  background: #F7F0E2;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.dab-ads-figure {
+  margin: 0;
+}
+.dab-ads-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid color-mix(in srgb, var(--color-levy-gilt) 55%, transparent);
+  background: #0b0f0c;
+}
+.dab-prose .dab-ads-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: var(--fw-card-title);
+  margin: 0.55rem 0 0;
+  text-align: center;
+  color: var(--color-ink);
+}
+.dab-prose .dab-ads-title::after {
+  display: none;
+}
+.dab-ads-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--color-levy-gilt);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: var(--color-navy);
+  background-image: url("/art/cta/plate_primary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff8ea;
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 234, 0.12);
+}
+.dab-ads-download:hover {
+  opacity: 0.92;
+}
+@media (min-width: 720px) {
+  .dab-page ul.dab-ads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 960px) {
+  .dab-page ul.dab-ads-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

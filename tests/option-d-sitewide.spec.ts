@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const INNER = ["/involve", "/sign", "/statement"] as const;
+const INNER = ["/involve", "/involve/ads", "/sign", "/statement"] as const;
 
 test.describe("Option D sitewide style", () => {
   test("home keeps the full cartouche; 390 shell clears the woodcut rails", async ({

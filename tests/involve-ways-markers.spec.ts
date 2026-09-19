@@ -12,7 +12,7 @@ test.describe("Get Involved American star markers", () => {
 
     const list = page.locator("ol.dab-involve-ways");
     await expect(list).toHaveAttribute("aria-label", "Ways to get involved");
-    await expect(list.locator("> li")).toHaveCount(6);
+    await expect(list.locator("> li")).toHaveCount(7);
 
     const marker = await list.evaluate((el) => {
       const li = el.querySelector(":scope > li");
