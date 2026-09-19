@@ -24,5 +24,7 @@ Backup of prior: `masthead_390_compact_PRE_GRAND_D.png`
 
 Live wire: `SiteShell` + `.dab-masthead` at **390×389** (`height: auto`). Default src is the on-paper compact; ink-only is an unused alt while paper tiles behind the sheet.
 
+Blend pass (2026-09-19): live compact is now a feathered cartouche with transparent exterior — see `BLEND_HANDOFF.md`. Do not restore the opaque cooler plate.
+
 ## Preview
 Attached `PREVIEW_D.jpg` (handoff). Supersedes the 390×250 clear-gap plate.
