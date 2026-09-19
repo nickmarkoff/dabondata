@@ -89,5 +89,10 @@ test.describe("/sign signature names", () => {
       nearest.distance,
       `ink ${styles.color} should be near #1A1814 or #12100c`,
     ).toBeLessThanOrEqual(12);
+
+    const inputFamily = await page
+      .locator('.dab-sign-form input[name="name"]')
+      .evaluate((el) => getComputedStyle(el).fontFamily);
+    expect(inputFamily).not.toMatch(/Meddon|Italianno|Pinyon|Great Vibes/i);
   });
 });
