@@ -2,6 +2,7 @@
 @import "./tokens.css";
 @import "./sign-wall.css";
 @import "./gw-chat.css";
+@import "../public/art/tokens/SIGNATURE_FONT.css";
 
 html, body {
   margin: 0;

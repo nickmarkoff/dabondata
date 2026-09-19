@@ -1,0 +1,16 @@
+/* Pea Eye lock — Meddon (Google Fonts): 18th-c legal manuscript / quilled clerk.
+   Displayed /sign names only. Do not use Italianno, Pinyon Script, or Great Vibes. */
+:root {
+  --font-signature-stack: var(--font-signature), "Meddon", cursive;
+  --color-signature-ink: #1A1814;
+}
+
+.dab-sign-name {
+  font-family: var(--font-signature), "Meddon", cursive;
+  color: #1A1814;
+}
+
+.dab-sign-ink-a .dab-sign-name,
+.dab-sign-ink-b .dab-sign-name {
+  color: #1A1814;
+}
