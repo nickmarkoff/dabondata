@@ -34,23 +34,22 @@ test.describe("PDF-only downloads", () => {
       page.getByRole("heading", { name: "Official memo & bylaws" }),
     ).toBeVisible();
 
+    const main = page.locator("main");
+    await expect(main.locator('a[href="/docs/DABonData.pdf"]')).toBeVisible();
     await expect(
-      page.locator('a[href="/docs/DABonData.pdf"]'),
+      main.locator('a[href="/docs/DAB_Resident_Proposal_Letter.pdf"]'),
     ).toBeVisible();
     await expect(
-      page.locator('a[href="/docs/DAB_Resident_Proposal_Letter.pdf"]'),
+      main.locator('a[href="/docs/DAB_Script_Handout.pdf"]'),
     ).toBeVisible();
     await expect(
-      page.locator('a[href="/docs/DAB_Script_Handout.pdf"]'),
+      main.locator('a[href="/docs/DAB_Example_Email.pdf"]'),
     ).toBeVisible();
     await expect(
-      page.locator('a[href="/docs/DAB_Example_Email.pdf"]'),
+      main.locator('a[href="/docs/DAB_Energy_Trust_Memo.pdf"]'),
     ).toBeVisible();
     await expect(
-      page.locator('a[href="/docs/DAB_Energy_Trust_Memo.pdf"]'),
-    ).toBeVisible();
-    await expect(
-      page.locator('a[href="/docs/DAB_Energy_Trust_Bylaws.pdf"]'),
+      main.locator('a[href="/docs/DAB_Energy_Trust_Bylaws.pdf"]'),
     ).toBeVisible();
   });
 
