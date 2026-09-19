@@ -14,12 +14,15 @@ test.describe("Option D sitewide style", () => {
     await expect(page.locator(".dab-page")).toHaveClass(/dab-page-home/);
     await expect(page.locator(".dab-doc-card .dab-iron-phrase")).toHaveCount(1);
 
-    const pageBox = await page.locator(".dab-page").boundingBox();
-    const shellBox = await page.locator(".dab-shell").boundingBox();
-    expect(pageBox, "page box").not.toBeNull();
-    expect(shellBox, "shell box").not.toBeNull();
-    const inset = shellBox!.x - pageBox!.x;
-    expect(inset).toBeGreaterThanOrEqual(48);
+    const pad = await page.locator(".dab-shell").evaluate((el) => {
+      const styles = getComputedStyle(el);
+      return {
+        padLeft: parseFloat(styles.paddingLeft),
+        padRight: parseFloat(styles.paddingRight),
+      };
+    });
+    expect(pad.padLeft).toBeGreaterThanOrEqual(48);
+    expect(pad.padRight).toBeGreaterThanOrEqual(48);
   });
 
   test("inner routes use wordmark + fleuron rule, not a second cartouche", async ({
