@@ -69,7 +69,7 @@ export default function InvolvePage() {
         </p>
 
         <h3>Where and how to send these (basic steps)</h3>
-        <ol>
+        <ol className="dab-involve-ways" role="list" aria-label="Ways to get involved">
           <li>Open your email app (phone or computer).</li>
           <li>
             Use the buttons below to email the County Executive, County Council,
