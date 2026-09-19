@@ -1,7 +1,7 @@
 /* DABonData / DAB ENERGY TRUST — site tokens (paths for /public/art) */
 :root {
-  --dab-title: "DAB on Data";
-  --dab-subtitle: "DAB ENERGY TRUST";
+  --dab-title: "DAB ENERGY TRUST";
+  --dab-subtitle: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition";
   --dab-coalition: "Doubs · Adamstown · Buckeystown — Our Home, Our Coalition";
   --dab-tag: "We like it here. Keep Frederick looking like Frederick.";
   --dab-date: "Sept 18, 2026";
@@ -41,10 +41,11 @@
   --img-border: none;
   --img-divider: url("/art/dividers/divider_gilt_electric.jpg");
   --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
-  --img-masthead: url("/art/mastheads/masthead_dabondata_390.jpg");
+  --img-masthead: url("/art/mastheads/masthead_dab_energy_trust_390.jpg");
 }
 
 .dab-page {
+  position: relative;
   min-height: 100dvh;
   margin: 0 auto;
   max-width: var(--vp-mobile);
@@ -57,35 +58,25 @@
   font-size: var(--fs-body);
   line-height: var(--lh-body);
 }
+/* Option A — full ornate page border overlay (mobile + ≥720 portrait) */
+.dab-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/art/borders/page_border_mobile_390x844_transparent.png") center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 5;
+}
+.dab-page > * {
+  position: relative;
+  z-index: 1;
+}
 .dab-shell {
   position: relative;
-  border: var(--border-w) solid transparent;
-  border-image-source: var(--img-border);
-  border-image-slice: 18% fill;
-  border-image-width: var(--border-w);
-  border-image-repeat: stretch;
-  background: var(--color-parchment);
-  /* Extra inset so corner bulbs don't crush body text */
-  padding: 48px 40px 52px;
-}
-
-/* Pea Eye light-bulb corner ornaments (_256 only — not full ~1.4MB PNGs) */
-.dab-corners { pointer-events: none; }
-.dab-corners .c {
-  position: absolute;
-  width: 56px;
-  height: 56px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
-  opacity: 0.92;
-}
-.dab-corners .tl { top: 4px; left: 4px; background-image: url("/art/ornaments/corners/corner_bulb_tl_256.png"); background-position: top left; }
-.dab-corners .tr { top: 4px; right: 4px; background-image: url("/art/ornaments/corners/corner_bulb_tr_256.png"); background-position: top right; }
-.dab-corners .bl { bottom: 4px; left: 4px; background-image: url("/art/ornaments/corners/corner_bulb_bl_256.png"); background-position: bottom left; }
-.dab-corners .br { bottom: 4px; right: 4px; background-image: url("/art/ornaments/corners/corner_bulb_br_256.png"); background-position: bottom right; }
-@media (min-width: 720px) {
-  .dab-corners .c { width: 72px; height: 72px; }
+  /* No border-image — overlay frame handles chrome; inset keeps copy inside rails */
+  border: none;
+  background: transparent;
+  padding: 40px 36px 44px;
 }
 
 .dab-title {
@@ -218,7 +209,11 @@
   margin: 0 auto 0.35rem;
 }
 @media (min-width: 720px) {
-  .dab-page { max-width: 720px; --fs-title: 2.6rem; --border-w: 36px; }
+  .dab-page { max-width: 720px; --fs-title: 2.6rem; }
+  .dab-page::before {
+    background-image: url("/art/borders/page_border_portrait_transparent.png");
+  }
+  .dab-shell { padding: 48px 44px 52px; }
 }
 @media (min-width: 960px) {
   .dab-page { max-width: 960px; }

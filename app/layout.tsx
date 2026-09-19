@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: `${SITE.title} — ${SITE.subtitle}`,
     template: `%s · ${SITE.title}`,
   },
-  description: `${SITE.coalition}. ${SITE.tag} Compiled packet by ${SITE.author}, ${SITE.date}.`,
+  description: `${SITE.coalition}. ${SITE.tag} Compiled packet by ${SITE.author}, ${SITE.date}. Site handle: ${SITE.handle}.`,
   authors: [{ name: SITE.author }],
   openGraph: {
     title: `${SITE.title} — ${SITE.subtitle}`,

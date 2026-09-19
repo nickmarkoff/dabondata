@@ -15,19 +15,21 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
       />
       {showMasthead ? (
         <Image
-          src="/art/mastheads/masthead_dabondata_390.jpg"
+          src="/art/mastheads/masthead_dab_energy_trust_390.jpg"
           alt={SITE.title}
           width={390}
-          height={120}
+          height={219}
           className="mx-auto mb-2 h-auto w-full max-w-[340px]"
           priority
         />
-      ) : null}
-      <h1 className="dab-title">{SITE.title}</h1>
-      <p className="dab-subtitle">{SITE.subtitle}</p>
-      <p className="dab-coalition">{SITE.coalition}</p>
-      <p className="dab-tag">{SITE.tag}</p>
-      <p className="dab-date">{SITE.date}</p>
+      ) : (
+        <>
+          <h1 className="dab-title">{SITE.title}</h1>
+          <p className="dab-coalition">{SITE.coalition}</p>
+          <p className="dab-tag">{SITE.tag}</p>
+          <p className="dab-date">{SITE.date}</p>
+        </>
+      )}
       <Image
         src="/art/dividers/divider_gilt_electric.jpg"
         alt=""
@@ -78,6 +80,7 @@ export function SiteFooter() {
       <p style={{ marginTop: "0.45rem" }}>
         {SITE.author} · Buckeystown / DAB area, Frederick County, MD · {SITE.date}
       </p>
+      <p style={{ marginTop: "0.35rem" }}>{SITE.handle}</p>
       <div className="dab-downloads">
         <a href="/docs/DABonData.md" download>
           Download .md
@@ -105,12 +108,6 @@ export function SiteShell({
   return (
     <div className="dab-page">
       <div className="dab-shell">
-        <div className="dab-corners" aria-hidden>
-          <span className="c tl" />
-          <span className="c tr" />
-          <span className="c bl" />
-          <span className="c br" />
-        </div>
         <SiteHeader showMasthead={showMasthead} />
         <SiteNav current={current} />
         <main>{children}</main>
