@@ -11,8 +11,9 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
         src="/art/mobile/masthead_390_compact.png"
         alt={showMasthead ? SITE.title : ""}
         width={390}
-        height={250}
+        height={389}
         className="dab-masthead"
+        sizes="(min-width: 720px) 390px, 100vw"
         priority
       />
       {showMasthead ? null : <h1 className="dab-title-sr">{SITE.title}</h1>}
