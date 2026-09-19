@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
+import { GWChatWidget } from "@/components/GWChatWidget";
 import { ACTIONS, DOCS, SITE } from "@/lib/nav";
 
 export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean }) {
@@ -98,13 +100,18 @@ export function SiteShell({
   showMasthead?: boolean;
 }) {
   return (
-    <div className="dab-page">
-      <div className="dab-shell">
-        <SiteHeader showMasthead={showMasthead} />
-        <SiteNav current={current} />
-        <main>{children}</main>
-        <SiteFooter />
+    <>
+      <div className="dab-page">
+        <div className="dab-shell">
+          <SiteHeader showMasthead={showMasthead} />
+          <SiteNav current={current} />
+          <main>{children}</main>
+          <SiteFooter />
+        </div>
       </div>
-    </div>
+      <Suspense fallback={null}>
+        <GWChatWidget />
+      </Suspense>
+    </>
   );
 }

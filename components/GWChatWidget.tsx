@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   FormEvent,
   KeyboardEvent,
@@ -16,6 +17,23 @@ import {
   type ChatLink,
   type ChatReply,
 } from "@/lib/gw-chat";
+
+const LIFT_PATHS = new Set(["/sign", "/involve"]);
+
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return (
+    <p>
+      {parts.map((part, index) =>
+        part.startsWith("**") && part.endsWith("**") ? (
+          <strong key={index}>{part.slice(2, -2)}</strong>
+        ) : (
+          <span key={index}>{part}</span>
+        ),
+      )}
+    </p>
+  );
+}
 
 type ChatMessage = {
   id: string;
@@ -55,6 +73,8 @@ function replyToMessage(reply: ChatReply, prefix: string): ChatMessage {
 }
 
 export function GWChatWidget() {
+  const pathname = usePathname() ?? "";
+  const lift = LIFT_PATHS.has(pathname);
   const panelId = useId();
   const inputId = useId();
   const [open, setOpen] = useState(false);
@@ -121,7 +141,7 @@ export function GWChatWidget() {
   }
 
   return (
-    <div className="gw-chat">
+    <div className={lift ? "gw-chat gw-chat-lift" : "gw-chat"}>
       {open ? (
         <div
           className="gw-chat-panel"
@@ -169,7 +189,7 @@ export function GWChatWidget() {
                 <p className="gw-chat-who">
                   {message.role === "guide" ? "George Washington" : "You"}
                 </p>
-                <p>{message.text}</p>
+                <RichText text={message.text} />
                 {message.links ? <ReplyLinks links={message.links} /> : null}
               </article>
             ))}

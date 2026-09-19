@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Source_Serif_4, Great_Vibes } from "next/font/google";
-import { GWChatWidget } from "@/components/GWChatWidget";
 import { SITE } from "@/lib/nav";
 import "./globals.css";
 
@@ -22,6 +21,10 @@ const greatVibes = Great_Vibes({
   variable: "--font-cursive",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -56,7 +59,6 @@ export default function RootLayout({
         }}
       >
         {children}
-        <GWChatWidget />
       </body>
     </html>
   );
