@@ -146,8 +146,19 @@ export function GWChatWidget() {
   useEffect(() => {
     if (!open) return;
     const node = scrollerRef.current;
-    if (node) node.scrollTop = node.scrollHeight;
-  }, [messages, open]);
+    if (!node) return;
+    const scrollToEnd = () => {
+      node.scrollTop = node.scrollHeight;
+    };
+    scrollToEnd();
+    // Locking swaps the form for a banner and can change the log height
+    // after the first paint; scroll again once layout settles.
+    const frame = requestAnimationFrame(() => {
+      scrollToEnd();
+      requestAnimationFrame(scrollToEnd);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [messages, open, locked]);
 
   useEffect(() => {
     if (open) {
