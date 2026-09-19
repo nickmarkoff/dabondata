@@ -76,7 +76,8 @@
   /* No border-image — overlay frame handles chrome; inset keeps copy inside rails */
   border: none;
   background: transparent;
-  padding: 40px 36px 44px;
+  /* Horizontal inset must clear ornate rails/bulbs (Pea desktop QC @ ~1280) */
+  padding: 48px 42px 52px;
 }
 
 .dab-title {
@@ -213,10 +214,12 @@
   .dab-page::before {
     background-image: url("/art/borders/page_border_portrait_transparent.png");
   }
-  .dab-shell { padding: 48px 44px 52px; }
+  .dab-shell { padding: 56px 80px 60px; }
 }
 @media (min-width: 960px) {
   .dab-page { max-width: 960px; }
+  /* Wider frame stretch needs deeper gutters so 2-col cards never enter rails */
+  .dab-shell { padding: 64px 108px 68px; }
   .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
 }
 
