@@ -58,14 +58,36 @@
   line-height: var(--lh-body);
 }
 .dab-shell {
+  position: relative;
   border: var(--border-w) solid transparent;
   border-image-source: var(--img-border);
   border-image-slice: 18% fill;
   border-image-width: var(--border-w);
   border-image-repeat: stretch;
   background: var(--color-parchment);
-  padding: 18px 14px 22px;
+  /* Extra inset so corner bulbs don't crush body text */
+  padding: 48px 40px 52px;
 }
+
+/* Pea Eye light-bulb corner ornaments (_256 only — not full ~1.4MB PNGs) */
+.dab-corners { pointer-events: none; }
+.dab-corners .c {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.92;
+}
+.dab-corners .tl { top: 4px; left: 4px; background-image: url("/art/ornaments/corners/corner_bulb_tl_256.png"); background-position: top left; }
+.dab-corners .tr { top: 4px; right: 4px; background-image: url("/art/ornaments/corners/corner_bulb_tr_256.png"); background-position: top right; }
+.dab-corners .bl { bottom: 4px; left: 4px; background-image: url("/art/ornaments/corners/corner_bulb_bl_256.png"); background-position: bottom left; }
+.dab-corners .br { bottom: 4px; right: 4px; background-image: url("/art/ornaments/corners/corner_bulb_br_256.png"); background-position: bottom right; }
+@media (min-width: 720px) {
+  .dab-corners .c { width: 72px; height: 72px; }
+}
+
 .dab-title {
   font-family: var(--font-display);
   font-size: var(--fs-title);
@@ -390,3 +412,139 @@
 }
 .dab-back:hover { color: var(--color-navy); }
 .dab-cite { font-size: 0.78rem; color: var(--color-ink-soft); }
+
+
+/* —— Public signature wall (Declaration cursive) —— */
+.dab-sign { margin-top: 1rem; }
+.dab-sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  background: #fff8ea;
+  border: 1px solid var(--color-gilt);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+.dab-sign-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.dab-sign-form input[type="text"],
+.dab-sign-form select,
+.dab-sign-form textarea {
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--color-gilt);
+  background: #fff;
+  color: var(--color-ink);
+}
+.dab-sign-consent {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 0.5rem !important;
+  font-size: 0.78rem !important;
+}
+.dab-sign-consent input { margin-top: 0.15rem; }
+.dab-sign-form button {
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  background: var(--color-navy);
+  color: #fff8ea;
+  border: none;
+  cursor: pointer;
+}
+.dab-sign-form button:disabled { opacity: 0.6; cursor: wait; }
+.dab-sign-error { color: #8b1a1a; font-size: 0.85rem; margin: 0; }
+.dab-sign-ok { color: var(--color-navy); font-size: 0.85rem; margin: 0; }
+.dab-sign-wall {
+  border: 2px double var(--color-navy);
+  background: #faf3e3;
+  padding: 1rem 0.85rem 1.25rem;
+}
+.dab-sign-wall h3 {
+  font-family: var(--font-display);
+  text-align: center;
+  margin: 0 0 0.75rem;
+  color: var(--color-navy);
+}
+.dab-sign-meta {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+.dab-sign-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 1;
+}
+@media (min-width: 640px) {
+  .dab-sign-list { columns: 2; column-gap: 1.25rem; }
+}
+.dab-sign-list li {
+  break-inside: avoid;
+  margin: 0 0 0.95rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transform: rotate(var(--rot, 0deg));
+}
+.dab-sign-name {
+  display: block;
+  font-family: var(--font-signature), "Great Vibes", "Segoe Script", cursive;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+.dab-sign-ink-a .dab-sign-name { color: #1a1a1a; }
+.dab-sign-ink-b .dab-sign-name { color: #2c1810; }
+.dab-sign-place,
+.dab-sign-note {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.1rem;
+}
+
+
+/* —— Homepage bullet links (not cards) —— */
+.dab-bullet-list {
+  list-style: disc;
+  margin: 0 0 1.25rem 1.25em;
+  padding: 0;
+}
+.dab-bullet-list li {
+  margin: 0.4em 0;
+  font-size: 0.92rem;
+}
+.dab-bullet-list a {
+  color: var(--color-gilt-deep);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-gilt);
+}
+.dab-bullet-list a:hover {
+  color: var(--color-navy);
+  border-bottom-color: var(--color-navy);
+}
+
+/* —— Example proposed email on Get Involved —— */
+.dab-example-email {
+  margin: 0.75rem 0 1rem;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--color-gilt);
+  background: #fff8ea;
+}
+.dab-example-email pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+}

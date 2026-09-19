@@ -105,6 +105,12 @@ export function SiteShell({
   return (
     <div className="dab-page">
       <div className="dab-shell">
+        <div className="dab-corners" aria-hidden>
+          <span className="c tl" />
+          <span className="c tr" />
+          <span className="c bl" />
+          <span className="c br" />
+        </div>
         <SiteHeader showMasthead={showMasthead} />
         <SiteNav current={current} />
         <main>{children}</main>

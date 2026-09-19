@@ -14,7 +14,7 @@ export default function Page() {
       </Link>
       <article className="dab-prose">
         <h2>Supporting Materials</h2>
-        <h3>Bylaws highlights — DAB ENERGY TRUST</h3>
+        <h3 id="bylaws">Bylaws highlights — DAB ENERGY TRUST</h3>
         <div className="overflow-x-auto"><table><tbody>
             <tr>
               <th dangerouslySetInnerHTML={{ __html: "Article" }} />
@@ -58,9 +58,9 @@ export default function Page() {
             </tr>
           </tbody></table></div>
         <p dangerouslySetInnerHTML={{ __html: "When Council enacts the Trust, the January 20, 2026 grandfather cutoff and host-community rebate framing in this packet should be incorporated into Schedule A and Article III." }} />
-        <h3>Resident handout / script</h3>
+        <h3 id="handout">Resident handout / script</h3>
         <p dangerouslySetInnerHTML={{ __html: "<strong>DAB ENERGY TRUST</strong> Doubs \u00b7 Adamstown \u00b7 Buckeystown \u2014 Our Home, Our Coalition" }} />
-        <h3>Spoken remarks</h3>
+        <h3 id="script">Spoken remarks</h3>
         <p dangerouslySetInnerHTML={{ __html: "Why we\u2019re doing this \u2014 my wife pulls out of our driveway onto MD 85 with our six-month-old and has to time it like a gap in freeway traffic. That\u2019s not a statistic. That\u2019s our morning." }} />
         <p dangerouslySetInnerHTML={{ __html: "MD 85 is Buckeystown Pike \u2014 a state highway through the Buckeystown Historic District. We are Doubs, Adamstown, Buckeystown \u2014 Our Home, Our Coalition. We like it here. Keep Frederick looking like Frederick." }} />
         <p dangerouslySetInnerHTML={{ __html: "About twelve hundred census households in Adamstown and Buckeystown, plus Doubs on a published address list. The CDI overlay is mapped. Catellus is planned at two-point-four gigawatts. Construction is underway. About fifty-three million in Quantum-related recordation already collected \u2014 and it is not paying our electric bills." }} />
@@ -68,7 +68,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "Proposed floor two hundred fifty a year; proposed cap one thousand a year \u2014 dollar per megawatt-hour on prior-twelve-month campus IT load between those rails \u2014 not law until you pass it. Grandfather the buildings and lawful uses that existed on January twentieth, twenty twenty-six. No new buildings after that cutoff. Dividend is the floor; boundary is the wall \u2014 three communities only, not Frederick City." }} />
         <p dangerouslySetInnerHTML={{ __html: "Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan." }} />
         <p dangerouslySetInnerHTML={{ __html: "Doubs, Adamstown, Buckeystown first. That is the ask." }} />
-        <h3>Summary table</h3>
+        <h3 id="summary">Summary table</h3>
         <div className="overflow-x-auto"><table><tbody>
             <tr>
               <th dangerouslySetInnerHTML={{ __html: "<strong>Who</strong>" }} />
@@ -105,7 +105,7 @@ export default function Page() {
           </tbody></table></div>
         <h3>Ask of candidates and officials</h3>
         <p dangerouslySetInnerHTML={{ __html: "I will put a DAB ENERGY TRUST dividend \u2014 megawatts to meters in Adamstown CDP, Buckeystown CDP, and on the Doubs list, with grandfather cutoff January 20, 2026 \u2014 ahead of any countywide data-center benefit or zoning freeze, and condition new CDI occupancy and any DRRA on that Trust." }} />
-        <h3>Resident proposal letter</h3>
+        <h3 id="letter">Resident proposal letter</h3>
         <p dangerouslySetInnerHTML={{ __html: "<strong>DAB ENERGY TRUST</strong> Doubs \u00b7 Adamstown \u00b7 Buckeystown \u2014 Our Home, Our Coalition" }} />
         <p dangerouslySetInnerHTML={{ __html: "A note to our neighbors in Doubs, Adamstown, and Buckeystown" }} />
         <p dangerouslySetInnerHTML={{ __html: "Friends\u2014" }} />
