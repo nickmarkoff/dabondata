@@ -227,7 +227,7 @@
   letter-spacing: 0.02em;
   line-height: 1.35;
   color: var(--color-navy);
-  background: color-mix(in srgb, var(--color-parchment-deep) 62%, #fff8ea);
+  background: color-mix(in srgb, var(--color-parchment-deep) 88%, #fff8ea);
   border-top: 1px solid color-mix(in srgb, var(--color-levy-gilt) 72%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--color-levy-gilt) 72%, transparent);
 }
