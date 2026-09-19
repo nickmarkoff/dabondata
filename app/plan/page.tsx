@@ -14,6 +14,17 @@ export default function Page() {
       </Link>
       <article className="dab-prose">
         <h2>Memorandum for Public Filing</h2>
+        <p>
+          Download the{" "}
+          <a href="/docs/DAB_Energy_Trust_Memo.pdf" download>
+            official memo (PDF)
+          </a>{" "}
+          and the{" "}
+          <a href="/docs/DAB_Energy_Trust_Bylaws.pdf" download>
+            full bylaws (PDF)
+          </a>
+          .
+        </p>
         <p dangerouslySetInnerHTML={{ __html: "<strong>FREDERICK COUNTY, MARYLAND</strong>" }} />
         <p dangerouslySetInnerHTML={{ __html: "<strong>TO:</strong> County Executive; County Council; Planning Commission <strong>FROM:</strong> Nicholas Markoff, DAB ENERGY TRUST (Doubs \u00b7 Adamstown \u00b7 Buckeystown), Frederick County, MD <strong>DATE:</strong> September 18, 2026 <strong>RE:</strong> DAB ENERGY TRUST \u2014 condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for Doubs, Adamstown, and Buckeystown only <strong>ACTION:</strong> Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan" }} />
         <p dangerouslySetInnerHTML={{ __html: "<strong>Subtitle:</strong> Doubs \u00b7 Adamstown \u00b7 Buckeystown \u2014 Our Home, Our Coalition" }} />

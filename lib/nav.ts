@@ -76,7 +76,7 @@ export const OTHER_LINKS: DocLink[] = [
     href: "/sources",
     title: "Sources & Downloads",
     short: "Sources",
-    blurb: "Download the September 18, 2026 packet (.md, .docx, .pdf).",
+    blurb: "PDF downloads: compiled packet, example emails & letters, official memo & bylaws.",
   },
   {
     href: "/involve",
@@ -128,7 +128,7 @@ export const DOCS: DocLink[] = [
     href: "/sources",
     title: "Sources & Downloads",
     short: "Sources",
-    blurb: "Download the September 18, 2026 packet (.md, .docx, .pdf).",
+    blurb: "PDF downloads: compiled packet, example emails & letters, official memo & bylaws.",
   },
 ];
 

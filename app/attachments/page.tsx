@@ -15,6 +15,17 @@ export default function Page() {
       <article className="dab-prose">
         <h2>Supporting Materials</h2>
         <h3 id="bylaws">Bylaws highlights — DAB ENERGY TRUST</h3>
+        <p>
+          Highlights only. Download the{" "}
+          <a href="/docs/DAB_Energy_Trust_Memo.pdf" download>
+            official memo (PDF)
+          </a>{" "}
+          and the{" "}
+          <a href="/docs/DAB_Energy_Trust_Bylaws.pdf" download>
+            full bylaws (PDF)
+          </a>
+          .
+        </p>
         <div className="overflow-x-auto"><table><tbody>
             <tr>
               <th dangerouslySetInnerHTML={{ __html: "Article" }} />
