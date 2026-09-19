@@ -203,6 +203,17 @@
   /* Title rule is baked in the PNG with ≥18px gap — never CSS-underline */
   text-decoration: none;
   border-bottom: 0;
+  /* Blend pass: transparent cartouche edges must show page paper_tile, not a CSS plate */
+  background: none;
+  background-color: transparent;
+  box-shadow: none;
+  filter: none;
+}
+.dab-header-hero {
+  background: none;
+  background-color: transparent;
+  box-shadow: none;
+  filter: none;
 }
 .dab-divider { display: block; width: 100%; max-width: 100%; height: auto; margin: 0.75rem auto 1.1rem; }
 .dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
