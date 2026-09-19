@@ -101,7 +101,13 @@ export function SiteShell({
 }) {
   return (
     <>
-      <div className="dab-page">
+      <div
+        className={
+          current === "/sign" || current === "/involve"
+            ? "dab-page dab-page-fab-clear"
+            : "dab-page"
+        }
+      >
         <div className="dab-shell">
           <SiteHeader showMasthead={showMasthead} />
           <SiteNav current={current} />

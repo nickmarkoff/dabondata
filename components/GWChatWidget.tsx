@@ -235,13 +235,18 @@ export function GWChatWidget() {
           ref={launcherRef}
           type="button"
           className="gw-chat-launcher"
+          aria-label="George Washington, ask about the packet"
           aria-expanded={false}
           aria-controls={panelId}
           onClick={() => setOpen(true)}
           onKeyDown={onLauncherKey}
         >
-          <span className="gw-chat-launcher-name">George Washington</span>
-          <span className="gw-chat-launcher-sub">Ask about the packet</span>
+          <span className="gw-chat-launcher-name">
+            {lift ? "GW" : "George Washington"}
+          </span>
+          <span className="gw-chat-launcher-sub">
+            {lift ? "Ask" : "Ask about the packet"}
+          </span>
         </button>
       )}
     </div>

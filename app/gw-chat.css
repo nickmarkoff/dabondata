@@ -16,7 +16,19 @@
 
 /* /sign and /involve — keep the FAB off signature fields and mail buttons. */
 .gw-chat-lift {
-  bottom: calc(5.625rem + env(safe-area-inset-bottom, 0px));
+  bottom: calc(6.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+.gw-chat-lift .gw-chat-launcher {
+  padding: 0.4rem 0.5rem 0.42rem;
+}
+
+.gw-chat-lift .gw-chat-launcher-name {
+  font-size: 0.78rem;
+}
+
+.dab-page-fab-clear {
+  padding-bottom: 7.5rem;
 }
 
 .gw-chat > * {
