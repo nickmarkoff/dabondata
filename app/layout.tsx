@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Source_Serif_4, Great_Vibes } from "next/font/google";
-import "./globals.css";
 import { SITE } from "@/lib/nav";
+import "./globals.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -21,6 +21,10 @@ const greatVibes = Great_Vibes({
   variable: "--font-cursive",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   title: {

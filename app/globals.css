@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./tokens.css";
 @import "./sign-wall.css";
+@import "./gw-chat.css";
 
 html, body {
   margin: 0;
