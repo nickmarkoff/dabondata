@@ -112,7 +112,7 @@ export function SignatureWall() {
           Community <span aria-hidden>*</span>
           <select name="community" required defaultValue="">
             <option value="" disabled>
-              Select Doubs, Adamstown, or Buckeystown…
+              Choose community
             </option>
             {COMMUNITIES.map((c) => (
               <option key={c} value={c}>

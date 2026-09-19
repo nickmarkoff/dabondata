@@ -10,31 +10,49 @@
   margin-bottom: 1.25rem;
 }
 .dab-sign-form label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+}
+.dab-sign-form label:not(.dab-sign-consent) {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  font-size: 0.82rem;
-  color: var(--color-navy);
 }
 .dab-sign-form input[type="text"],
 .dab-sign-form select,
 .dab-sign-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   font: inherit;
-  padding: 0.45rem 0.55rem;
+  padding: 0.55rem 0.65rem;
+  min-height: 48px;
   border: 1px solid var(--color-gilt);
   background: #fff;
   color: var(--color-ink);
 }
 .dab-sign-consent {
+  display: flex !important;
   flex-direction: row !important;
   align-items: flex-start;
   gap: 0.5rem !important;
   font-size: 0.78rem !important;
 }
-.dab-sign-consent input { margin-top: 0.15rem; }
+.dab-sign-consent input {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  margin-top: 0.15rem;
+  flex: 0 0 auto;
+}
 .dab-sign-form button {
+  display: block;
+  width: 100%;
   margin-top: 0.35rem;
   padding: 0.6rem 0.9rem;
+  min-height: 48px;
   font-family: var(--font-display);
   font-size: 1rem;
   background: var(--color-navy);
@@ -46,7 +64,7 @@
 .dab-sign-error { color: #8b1a1a; font-size: 0.85rem; margin: 0; }
 .dab-sign-ok { color: var(--color-navy); font-size: 0.85rem; margin: 0; }
 .dab-sign-wall {
-  border: 2px double var(--color-navy);
+  border: 1px solid var(--color-gilt);
   background: #faf3e3;
   padding: 1rem 0.85rem 1.25rem;
 }
@@ -97,7 +115,7 @@
 
 .dab-sign-oath {
   background: #f3ead6;
-  border: 2px double var(--color-navy);
+  border: 1px solid var(--color-gilt);
   padding: 0.9rem 1rem 1rem;
   margin-bottom: 1rem;
 }
