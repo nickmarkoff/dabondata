@@ -1,11 +1,29 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Great_Vibes } from "next/font/google";
+import { EB_Garamond, Libre_Caslon_Text, Libre_Baskerville, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/nav";
 
-const sourceSerif = Source_Serif_4({
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-eb-garamond",
+  display: "swap",
+});
+
+const libreCaslon = Libre_Caslon_Text({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-caslon",
+  display: "swap",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-baskerville",
   display: "swap",
 });
 
@@ -41,10 +59,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sourceSerif.variable} ${greatVibes.variable} antialiased`}
+        className={`${ebGaramond.variable} ${libreCaslon.variable} ${libreBaskerville.variable} ${greatVibes.variable} antialiased`}
         style={{
-          ["--font-display" as string]: "var(--font-source-serif), Georgia, serif",
-          ["--font-body" as string]: "var(--font-source-serif), Georgia, serif",
+          ["--font-display" as string]:
+            "var(--font-eb-garamond), var(--font-libre-baskerville), var(--font-libre-caslon), Georgia, serif",
+          ["--font-body" as string]:
+            "var(--font-libre-caslon), var(--font-eb-garamond), var(--font-libre-baskerville), Georgia, serif",
           ["--font-signature" as string]: "var(--font-cursive), cursive",
         }}
       >

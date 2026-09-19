@@ -10,7 +10,7 @@
   --color-parchment: #F2E8D5;
   --color-parchment-deep: #E6D5B8;
   --color-ink: #1A1814;
-  --color-ink-soft: #3D382E;
+  --color-ink-soft: #2C2820;
   --color-navy: #0A1A33;
   --color-navy-mid: #1A2A3A;
   --color-gilt: #C5A059;
@@ -19,8 +19,8 @@
   --color-filament: #FFB347;
   --color-rule: #3D2E1A;
 
-  --font-display: "Source Serif 4", "Libre Baskerville", Georgia, serif;
-  --font-body: "Source Serif 4", "Libre Baskerville", Georgia, serif;
+  --font-display: "EB Garamond", "Libre Baskerville", "Libre Caslon Text", Georgia, serif;
+  --font-body: "Libre Caslon Text", "EB Garamond", "Libre Baskerville", Georgia, serif;
   --fs-title: 2.1rem;
   --fs-subtitle: 0.95rem;
   --fs-coalition: 0.78rem;
@@ -89,12 +89,12 @@
 .dab-title {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 6.4vw, var(--fs-title));
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
   margin: 0.2em 0 0.15em;
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 .dab-title-sr {
   position: absolute;
@@ -156,7 +156,8 @@
 .dab-prose h2 {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  color: var(--color-navy);
+  font-weight: 700;
+  color: var(--color-ink);
   margin: 1.4em 0 0.5em;
   border-bottom: 1px solid #C5A05966;
   padding-bottom: 0.25em;
@@ -164,7 +165,8 @@
 .dab-prose h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: var(--color-navy);
+  font-weight: 700;
+  color: var(--color-ink);
   margin: 1.1em 0 0.4em;
 }
 .dab-prose p { margin: 0.65em 0; }
