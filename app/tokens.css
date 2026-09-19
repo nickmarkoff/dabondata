@@ -48,7 +48,7 @@
 
   /* 9-slice from locked 390×844 frame (mid-rail ~45px; corners live in top/bottom) */
   --frame-slice: 80 48 80 48;
-  --frame-w: 72px 48px 68px 48px;
+  --frame-w: 82px 48px 68px 48px;
   --gutter-x: 28px;
 }
 
@@ -65,7 +65,7 @@
   border-image-slice: var(--frame-slice);
   /* stretch top/bottom; round left/right so tall /plan rails tile instead of smear */
   border-image-repeat: stretch round;
-  /* ≥24–32px from rails; 72px top border clears ornament for title/masthead */
+  /* ≥24–32px from rails; 82px top matches Pea HERO inset so title clears ornament */
   padding: 4px var(--gutter-x) 16px;
   color: var(--color-ink);
   background-color: var(--color-parchment);
