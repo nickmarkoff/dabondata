@@ -10,8 +10,12 @@ export default function HomePage() {
         Neighbors with a plan — not a campaign committee.
       </p>
       <p className="involve-banner" style={{ marginBottom: "1rem" }}>
-        Our community knows better than the candidates! Let’s make them serve{" "}
-        <em>US</em>.
+        <span className="dab-iron-phrase">
+          Our community knows better than the candidates!
+        </span>
+        <span className="dab-iron-follow">
+          Let’s make them serve <em>US</em>.
+        </span>
       </p>
       <p className="involve-actions" style={{ marginBottom: "1.25rem" }}>
         <Link className="involve-btn primary" href="/involve">

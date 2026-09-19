@@ -15,6 +15,8 @@ Standalone ornaments: `public/art/ornaments/iron_bracket_{left,right}.png` (+ `_
 
 Preview: `public/art/mobile/PREVIEW_masthead_iron.jpg`
 
+Superseded for live wire by the 390×250 clear-gap plate — see `MASTHEAD_CLEAR_GAP.md`.
+
 ## Wire
 Swap the home masthead `src` to the new PNG (same path). No CSS underline / border-bottom on the title.
 

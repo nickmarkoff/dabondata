@@ -49,8 +49,12 @@ export default function InvolvePage() {
       <article className="dab-prose">
         <h2>How to Get Involved</h2>
         <p className="dab-involve-lede">
-          Our community knows better than the candidates! Let’s make them serve{" "}
-          <em>US</em>!
+          <span className="dab-iron-phrase">
+            Our community knows better than the candidates!
+          </span>
+          <span className="dab-iron-follow">
+            Let’s make them serve <em>US</em>!
+          </span>
         </p>
         <p>
           Ask Frederick County leaders to attach this{" "}

@@ -9,9 +9,12 @@
 
   --color-parchment: #F2E8D5;
   --color-parchment-deep: #E6D5B8;
-  --color-ink: #1A1814;
-  --color-ink-soft: #2C2820;
-  --color-navy: #0A1A33;
+  --color-ink: #12100c;
+  --color-ink-soft: #2a241c;
+  --color-navy: #08162d;
+  --color-levy-gilt: #c8aa5c;
+  --fw-display: 800;
+  --fw-card-title: 700;
   --color-navy-mid: #1A2A3A;
   --color-gilt: #C5A059;
   --color-gilt-bright: #E2BC74;
@@ -101,12 +104,15 @@
 .dab-title {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 6.4vw, var(--fs-title));
-  font-weight: 800;
+  font-weight: var(--fw-display);
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
   margin: 0.2em 0 0.15em;
   color: var(--color-ink);
+  /* Masthead is a PNG — never draw a CSS rule through the title glyphs */
+  text-decoration: none;
+  border-bottom: 0;
 }
 .dab-title-sr {
   position: absolute;
@@ -139,6 +145,8 @@
   max-width: 100%;
   height: auto;
   margin: 0 auto 0.35rem;
+  text-decoration: none;
+  border-bottom: 0;
 }
 .dab-divider { display: block; width: 100%; max-width: 100%; height: auto; margin: 0.75rem auto 1.1rem; }
 .dab-doc-list { display: flex; flex-direction: column; gap: var(--card-gap); list-style: none; padding: 0; margin: 0 0 1.25rem; }
@@ -157,7 +165,7 @@
 .dab-doc-card h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: var(--fw-card-title);
   margin: 0 0 0.35em;
   color: var(--color-ink);
 }
@@ -299,18 +307,18 @@
 .involve-banner {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: var(--fw-display);
   text-align: center;
   color: var(--color-ink);
-  background: #fff8ea;
-  border: 1px solid var(--color-gilt);
-  padding: 0.75rem 0.9rem;
+  background: transparent;
+  border: none;
+  padding: 0.35rem 0;
   margin: 0.75rem 0 1rem;
 }
 .involve-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.65rem;
   justify-content: center;
   margin: 0.75rem 0 1rem;
 }
@@ -318,20 +326,53 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--tap);
-  padding: 0.55rem 0.9rem;
-  border: 1px solid var(--color-navy);
-  border-radius: 4px;
+  min-height: 52px;
+  padding: 0.65rem 1.15rem;
+  border: 2px solid var(--color-navy);
+  border-radius: 0;
   text-decoration: none;
-  font-size: 0.85rem;
-  background: #fff;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: #fff8ea;
+  background-image: url("/art/cta/plate_secondary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: var(--color-navy);
 }
-.involve-btn.primary {
-  background: var(--color-navy);
+.involve-btn.primary,
+a.involve-btn.primary {
+  min-height: 52px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background-color: var(--color-navy);
+  background-image: url("/art/cta/plate_primary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: #fff8ea;
+  border: 1px solid var(--color-levy-gilt);
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 234, 0.12);
 }
 .involve-btn:hover { opacity: 0.92; }
+.dab-iron-phrase {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  max-width: 100%;
+  padding: 0.4rem 0.9rem;
+  background: url("/art/ornaments/iron_word_frame_340.png") center / 100% 100% no-repeat;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink);
+  text-align: center;
+}
+.dab-iron-follow {
+  display: block;
+  margin-top: 0.45rem;
+}
 .involve-emails {
   list-style: none;
   margin: 0.75rem 0 1.25rem;
@@ -440,12 +481,12 @@
 .dab-involve-lede {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: var(--fw-display);
   text-align: center;
   color: var(--color-ink);
-  background: #fff8ea;
-  border: 1px solid var(--color-gilt);
-  padding: 0.75rem 0.9rem;
+  background: transparent;
+  border: none;
+  padding: 0.35rem 0;
   margin: 0.75rem 0 1rem;
 }
 .dab-mail-grid {
@@ -546,12 +587,19 @@
   width: 100%;
   margin-top: 0.35rem;
   padding: 0.6rem 0.9rem;
-  min-height: 48px;
+  min-height: 52px;
   font-family: var(--font-display);
   font-size: 1rem;
-  background: var(--color-navy);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: var(--color-navy);
+  background-image: url("/art/cta/plate_primary.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: #fff8ea;
-  border: none;
+  border: 1px solid var(--color-levy-gilt);
+  box-shadow: inset 0 0 0 1px rgba(255, 248, 234, 0.12);
   cursor: pointer;
 }
 .dab-sign-form button:disabled { opacity: 0.6; cursor: wait; }
