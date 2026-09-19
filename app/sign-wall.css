@@ -106,13 +106,12 @@
 }
 .dab-sign-name {
   display: block;
-  font-family: var(--font-signature), "Great Vibes", "Segoe Script", cursive;
-  font-size: 1.85rem;
-  line-height: 1.15;
-  color: var(--color-ink);
+  font-family: var(--font-signature);
+  font-weight: 400;
+  font-size: var(--fs-signature);
+  line-height: var(--lh-signature);
+  color: var(--color-signature);
 }
-.dab-sign-ink-a .dab-sign-name { color: #1a1a1a; }
-.dab-sign-ink-b .dab-sign-name { color: #2c1810; }
 .dab-sign-place,
 .dab-sign-note {
   display: block;

@@ -1,0 +1,32 @@
+/* Signature wall — military / Continental clerk hand (Pea Eye → Call)
+ * Face: Meddon (Google Fonts) — drawn from an 18th-c legal manuscript hand.
+ * Not Italianno / Pinyon / Great Vibes (wedding-chrome script).
+ * Ink: same sepia as body (#1A1814).
+ */
+
+/* next/font or <link>:
+   https://fonts.googleapis.com/css2?family=Meddon&display=swap
+*/
+
+:root {
+  --font-signature: "Meddon", "Homemade Apple", cursive;
+  --fs-signature: clamp(1.55rem, 4.2vw, 2.05rem);
+  --lh-signature: 1.15;
+  --color-signature: var(--color-ink, #1A1814);
+}
+
+.dab-sign-name,
+.sign-wall-name,
+[data-sign-name] {
+  font-family: var(--font-signature);
+  font-weight: 400; /* Meddon is a single cut — don’t fake bold */
+  font-size: var(--fs-signature);
+  line-height: var(--lh-signature);
+  color: var(--color-signature);
+  letter-spacing: 0.01em;
+  /* slight ink variation ok via opacity jitter in JS; keep CSS sober */
+}
+
+/* Drop Great Vibes / modern script stacks on the wall only.
+ * Display titles stay EB Garamond; body stays Libre Caslon Text.
+ */

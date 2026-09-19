@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { EB_Garamond, Libre_Caslon_Text, Libre_Baskerville, Great_Vibes } from "next/font/google";
+import { EB_Garamond, Libre_Caslon_Text, Libre_Baskerville, Meddon } from "next/font/google";
 import { SITE } from "@/lib/nav";
 import "./globals.css";
 
@@ -27,10 +27,10 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
 });
 
-const greatVibes = Great_Vibes({
+const meddon = Meddon({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-cursive",
+  variable: "--font-meddon",
   display: "swap",
 });
 
@@ -63,13 +63,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ebGaramond.variable} ${libreCaslon.variable} ${libreBaskerville.variable} ${greatVibes.variable} antialiased`}
+        className={`${ebGaramond.variable} ${libreCaslon.variable} ${libreBaskerville.variable} ${meddon.variable} antialiased`}
         style={{
           ["--font-display" as string]:
             "var(--font-eb-garamond), var(--font-libre-baskerville), var(--font-libre-caslon), Georgia, serif",
           ["--font-body" as string]:
             "var(--font-libre-caslon), var(--font-eb-garamond), var(--font-libre-baskerville), Georgia, serif",
-          ["--font-signature" as string]: "var(--font-cursive), cursive",
+          ["--font-signature" as string]:
+            'var(--font-meddon), "Meddon", "Homemade Apple", cursive',
         }}
       >
         {children}
