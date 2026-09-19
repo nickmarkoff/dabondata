@@ -20,6 +20,7 @@ a { color: inherit; }
 
 /* Stamped filing titles — beat Tailwind preflight (h1–h6 { font-weight: inherit }).
    Unlayered + .dab-page ancestor so computed weight is 800 and color is ink #1A1814. */
+.dab-page .dab-title,
 .dab-page .dab-doc-card h3,
 .dab-page .involve-banner,
 .dab-page .dab-involve-lede,
@@ -28,4 +29,18 @@ a { color: inherit; }
   font-family: var(--font-display);
   font-weight: 800;
   color: var(--color-ink);
+}
+
+/* Homepage H1 rule: sit below EB Garamond, never through the glyphs.
+   border-bottom + padding (not default text-decoration) so serifs stay clear. */
+.dab-page .dab-title {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-bottom: 0.28em;
+  border-bottom: 1.5px solid var(--color-ink);
+  text-decoration: none;
+  text-underline-offset: 0.28em;
+  text-decoration-thickness: 0.055em;
+  text-decoration-skip-ink: none;
 }

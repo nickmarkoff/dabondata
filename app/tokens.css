@@ -105,8 +105,27 @@
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
-  margin: 0.2em 0 0.15em;
+  /* Shrink-wrap so the rule is title-width, not the full column */
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.2em auto 0.35em;
   color: var(--color-ink);
+  /* Hairline below glyphs — padding keeps ink off letterforms (no mid-glyph strike) */
+  padding: 0 0.02em 0.28em;
+  border-bottom: 1.5px solid var(--color-ink);
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.28em;
+  text-decoration-thickness: 0.055em;
+}
+.dab-masthead-type {
+  text-align: center;
+}
+.dab-masthead-type .dab-coalition:first-child {
+  margin-top: 0;
+}
+.dab-masthead-type .dab-date {
+  margin-bottom: 0.2em;
 }
 .dab-title-sr {
   position: absolute;
