@@ -3,12 +3,8 @@
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import type { Community, Signature } from "@/lib/signatures";
 
-const COMMUNITIES: Community[] = [
-  "Doubs",
-  "Adamstown",
-  "Buckeystown",
-  "Other",
-];
+/** Signers must pick a proposed Tier 1 community — no freeloader "Other". */
+const COMMUNITIES: Community[] = ["Doubs", "Adamstown", "Buckeystown"];
 
 export function SignatureWall() {
   const [signatures, setSignatures] = useState<Signature[]>([]);
@@ -46,6 +42,7 @@ export function SignatureWall() {
       community: String(fd.get("community") ?? "") as Community,
       note: String(fd.get("note") ?? ""),
       consent: fd.get("consent") === "on",
+      oath: fd.get("oath") === "on",
     };
     try {
       const res = await fetch("/api/signatures", {
@@ -70,7 +67,35 @@ export function SignatureWall() {
 
   return (
     <div className="dab-sign">
+      <aside className="dab-sign-oath" aria-label="Residency affirmation">
+        <h3>Affirmation before you sign</h3>
+        <p>
+          By putting my name on this wall, I affirm — as a matter of honor among
+          neighbors — that I am a resident of the proposed{" "}
+          <strong>DAB ENERGY TRUST</strong> area:{" "}
+          <strong>Doubs</strong>, <strong>Adamstown</strong>, or{" "}
+          <strong>Buckeystown</strong> (Adamstown CDP, Buckeystown CDP, or a
+          Doubs service address on the published Doubs list when Council adopts
+          it). I am not signing for Frederick City or any place outside these
+          three communities.
+        </p>
+        <p>
+          I understand this Trust is exclusive by design — for our home, our
+          coalition — and that my name stands as a public witness that I live
+          here and ask County leaders to attach DAB ENERGY TRUST to the next
+          CDI / DRRA deal.
+        </p>
+        <p className="dab-sign-oath-close">
+          So help me God.
+        </p>
+      </aside>
+
       <form className="dab-sign-form" onSubmit={onSubmit}>
+        <label className="dab-sign-consent dab-sign-oath-check">
+          <input name="oath" type="checkbox" required />
+          I affirm I am a resident of Doubs, Adamstown, or Buckeystown as
+          described above — so help me God.
+        </label>
         <label>
           Full name <span aria-hidden>*</span>
           <input
@@ -87,7 +112,7 @@ export function SignatureWall() {
           Community <span aria-hidden>*</span>
           <select name="community" required defaultValue="">
             <option value="" disabled>
-              Select…
+              Select Doubs, Adamstown, or Buckeystown…
             </option>
             {COMMUNITIES.map((c) => (
               <option key={c} value={c}>

@@ -26,6 +26,7 @@ export async function POST(req: Request) {
       | "Other",
     note: b.note != null ? String(b.note) : undefined,
     consent: Boolean(b.consent),
+    oath: Boolean(b.oath),
   });
   if (!result.ok) {
     return NextResponse.json({ error: result.error }, { status: result.status });

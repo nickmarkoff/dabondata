@@ -16,6 +16,8 @@ export type SignatureInput = {
   community: Community;
   note?: string;
   consent: boolean;
+  /** Morally binding residency affirmation (UI + API). */
+  oath: boolean;
 };
 
 const DATA_PATH = path.join(process.cwd(), "data", "signatures.json");
@@ -103,9 +105,21 @@ export async function addSignature(
       status: 400,
     };
   }
-  const allowed: Community[] = ["Doubs", "Adamstown", "Buckeystown", "Other"];
+  if (!input.oath) {
+    return {
+      ok: false,
+      error: "Residency affirmation is required before you sign.",
+      status: 400,
+    };
+  }
+  // New signatures: Doubs / Adamstown / Buckeystown only ("Other" kept on type for older rows).
+  const allowed: Community[] = ["Doubs", "Adamstown", "Buckeystown"];
   if (!allowed.includes(input.community)) {
-    return { ok: false, error: "Choose a community.", status: 400 };
+    return {
+      ok: false,
+      error: "Choose Doubs, Adamstown, or Buckeystown.",
+      status: 400,
+    };
   }
   const note = (input.note ?? "").trim().slice(0, 280);
 
