@@ -51,12 +51,17 @@
 
 .dab-page {
   position: relative;
-  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
   margin: 0 auto;
   max-width: var(--page-max);
   box-sizing: border-box;
-  /* No extra page pad — shell alone clears rails so the 390 column stays wide */
-  padding: 0;
+  /* Fringe inset = scroll clip (T69/R45/B69/L45). Do not put this pad on
+     the scroller — padding there only clears start/end, not mid-scroll. */
+  padding: var(--pad-y) var(--pad-x);
   color: var(--color-ink);
   background-color: var(--color-parchment);
   background-image: var(--img-parchment);
@@ -87,8 +92,14 @@
   border: none;
   background: transparent;
   min-width: 0;
-  /* ≥ fringe T69/R45/B69/L45 */
-  padding: 72px 48px;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  /* Well already inset by .dab-page; extra pad would shrink the 390 column */
+  padding: 0;
 }
 
 .dab-title {
@@ -263,15 +274,19 @@
     --page-max: 720px;
     --fs-title: 2.6rem;
     --img-border: var(--img-border-desktop);
+    --pad-y: 88px;
+    --pad-x: 88px;
   }
-  .dab-shell { padding: 88px 88px; }
   .dab-nav { justify-content: center; }
   .dab-medallion { display: block; }
 }
 @media (min-width: 960px) {
-  .dab-page { --page-max: 960px; }
-  /* Deeper sides so 2-col cards / "$250 floor" stay inside portrait rails */
-  .dab-shell { padding: 96px 120px; }
+  .dab-page {
+    --page-max: 960px;
+    /* Deeper sides so 2-col cards / "$250 floor" stay inside portrait rails */
+    --pad-y: 96px;
+    --pad-x: 120px;
+  }
   .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
 }
 
