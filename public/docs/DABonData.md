@@ -226,7 +226,7 @@ Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee.
 | **II — Purpose** | Energy dividend to Tier 1 residential meters; funded by CDI load and infrastructure rent. ZIP codes are not the eligibility lock. Exclusive by design — not Frederick City. |
 | **III — Beneficiaries** | Adamstown CDP + Buckeystown CDP + published Doubs list. Hard Census: **710 + 499 = 1,209**. Doubs is not a CDP. Expansion only by board vote, new expansion ordinance, and elder consult where applicable. |
 | **IV — Board** | Five voting members; at least one seat per town; default **2 / 2 / 1**. Doubs interim seat until the Doubs list is adopted. |
-| **IV-A — Elections** | Weekend town hall; preferred location Buckeystown United Methodist Church, **3440** Buckeystown Pike (permission pending). Proof of residency: license, utility bill, or lease. |
+| **IV-A — Elections** | Weekend town hall; preferred location Adamstown Park or Buckeystown Park. Proof of residency: license, utility bill, or lease. |
 | **V–VIII** | Duties (megawatt reports; publish by March 31); restricted funds; quarterly meetings under the Open Meetings Act; conflicts and recusal. |
 | **IX / IX-A** | Amendment lock; elder consult — ten residents age 65 or older with at least ten years in Doubs, Adamstown, or Buckeystown before Tier 1 geography-change votes; advisory, not a veto. |
 | **X — Dissolution** | Last dividend to Tier 1 meters; any residue only to energy-burden aid within Tier 1. |
@@ -300,4 +300,4 @@ Respectfully,
 Nicholas Markoff  
 Buckeystown / DAB area, Frederick County, MD
 
-P.S. Preferred town-hall location: Buckeystown United Methodist Church, 3440 Buckeystown Pike — permission pending. Bring a license, utility bill, or lease.
+P.S. Preferred town-hall location: Adamstown Park or Buckeystown Park. Bring a license, utility bill, or lease.

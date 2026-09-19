@@ -38,7 +38,7 @@ export default function Page() {
             </tr>
             <tr>
               <td dangerouslySetInnerHTML={{ __html: "<strong>IV-A \u2014 Elections</strong>" }} />
-              <td dangerouslySetInnerHTML={{ __html: "Weekend town hall; preferred location Buckeystown United Methodist Church, <strong>3440</strong> Buckeystown Pike (permission pending). Proof of residency: license, utility bill, or lease." }} />
+              <td dangerouslySetInnerHTML={{ __html: "Weekend town hall; preferred location Adamstown Park or Buckeystown Park. Proof of residency: license, utility bill, or lease." }} />
             </tr>
             <tr>
               <td dangerouslySetInnerHTML={{ __html: "<strong>V\u2013VIII</strong>" }} />
@@ -119,7 +119,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "Respectfully," }} />
         <p dangerouslySetInnerHTML={{ __html: "Nicholas Markoff" }} />
         <p dangerouslySetInnerHTML={{ __html: "Buckeystown / DAB area, Frederick County, MD" }} />
-        <p dangerouslySetInnerHTML={{ __html: "P.S. Preferred town-hall location: Buckeystown United Methodist Church, 3440 Buckeystown Pike \u2014 permission pending. Bring a license, utility bill, or lease." }} />
+        <p dangerouslySetInnerHTML={{ __html: "P.S. Preferred town-hall location: Adamstown Park or Buckeystown Park. Bring a license, utility bill, or lease." }} />
       </article>
     </SiteShell>
   );

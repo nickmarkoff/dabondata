@@ -8,14 +8,6 @@ export function SiteHeader({ showMasthead = false }: { showMasthead?: boolean })
   return (
     <header>
       <Image
-        src="/art/ornaments/bulb_medallion_128.png"
-        alt=""
-        width={64}
-        height={64}
-        className="dab-medallion"
-        priority
-      />
-      <Image
         src="/art/mobile/masthead_390_compact.png"
         alt={showMasthead ? SITE.title : ""}
         width={390}

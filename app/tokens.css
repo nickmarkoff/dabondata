@@ -9,8 +9,8 @@
 
   --color-parchment: #F2E8D5;
   --color-parchment-deep: #E6D5B8;
-  --color-ink: #1A1A1B;
-  --color-ink-soft: #2E2E2E;
+  --color-ink: #1A1814;
+  --color-ink-soft: #2C2820;
   --color-navy: #0A1A33;
   --color-navy-mid: #1A2A3A;
   --color-gilt: #C5A059;
@@ -19,8 +19,8 @@
   --color-filament: #FFB347;
   --color-rule: #3D2E1A;
 
-  --font-display: "Playfair Display", "Libre Baskerville", "Source Serif 4", Georgia, serif;
-  --font-body: "Source Serif 4", "Libre Baskerville", Georgia, serif;
+  --font-display: "EB Garamond", "Libre Baskerville", "Libre Caslon Text", Georgia, serif;
+  --font-body: "Libre Caslon Text", "EB Garamond", "Libre Baskerville", Georgia, serif;
   --fs-title: 2.1rem;
   --fs-subtitle: 0.95rem;
   --fs-coalition: 0.78rem;
@@ -32,18 +32,18 @@
 
   --vp-mobile: 390px;
   --page-max: var(--vp-mobile);
-  --pad-x: 48px;
-  --pad-y: 72px;
+  --pad-x: 32px;
+  --pad-y: 32px;
   --section-gap: 28px;
   --card-gap: 14px;
-  /* Art fringe @390×844 ≈ T69 / R45 / B69 / L45 — shell must clear this */
-  --border-w: 45px;
+  /* Woodcut hairline rails — modest inset, not gilt 3D fringe */
+  --border-w: 8px;
   --tap: 44px;
 
-  /* Pea Eye 390 — type-only masthead, transparent PNG divider, phone frame */
-  --img-parchment: url("/art/textures/parchment_tile.jpg");
-  --img-border: url("/art/mobile/page_border_390x844_transparent.png");
-  --img-border-desktop: url("/art/borders/page_border_portrait_transparent.png");
+  /* Pea Eye woodcut broadside — fiber paper + thin ink frame */
+  --img-parchment: url("/art/woodcut/paper_tile.png");
+  --img-border: url("/art/woodcut/border_390x844_transparent.png");
+  --img-border-desktop: url("/art/woodcut/border_portrait_transparent.png");
   --img-divider: url("/art/dividers/divider_rule_340.png");
   --img-medallion: url("/art/ornaments/bulb_medallion_128.png");
   --img-masthead: url("/art/mobile/masthead_390_compact.png");
@@ -55,25 +55,21 @@
   margin: 0 auto;
   max-width: var(--page-max);
   box-sizing: border-box;
-  /* No extra page pad — shell alone clears rails so the 390 column stays wide */
   padding: 0;
   color: var(--color-ink);
-  background-color: var(--color-parchment);
-  background-image: var(--img-parchment);
-  background-size: 480px auto;
+  background-color: #F2E8D5;
+  background-image: url("/art/woodcut/paper_tile.png");
+  background-size: 480px;
+  background-repeat: repeat;
   font-family: var(--font-body);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
 }
-/* Viewport-pinned frame: 100% 100% of 100dvh, never document height */
+/* Ink on the sheet — absolute overlay grows with .dab-page, scrolls with it */
 .dab-page::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-  height: 100dvh;
-  width: 100%;
-  max-width: inherit;
-  margin: 0 auto;
   background: var(--img-border) center / 100% 100% no-repeat;
   pointer-events: none;
   z-index: 5;
@@ -87,19 +83,18 @@
   border: none;
   background: transparent;
   min-width: 0;
-  /* ≥ fringe T69/R45/B69/L45 */
-  padding: 72px 48px;
+  padding: var(--pad-y) var(--pad-x);
 }
 
 .dab-title {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 6.4vw, var(--fs-title));
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
   text-align: center;
   line-height: var(--lh-tight);
   margin: 0.2em 0 0.15em;
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 .dab-title-sr {
   position: absolute;
@@ -161,7 +156,8 @@
 .dab-prose h2 {
   font-family: var(--font-display);
   font-size: 1.25rem;
-  color: var(--color-navy);
+  font-weight: 700;
+  color: var(--color-ink);
   margin: 1.4em 0 0.5em;
   border-bottom: 1px solid #C5A05966;
   padding-bottom: 0.25em;
@@ -169,7 +165,8 @@
 .dab-prose h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: var(--color-navy);
+  font-weight: 700;
+  color: var(--color-ink);
   margin: 1.1em 0 0.4em;
 }
 .dab-prose p { margin: 0.65em 0; }
@@ -252,7 +249,7 @@
 .dab-downloads a:hover { background: #fff8ea; }
 .dab-sig { margin-top: 1.25rem; }
 .dab-medallion {
-  /* Mobile: page frame carries corner bulbs — hide extra ornament (no double chrome) */
+  /* No separate corner-bulb overlays — woodcut frame is the only chrome */
   display: none;
   width: 64px;
   height: auto;
@@ -263,15 +260,17 @@
     --page-max: 720px;
     --fs-title: 2.6rem;
     --img-border: var(--img-border-desktop);
+    --pad-y: 36px;
+    --pad-x: 36px;
   }
-  .dab-shell { padding: 88px 88px; }
   .dab-nav { justify-content: center; }
-  .dab-medallion { display: block; }
 }
 @media (min-width: 960px) {
-  .dab-page { --page-max: 960px; }
-  /* Deeper sides so 2-col cards / "$250 floor" stay inside portrait rails */
-  .dab-shell { padding: 96px 120px; }
+  .dab-page {
+    --page-max: 960px;
+    --pad-y: 36px;
+    --pad-x: 36px;
+  }
   .dab-doc-list { display: grid; grid-template-columns: 1fr 1fr; }
 }
 
