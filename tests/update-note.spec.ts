@@ -11,6 +11,7 @@ const ROUTES = [
   "/attachments",
   "/sources",
   "/involve",
+  "/involve/ads",
   "/sign",
 ] as const;
 

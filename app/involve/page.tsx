@@ -67,6 +67,11 @@ export default function InvolvePage() {
           Prefills open in your email app with subject and body ready. Each message
           points officials to the public site and the packet (Google Doc / PDF).
         </p>
+        <p className="involve-actions">
+          <Link className="involve-btn primary" href="/involve/ads">
+            Share these ads
+          </Link>
+        </p>
 
         <h3>Where and how to send these (basic steps)</h3>
         <ol className="dab-involve-ways" role="list" aria-label="Ways to get involved">
@@ -95,6 +100,11 @@ export default function InvolvePage() {
           </li>
           <li>
             <Link href="/sign">Sign the public signature wall</Link>.
+          </li>
+          <li>
+            Download and share the{" "}
+            <Link href="/involve/ads">shareable ads</Link> — posters neighbors
+            can save to a phone and pass along.
           </li>
         </ol>
 

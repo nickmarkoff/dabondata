@@ -142,6 +142,12 @@ export const ACTIONS: DocLink[] = [
     blurb: "Email County leaders — attach DAB ENERGY TRUST as a ride-on to the next datacenter / DRRA agreement.",
   },
   {
+    href: "/involve/ads",
+    title: "Shareable ads",
+    short: "Ads",
+    blurb: "Download posters neighbors can save and share — Doubs, Adamstown, Buckeystown.",
+  },
+  {
     href: "/sign",
     title: "Public Signature Wall",
     short: "Sign",
