@@ -823,6 +823,32 @@ a.involve-btn.primary {
   border-bottom-color: var(--color-navy);
 }
 
+/* —— Get Involved ways list — tiny American star markers (this ol only) —— */
+.dab-page ol.dab-involve-ways {
+  --dab-involve-marker: 14px;
+  list-style: none;
+  list-style-type: "";
+  margin-left: 0;
+  padding-left: 0;
+}
+.dab-page ol.dab-involve-ways > li {
+  position: relative;
+  padding-left: calc(var(--dab-involve-marker) + 0.55em);
+}
+.dab-page ol.dab-involve-ways > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.38em;
+  width: var(--dab-involve-marker);
+  height: var(--dab-involve-marker);
+  background-image: url("/art/ornaments/american_star_14.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--dab-involve-marker) var(--dab-involve-marker);
+  pointer-events: none;
+}
+
 /* —— Example proposed email on Get Involved —— */
 .dab-example-email {
   margin: 0.75rem 0 1rem;
