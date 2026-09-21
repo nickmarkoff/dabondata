@@ -14,10 +14,10 @@ export default function Page() {
       </Link>
       <article className="dab-prose">
         <h2>Supporting Materials</h2>
-        <ul>
+        <ul className="dab-bullet-list">
           <li>
             <Link href="/plan#legal-authority-and-risk">
-              <strong>Legal Authority and Risk</strong>
+              Legal Authority and Risk
             </Link>
             {" — Official Plan / Memo § Legal Authority and Risk."}
           </li>
