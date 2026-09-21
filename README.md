@@ -7,7 +7,7 @@ Mobile-first Next.js (App Router + TypeScript + Tailwind) archive for the **DABo
 - **Coalition:** Doubs · Adamstown · Buckeystown — Our Home, Our Coalition
 - **Tag:** We like it here. Keep Frederick looking like Frederick.
 - **Date:** Sept 18, 2026
-- **Author lock:** Nicholas Markoff only (short-form nickname forbidden)
+- **Author:** Nicholas M. (public byline on pages, meta, and packet credits)
 
 ## Pages
 

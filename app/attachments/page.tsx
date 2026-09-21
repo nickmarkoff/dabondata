@@ -128,7 +128,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan. I\u2019m very busy with my newborn; that doesn\u2019t mean I can\u2019t make a few minutes for this. If you\u2019re in Doubs, Adamstown, or Buckeystown, read this packet and help us get the ordinance introduced." }} />
         <p dangerouslySetInnerHTML={{ __html: "Our home. Our coalition." }} />
         <p dangerouslySetInnerHTML={{ __html: "Respectfully," }} />
-        <p dangerouslySetInnerHTML={{ __html: "Nicholas Markoff" }} />
+        <p dangerouslySetInnerHTML={{ __html: "Nicholas M." }} />
         <p dangerouslySetInnerHTML={{ __html: "Buckeystown / DAB area, Frederick County, MD" }} />
         <p dangerouslySetInnerHTML={{ __html: "P.S. Preferred town-hall location: Adamstown Park or Buckeystown Park. Bring a license, utility bill, or lease." }} />
       </article>

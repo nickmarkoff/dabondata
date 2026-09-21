@@ -7,8 +7,9 @@ export const SITE = {
   date: "Sept 18, 2026",
   footer:
     "Compiled packet for County Executive, County Council, Planning Commission, and residents. Not a campaign committee filing.",
-  author: "Nicholas Markoff",
-  updateNote: "This site is updated often — thank you for your patience.",
+  author: "Nicholas M.",
+  updateNote:
+    "We are growing a movement. This site — and the memorandum and plan as they take shape — is updated often. Thank you for your patience.",
 } as const;
 
 export type DocLink = {
@@ -24,7 +25,7 @@ export const FEATURED_CARDS: DocLink[] = [
     href: "/statement",
     title: "Personal Statement",
     short: "Statement",
-    blurb: "Nicholas Markoff — neighbors with a plan, not a campaign committee.",
+    blurb: "Nicholas M. — neighbors with a plan, not a campaign committee.",
   },
   {
     href: "/attachments#summary",
@@ -99,7 +100,7 @@ export const DOCS: DocLink[] = [
     href: "/statement",
     title: "Personal Statement",
     short: "Statement",
-    blurb: "Nicholas Markoff — neighbors with a plan, not a campaign committee.",
+    blurb: "Nicholas M. — neighbors with a plan, not a campaign committee.",
   },
   {
     href: "/plan",

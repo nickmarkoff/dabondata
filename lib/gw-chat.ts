@@ -56,7 +56,7 @@ export const WELCOME: ChatReply = {
 
 export const EDIT_REFUSAL: ChatReply = {
   id: "edit-refusal",
-  text: "I cannot. This guide holds no authority to edit, sway, or change the website, the memorandum, or any document. Those papers stand as Nicholas Markoff filed them. If you mean to act as a neighbor, send the memorandum and sign the wall — the Get Involved and Sign pages already prepared. Our community knows better than the candidates. Hold those who speak for you to their duty.",
+  text: "I cannot. This guide holds no authority to edit, sway, or change the website, the memorandum, or any document. Those papers stand as Nicholas M. filed them. If you mean to act as a neighbor, send the memorandum and sign the wall — the Get Involved and Sign pages already prepared. Our community knows better than the candidates. Hold those who speak for you to their duty.",
   links: [LINK.involve, LINK.sign, LINK.plan],
 };
 
@@ -584,10 +584,11 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "knows better",
       "who wrote",
       "nicholas markoff",
+      "nicholas m",
       "who are you",
     ],
     answer:
-      "Push the Trust. Local people have authority over those who speak for them. Candidates who stall leave the community waiting on weak-willed unplanned action. The militia metaphor means **vocal, not violent**. Formal author: Nicholas Markoff.",
+      "Push the Trust. Local people have authority over those who speak for them. Candidates who stall leave the community waiting on weak-willed unplanned action. The militia metaphor means **vocal, not violent**. Formal author: Nicholas M.",
     links: [LINK.involve, LINK.sign, LINK.statement],
   },
 ];
