@@ -255,6 +255,9 @@
   margin-top: 0.5rem;
   line-height: 1.35;
 }
+#legal-authority-and-risk {
+  scroll-margin-top: 1rem;
+}
 .dab-prose h2 {
   font-family: var(--font-display);
   font-size: 1.35rem;

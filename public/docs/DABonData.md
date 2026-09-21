@@ -132,6 +132,52 @@ Pay as a utility-bill credit if the county obtains a rider; otherwise a county r
 - Maryland Supreme Court (opinion filed July 24, 2026): the overlay map is not a referendum subject. Change the map only by new plan and zoning acts.
 - Aim conditions at new load, new map amendments, and any new DRRA. Do not claim confiscation of 2021 vested rights.
 
+<a id="legal-authority-and-risk"></a>
+
+## Legal Authority and Risk
+
+The Trust rests on tools Maryland already gives counties — Development Rights and Responsibilities Agreements, local DRRA code, utility cost-allocation law, and recent high-court guidance on the CDI overlay. The citations below are for County Attorney and Council review; this section is research for the packet, not legal advice.
+
+### Maryland Land Use Article §§ 7-301 to 7-306 (DRRA statute)
+
+- **§ 7-301** — Definitions for development rights and responsibilities agreements.
+- **§ 7-302** — County authority to enter a DRRA.
+- **§ 7-303** — Required contents, including public-welfare conditions and public-facility financing (the natural home for a local energy dividend, infrastructure leasehold language, and residual-interest covenants tied to new load).
+- **§ 7-304** — Freeze of local laws for the agreement’s term (why this filing refuses a multi-year zoning freeze traded for a one-time benefits list).
+- **§ 7-305** — Procedures for adoption and administration.
+- **§ 7-306** — No forced agreements; a DRRA is voluntary.
+
+### Frederick County Code Chapter 1-25
+
+- **§ 1-25-2** — Public principal: the County acts for the public when it conditions development.
+- **§ 1-25-4** — Contents of a local DRRA — enhanced public benefits and their value belong in the agreement text (dividend + infrastructure lease + residual tools).
+
+### Public Utilities Article § 4-212
+
+Residential customers must not bear large-load financial risks. Data centers and other large loads must cover their own buildout costs. This is the cost-allocation spine for any county utility rider or large-load surcharge that funds host-community meter credits without shifting grid costs onto ordinary households.
+
+### 2026 Utility RELIEF Act
+
+Lowered the large-load threshold to **25 MW** and strengthened Public Service Commission oversight. Brings more CDI-scale load squarely under PSC review when financing or tariff tools are used.
+
+### Maryland Supreme Court, *In re Frederick County Data Center Referendum Committee*, No. 67, Sept. Term 2025 (June 30, 2026)
+
+The CDI overlay is **not** subject to referendum. Map fights stay in plan-and-zoning acts; community benefit and Trust conditions attach through ordinance, DRRA, and site conditions — not a ballot veto of the overlay map.
+
+### Louisiana Act 434 (2026)
+
+State enabling legislation before local tax credits drawn from data-center revenue. Useful precedent when Maryland needs a **2027 state bill** to clear a county utility rider or a residual equity interest dedicated to a host-community trust.
+
+### Legal-Risk
+
+The county utility rider and any residual equity interest likely need **PSC approval** and/or a **2027 state enabling bill**. Conditioning only **new load** and **new DRRAs** — not confiscating 2021 vested rights — is the path that avoids takings claims on vested entitlements.
+
+The Catellus **$110 million** community-benefits package was **rejected September 14, 2026**. New CDI applications remain **paused through July 2027**. The Trust is a different instrument: an ongoing, megawatt-funded meter credit for Doubs, Adamstown, and Buckeystown — not a one-time DRRA package.
+
+### Comparison to the current memo
+
+The memorandum already cites **Chapter 1-25**, the **CDI overlay**, and the **Maryland Supreme Court** order on referendum. It should be expanded to include the **§ 4-212** cost-allocation argument and the **Louisiana Act 434** precedent for the rider and equity tools — so County Attorney and Council see both the local DRRA hook and the state/utility path in one place.
+
 ## 7. What this filing is not
 
 Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan — working people who fix what is broken, not politicians, activists, or consultants with a binder.
@@ -217,6 +263,8 @@ Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee.
 ---
 
 # Supporting Materials
+
+- **[Legal Authority and Risk](#legal-authority-and-risk)** — Official Plan / Memo § Legal Authority and Risk.
 
 ## Bylaws highlights — DAB ENERGY TRUST
 

@@ -14,6 +14,14 @@ export default function Page() {
       </Link>
       <article className="dab-prose">
         <h2>Supporting Materials</h2>
+        <ul className="dab-bullet-list">
+          <li>
+            <Link href="/plan#legal-authority-and-risk">
+              Legal Authority and Risk
+            </Link>
+            {" — Official Plan / Memo § Legal Authority and Risk."}
+          </li>
+        </ul>
         <h3 id="bylaws">Bylaws highlights — DAB ENERGY TRUST</h3>
         <p>
           Highlights only. Download the{" "}
