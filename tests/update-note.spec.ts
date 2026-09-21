@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 const COPY =
-  "We are growing a movement. This site — memorandum and plan as they take shape — is updated often. Thank you for your patience.";
+  "We are growing a movement. This site — and the memorandum and plan as they take shape — is updated often. Thank you for your patience.";
 
 const ROUTES = [
   "/",
@@ -78,7 +78,7 @@ test.describe("Sitewide update note", () => {
     expect(boxesOverlap(noteBox!, mastheadBox!)).toBe(false);
     expect(boxesOverlap(noteBox!, ctaBox!)).toBe(false);
     expect(noteBox!.width).toBeLessThanOrEqual(390);
-    expect(noteBox!.height).toBeLessThan(72);
+    expect(noteBox!.height).toBeLessThan(96);
   });
 
   test("does not cover the sign wall or involve mail buttons", async ({

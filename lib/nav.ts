@@ -9,7 +9,7 @@ export const SITE = {
     "Compiled packet for County Executive, County Council, Planning Commission, and residents. Not a campaign committee filing.",
   author: "Nicholas M.",
   updateNote:
-    "We are growing a movement. This site — memorandum and plan as they take shape — is updated often. Thank you for your patience.",
+    "We are growing a movement. This site — and the memorandum and plan as they take shape — is updated often. Thank you for your patience.",
 } as const;
 
 export type DocLink = {
