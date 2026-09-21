@@ -24,6 +24,11 @@ const DATA_PATH = path.join(process.cwd(), "data", "signatures.json");
 const BLOB_PATHNAME = "dabondata/signatures.json";
 export const QC_PROBE_ID = "mu7v0ye3-6xmheb";
 export const QC_PROBE_NAME = "gus qc probe";
+/** Researcher QC probe on the 2026-09-19 live wall. */
+export const QC_PROBE_ID_QA_HELPER = "mu8k2yqm-2oq9e3";
+export const QC_PROBE_NAME_QA_HELPER = "test qa helper";
+const QC_PROBE_IDS = new Set([QC_PROBE_ID, QC_PROBE_ID_QA_HELPER]);
+const QC_PROBE_NAMES = new Set([QC_PROBE_NAME, QC_PROBE_NAME_QA_HELPER]);
 /** Live neighbor row — never drop this id when stripping the QC probe. */
 export const KEPT_SIGNATURE_ID = "mu7w3hsl-u7i2bv";
 
@@ -37,8 +42,8 @@ function hasBlobToken(): boolean {
 
 export function isQcProbe(signature: Pick<Signature, "id" | "name">): boolean {
   if (signature.id === KEPT_SIGNATURE_ID) return false;
-  if (signature.id === QC_PROBE_ID) return true;
-  return signature.name.trim().toLowerCase() === QC_PROBE_NAME;
+  if (QC_PROBE_IDS.has(signature.id)) return true;
+  return QC_PROBE_NAMES.has(signature.name.trim().toLowerCase());
 }
 
 export function withoutQcProbes(list: Signature[]): Signature[] {
