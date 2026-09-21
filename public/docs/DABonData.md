@@ -14,7 +14,7 @@ Compiled packet for County Executive, County Council, Planning Commission, and r
 
 ---
 
-# Personal Statement — Nicholas Markoff
+# Personal Statement — Nicholas M.
 
 I live in the Buckeystown / DAB area of Frederick County, Maryland. I am a working neighbor, not a candidate for office.
 
@@ -34,7 +34,7 @@ All we need is emails and signatures these days, no muskets! So, are there reall
 
 Respectfully,
 
-**Nicholas Markoff**  
+**Nicholas M.**  
 Buckeystown / DAB area, Frederick County, MD  
 September 18, 2026
 
@@ -45,7 +45,7 @@ September 18, 2026
 **FREDERICK COUNTY, MARYLAND**
 
 **TO:** County Executive; County Council; Planning Commission  
-**FROM:** Nicholas Markoff, DAB ENERGY TRUST (Doubs · Adamstown · Buckeystown), Frederick County, MD  
+**FROM:** Nicholas M., DAB ENERGY TRUST (Doubs · Adamstown · Buckeystown), Frederick County, MD  
 **DATE:** September 18, 2026  
 **RE:** DAB ENERGY TRUST — condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for Doubs, Adamstown, and Buckeystown only  
 **ACTION:** Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan
@@ -144,7 +144,7 @@ Introduce the DAB ENERGY TRUST ordinance, attach the Trust bylaws as the governi
 
 Respectfully submitted,
 
-Nicholas Markoff  
+Nicholas M.  
 Buckeystown / DAB area, Frederick County, MD
 
 I’m very busy with my newborn, but that doesn’t mean I can’t make a few minutes of my time available to quickly handle this. A mechanic’s habit: when something is broken on our road home, you fix it — you don’t wait for Winchester Hall to invent a feeling about it.
@@ -297,7 +297,7 @@ Our home. Our coalition.
 
 Respectfully,
 
-Nicholas Markoff  
+Nicholas M.  
 Buckeystown / DAB area, Frederick County, MD
 
 P.S. Preferred town-hall location: Adamstown Park or Buckeystown Park. Bring a license, utility bill, or lease.

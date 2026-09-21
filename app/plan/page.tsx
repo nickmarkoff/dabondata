@@ -26,7 +26,7 @@ export default function Page() {
           .
         </p>
         <p dangerouslySetInnerHTML={{ __html: "<strong>FREDERICK COUNTY, MARYLAND</strong>" }} />
-        <p dangerouslySetInnerHTML={{ __html: "<strong>TO:</strong> County Executive; County Council; Planning Commission <strong>FROM:</strong> Nicholas Markoff, DAB ENERGY TRUST (Doubs \u00b7 Adamstown \u00b7 Buckeystown), Frederick County, MD <strong>DATE:</strong> September 18, 2026 <strong>RE:</strong> DAB ENERGY TRUST \u2014 condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for Doubs, Adamstown, and Buckeystown only <strong>ACTION:</strong> Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan" }} />
+        <p dangerouslySetInnerHTML={{ __html: "<strong>TO:</strong> County Executive; County Council; Planning Commission <strong>FROM:</strong> Nicholas M., DAB ENERGY TRUST (Doubs \u00b7 Adamstown \u00b7 Buckeystown), Frederick County, MD <strong>DATE:</strong> September 18, 2026 <strong>RE:</strong> DAB ENERGY TRUST \u2014 condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for Doubs, Adamstown, and Buckeystown only <strong>ACTION:</strong> Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan" }} />
         <p dangerouslySetInnerHTML={{ __html: "<strong>Subtitle:</strong> Doubs \u00b7 Adamstown \u00b7 Buckeystown \u2014 Our Home, Our Coalition" }} />
         <h3>1. Request</h3>
         <p dangerouslySetInnerHTML={{ __html: "Enact a <strong>DAB ENERGY TRUST</strong> for residential electric meters whose service address lies within:" }} />
@@ -106,7 +106,7 @@ export default function Page() {
         <h3>8. Prayer</h3>
         <p dangerouslySetInnerHTML={{ __html: "Introduce the DAB ENERGY TRUST ordinance, attach the Trust bylaws as the governing instrument, and refuse any DRRA that omits the dividend, gifts public infrastructure, or freezes zoning for a term of years. Keep the three communities exclusive by design. Keep the boundary the wall. Incorporate the Grandfather Clause and the Public Declaration \u2014 Host-Community Rebate as stated in this packet." }} />
         <p dangerouslySetInnerHTML={{ __html: "Respectfully submitted," }} />
-        <p dangerouslySetInnerHTML={{ __html: "Nicholas Markoff" }} />
+        <p dangerouslySetInnerHTML={{ __html: "Nicholas M." }} />
         <p dangerouslySetInnerHTML={{ __html: "Buckeystown / DAB area, Frederick County, MD" }} />
         <p dangerouslySetInnerHTML={{ __html: "I\u2019m very busy with my newborn, but that doesn\u2019t mean I can\u2019t make a few minutes of my time available to quickly handle this. A mechanic\u2019s habit: when something is broken on our road home, you fix it \u2014 you don\u2019t wait for Winchester Hall to invent a feeling about it." }} />
         <h3>Sources (selected)</h3>

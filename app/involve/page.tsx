@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteShell } from "@/components/SiteShell";
-import { PACKET_DOC_URL, SITE_PUBLIC_URL } from "@/lib/links";
+import { PACKET_PDF_URL, SITE_PUBLIC_URL } from "@/lib/links";
 import {
   CONSTITUENT_SERVICES_EMAIL,
   COUNCIL_GROUP_EMAIL,
@@ -21,25 +21,25 @@ export default function InvolvePage() {
   const execMail = mailtoHref(
     [COUNTY_EXECUTIVE.email, CONSTITUENT_SERVICES_EMAIL],
     SITE_PUBLIC_URL,
-    PACKET_DOC_URL,
+    PACKET_PDF_URL,
   );
   const councilGroupMail = mailtoHref(
     COUNCIL_GROUP_EMAIL,
     SITE_PUBLIC_URL,
-    PACKET_DOC_URL,
+    PACKET_PDF_URL,
   );
   const allCouncilMail = mailtoHref(
     COUNCIL_MEMBERS.map((m) => m.email),
     SITE_PUBLIC_URL,
-    PACKET_DOC_URL,
+    PACKET_PDF_URL,
     [COUNCIL_GROUP_EMAIL],
   );
   const planningMail = mailtoHref(
     PLANNING_COMMISSION_EMAIL,
     SITE_PUBLIC_URL,
-    PACKET_DOC_URL,
+    PACKET_PDF_URL,
   );
-  const exampleBody = mailBody(SITE_PUBLIC_URL, PACKET_DOC_URL);
+  const exampleBody = mailBody(SITE_PUBLIC_URL, PACKET_PDF_URL);
 
   return (
     <SiteShell current="/involve">
@@ -64,8 +64,10 @@ export default function InvolvePage() {
           plan, not a campaign committee.
         </p>
         <p>
-          Prefills open in your email app with subject and body ready. Each message
-          points officials to the public site and the packet (Google Doc / PDF).
+          The packet and the related PDFs are public on this site — easy to send.
+          Download a file and email or forward it. The buttons below open your mail
+          app with the subject and body ready, and with the packet PDF link in the
+          note.
         </p>
         <p className="involve-actions">
           <Link className="involve-btn primary" href="/involve/ads">
@@ -78,13 +80,17 @@ export default function InvolvePage() {
           <li>Open your email app (phone or computer).</li>
           <li>
             Use the buttons below to email the County Executive, County Council,
-            and/or Planning Commission — they prefill subject/body and link the
-            public site + packet Google Doc.
+            and/or Planning Commission. The draft includes this site and the public
+            packet PDF:{" "}
+            <a href={PACKET_PDF_URL}>{PACKET_PDF_URL}</a>
           </li>
           <li>
-            Attach or paste the link to the packet (Google Doc / PDF from{" "}
-            <Link href="/sources">Sources</Link>) if your mail app doesn’t keep the
-            link.
+            Download the{" "}
+            <a href="/docs/DABonData.pdf">packet PDF</a> and attach it, or forward
+            the file. If the link drops out of the draft, paste the same address.
+            The letter, script, memo, and bylaws PDFs are public on{" "}
+            <Link href="/sources">Sources</Link> — download and send those the same
+            way.
           </li>
           <li>
             Optional: hand-deliver a printed packet to Winchester Hall, 12 E. Church
@@ -121,7 +127,8 @@ export default function InvolvePage() {
           <pre>{exampleBody}</pre>
         </blockquote>
         <p>
-          Script and letter for neighbors:{" "}
+          That packet address is a public PDF on this site. Download it and attach
+          or forward the file. Script and letter for neighbors:{" "}
           <Link href="/attachments#script">spoken remarks</Link> ·{" "}
           <Link href="/attachments#letter">proposal letter</Link>.
         </p>
@@ -156,7 +163,7 @@ export default function InvolvePage() {
             <a
               key={m.email}
               className="dab-mail-btn"
-              href={mailtoHref(m.email, SITE_PUBLIC_URL, PACKET_DOC_URL)}
+              href={mailtoHref(m.email, SITE_PUBLIC_URL, PACKET_PDF_URL)}
             >
               {m.name}
               <span>

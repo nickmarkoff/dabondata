@@ -64,7 +64,7 @@ export const COUNCIL_MEMBERS: Official[] = [
 export const MAIL_SUBJECT =
   "Attach DAB ENERGY TRUST (DABonData) to the next CDI/DRRA community-benefits agreement";
 
-export function mailBody(siteUrl: string, docUrl: string): string {
+export function mailBody(siteUrl: string, pdfUrl: string): string {
   return [
     "Dear County leaders,",
     "",
@@ -73,7 +73,8 @@ export function mailBody(siteUrl: string, docUrl: string): string {
     "Host communities Doubs, Adamstown, and Buckeystown are asking for operator-funded meter credits and a grandfather clause that keeps Frederick looking like Frederick.",
     "",
     `Site: ${siteUrl}`,
-    `Packet / Google Doc: ${docUrl}`,
+    "Packet PDF (public on the site — download, attach, or forward):",
+    pdfUrl,
     "",
     "Thank you,",
     "",
@@ -83,13 +84,13 @@ export function mailBody(siteUrl: string, docUrl: string): string {
 export function mailtoHref(
   to: string | string[],
   siteUrl: string,
-  docUrl: string,
+  pdfUrl: string,
   cc?: string[],
 ): string {
   const recipients = Array.isArray(to) ? to.join(",") : to;
   const params = new URLSearchParams();
   params.set("subject", MAIL_SUBJECT);
-  params.set("body", mailBody(siteUrl, docUrl));
+  params.set("body", mailBody(siteUrl, pdfUrl));
   if (cc?.length) params.set("cc", cc.join(","));
   return `mailto:${recipients}?${params.toString()}`;
 }

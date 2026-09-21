@@ -4,9 +4,7 @@ export const SITE_PUBLIC_URL =
   "https://dab-on-data.vercel.app";
 
 /**
- * Shareable packet link for officials.
- * Prefer a Google Doc URL via NEXT_PUBLIC_PACKET_DOC_URL when available.
+ * Public compiled packet PDF. Absolute so mailto bodies work in an email app.
+ * The same file is served same-origin at /docs/DABonData.pdf.
  */
-export const PACKET_DOC_URL =
-  process.env.NEXT_PUBLIC_PACKET_DOC_URL ??
-  "https://docs.google.com/document/d/15ifSVpIhhCVNS66ktWEa4OfE3nwl3jU-/edit";
+export const PACKET_PDF_URL = `${SITE_PUBLIC_URL}/docs/DABonData.pdf`;

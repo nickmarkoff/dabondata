@@ -13,7 +13,7 @@ export default function Page() {
         ← Packet home
       </Link>
       <article className="dab-prose">
-        <h2>Personal Statement — Nicholas Markoff</h2>
+        <h2>Personal Statement — Nicholas M.</h2>
         <p dangerouslySetInnerHTML={{ __html: "I live in the Buckeystown / DAB area of Frederick County, Maryland. I am a working neighbor, not a candidate for office." }} />
         <p dangerouslySetInnerHTML={{ __html: "My vote in the local election will be tied solely to attaching this Memo to the datacenter agreement." }} />
         <p dangerouslySetInnerHTML={{ __html: "I am offering a clear path. No other candidate I have seen is offering one." }} />
@@ -23,7 +23,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee." }} />
         <p dangerouslySetInnerHTML={{ __html: "All we need is emails and signatures these days, no muskets! So, are there really any excuses?" }} />
         <p dangerouslySetInnerHTML={{ __html: "Respectfully," }} />
-        <p dangerouslySetInnerHTML={{ __html: "<strong>Nicholas Markoff</strong>" }} />
+        <p dangerouslySetInnerHTML={{ __html: "<strong>Nicholas M.</strong>" }} />
         <p dangerouslySetInnerHTML={{ __html: "Buckeystown / DAB area, Frederick County, MD" }} />
         <p dangerouslySetInnerHTML={{ __html: "September 18, 2026" }} />
       </article>
