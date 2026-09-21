@@ -100,6 +100,118 @@ export default function Page() {
           <li dangerouslySetInnerHTML={{ __html: "Maryland Supreme Court (opinion filed July 24, 2026): the overlay map is not a referendum subject. Change the map only by new plan and zoning acts." }} />
           <li dangerouslySetInnerHTML={{ __html: "Aim conditions at new load, new map amendments, and any new DRRA. Do not claim confiscation of 2021 vested rights." }} />
         </ul>
+        <section id="legal-authority-and-risk">
+          <h2>Legal Authority and Risk</h2>
+          <p>
+            The Trust rests on tools Maryland already gives counties — Development
+            Rights and Responsibilities Agreements, local DRRA code, utility
+            cost-allocation law, and recent high-court guidance on the CDI
+            overlay. The citations below are for County Attorney and Council
+            review; this section is research for the packet, not legal advice.
+          </p>
+          <h3>Maryland Land Use Article §§ 7-301 to 7-306 (DRRA statute)</h3>
+          <ul>
+            <li>
+              <strong>§ 7-301</strong> — Definitions for development rights and
+              responsibilities agreements.
+            </li>
+            <li>
+              <strong>§ 7-302</strong> — County authority to enter a DRRA.
+            </li>
+            <li>
+              <strong>§ 7-303</strong> — Required contents, including
+              public-welfare conditions and public-facility financing (the
+              natural home for a local energy dividend, infrastructure leasehold
+              language, and residual-interest covenants tied to new load).
+            </li>
+            <li>
+              <strong>§ 7-304</strong> — Freeze of local laws for the
+              agreement’s term (why this filing refuses a multi-year zoning
+              freeze traded for a one-time benefits list).
+            </li>
+            <li>
+              <strong>§ 7-305</strong> — Procedures for adoption and
+              administration.
+            </li>
+            <li>
+              <strong>§ 7-306</strong> — No forced agreements; a DRRA is
+              voluntary.
+            </li>
+          </ul>
+          <h3>Frederick County Code Chapter 1-25</h3>
+          <ul>
+            <li>
+              <strong>§ 1-25-2</strong> — Public principal: the County acts for
+              the public when it conditions development.
+            </li>
+            <li>
+              <strong>§ 1-25-4</strong> — Contents of a local DRRA — enhanced
+              public benefits and their value belong in the agreement text
+              (dividend + infrastructure lease + residual tools).
+            </li>
+          </ul>
+          <h3>Public Utilities Article § 4-212</h3>
+          <p>
+            Residential customers must not bear large-load financial risks. Data
+            centers and other large loads must cover their own buildout costs.
+            This is the cost-allocation spine for any county utility rider or
+            large-load surcharge that funds host-community meter credits without
+            shifting grid costs onto ordinary households.
+          </p>
+          <h3>2026 Utility RELIEF Act</h3>
+          <p>
+            Lowered the large-load threshold to <strong>25 MW</strong> and
+            strengthened Public Service Commission oversight. Brings more
+            CDI-scale load squarely under PSC review when financing or tariff
+            tools are used.
+          </p>
+          <h3>
+            Maryland Supreme Court,{" "}
+            <em>In re Frederick County Data Center Referendum Committee</em>,
+            No. 67, Sept. Term 2025 (June 30, 2026)
+          </h3>
+          <p>
+            The CDI overlay is <strong>not</strong> subject to referendum. Map
+            fights stay in plan-and-zoning acts; community benefit and Trust
+            conditions attach through ordinance, DRRA, and site conditions — not
+            a ballot veto of the overlay map.
+          </p>
+          <h3>Louisiana Act 434 (2026)</h3>
+          <p>
+            State enabling legislation before local tax credits drawn from
+            data-center revenue. Useful precedent when Maryland needs a{" "}
+            <strong>2027 state bill</strong> to clear a county utility rider or
+            a residual equity interest dedicated to a host-community trust.
+          </p>
+          <h3>Legal-Risk</h3>
+          <p>
+            The county utility rider and any residual equity interest likely
+            need <strong>PSC approval</strong> and/or a{" "}
+            <strong>2027 state enabling bill</strong>. Conditioning only{" "}
+            <strong>new load</strong> and <strong>new DRRAs</strong> — not
+            confiscating 2021 vested rights — is the path that avoids takings
+            claims on vested entitlements.
+          </p>
+          <p>
+            The Catellus <strong>$110 million</strong> community-benefits
+            package was <strong>rejected September 14, 2026</strong>. New CDI
+            applications remain <strong>paused through July 2027</strong>. The
+            Trust is a different instrument: an ongoing, megawatt-funded meter
+            credit for Doubs, Adamstown, and Buckeystown — not a one-time DRRA
+            package.
+          </p>
+          <h3>Comparison to the current memo</h3>
+          <p>
+            The memorandum already cites <strong>Chapter 1-25</strong>, the{" "}
+            <strong>CDI overlay</strong>, and the{" "}
+            <strong>Maryland Supreme Court</strong> order on referendum. It
+            should be expanded to include the <strong>§ 4-212</strong>{" "}
+            cost-allocation argument and the <strong>Louisiana Act 434</strong>{" "}
+            precedent for the rider and equity tools — so County Attorney and
+            Council see both the local DRRA hook and the state/utility path in
+            one place.
+          </p>
+        </section>
         <h3>7. What this filing is not</h3>
         <p dangerouslySetInnerHTML={{ __html: "Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan \u2014 working people who fix what is broken, not politicians, activists, or consultants with a binder." }} />
         <p dangerouslySetInnerHTML={{ __html: "Not a request to raise taxes in Doubs, Adamstown, or Buckeystown. Not a ZIP-code subsidy. Not a substitute for a state data-center personal-property tax (support that separately and dedicate first dollars to this Trust). Not an invitation for Frederick City or other communities to freeload onto Tier 1 without a board vote AND a new ordinance titled as an expansion. Not legal advice. Ask the County Attorney which of A and C can be enacted under the Charter without a state bill, and publish the answer." }} />
