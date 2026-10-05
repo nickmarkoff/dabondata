@@ -3,7 +3,6 @@
  * Facts stay Q1–Q15 of the Call FAQ. Spoken lines are period Washington:
  * patriotic, measured, resolute — never modern slang or Hat Creek banter.
  * Answer-only. No visitor path to edit the site, memorandum, or documents.
- * Hard limit: 3 answered turns per browser (localStorage).
  */
 
 export type ChatLink = {
@@ -43,11 +42,6 @@ const LINK = {
   bylaws: { href: "/docs/DAB_Energy_Trust_Bylaws.pdf", label: "Full bylaws (PDF)" },
 } as const;
 
-export const GW_CHAT_QCOUNT_KEY = "dab-gw-chat-qcount";
-export const GW_CHAT_QUESTION_LIMIT = 3;
-
-const PACKET_LINKS: ChatLink[] = [LINK.plan, LINK.attachments, LINK.pdf];
-
 export const WELCOME: ChatReply = {
   id: "welcome",
   text: "Fellow citizens. I am General George Washington, and I stand as a measured guide to this packet. Doubs, Adamstown, and Buckeystown have laid before you a plan: the DAB ENERGY TRUST. Not a protest. Not a campaign committee. I shall orient you to the pages already written. I cannot alter this website, the memorandum, or any document. Guidance only — let the papers speak.",
@@ -66,61 +60,10 @@ export const FALLBACK: ChatReply = {
   links: [LINK.plan, LINK.involve, LINK.sign, LINK.sources],
 };
 
-/** Spoken after the third answered turn. Input locks; the engine is not called again. */
-export const LOCKED_CLOSING: ChatReply = {
-  id: "limit-closing",
-  text: "The founders believed in us to read what they wrote. I have answered thrice; that is my allowance. Open the Official Plan, the supporting papers, or the packet itself — and let those documents speak. I shall take no further questions.",
-  links: PACKET_LINKS,
-};
-
-/** Shown if the visitor reopens the widget after the limit. */
-export const LOCKED_NOTICE: ChatReply = {
-  id: "limit-notice",
-  text: "I have already given three answers in this chamber. The papers remain: the Official Plan, the attachments, and the packet downloads. The founders trusted us to read what they wrote. I can answer no more.",
-  links: PACKET_LINKS,
-};
-
 export const EMPTY_REPLY: ChatReply = {
   id: "empty",
   text: "Put a question to me concerning the Trust, Tier 1, the proposed floor and cap, or how a citizen may act. I shall not invent numbers beyond this packet.",
   links: [LINK.plan, LINK.involve],
-};
-
-export function readStoredQuestionCount(): number {
-  if (typeof window === "undefined") return 0;
-  try {
-    const raw = window.localStorage.getItem(GW_CHAT_QCOUNT_KEY);
-    const n = Number.parseInt(raw ?? "", 10);
-    if (!Number.isFinite(n) || n < 0) return 0;
-    return Math.min(Math.floor(n), GW_CHAT_QUESTION_LIMIT);
-  } catch {
-    return 0;
-  }
-}
-
-export function writeStoredQuestionCount(count: number): number {
-  const next = Math.min(
-    Math.max(0, Math.floor(count)),
-    GW_CHAT_QUESTION_LIMIT,
-  );
-  if (typeof window === "undefined") return next;
-  try {
-    window.localStorage.setItem(GW_CHAT_QCOUNT_KEY, String(next));
-  } catch {
-    // Private mode or quota — in-memory count still governs this session.
-  }
-  return next;
-}
-
-export function isQuestionLimitReached(count: number): boolean {
-  return count >= GW_CHAT_QUESTION_LIMIT;
-}
-
-export type GuideTurn = {
-  reply: ChatReply;
-  count: number;
-  locked: boolean;
-  closing?: ChatReply;
 };
 
 /** Call FAQ Q1–Q15 — matching and facts stay; spoken lines are Washington. */
@@ -667,21 +610,4 @@ export function answerVisitor(raw: string): ChatReply {
   }
 
   return FALLBACK;
-}
-
-/** One answered turn, or null when the visitor is already locked. */
-export function takeGuideTurn(
-  raw: string,
-  currentCount: number,
-): GuideTurn | null {
-  if (isQuestionLimitReached(currentCount)) return null;
-  const reply = answerVisitor(raw);
-  const count = currentCount + 1;
-  const locked = isQuestionLimitReached(count);
-  return {
-    reply,
-    count,
-    locked,
-    closing: locked ? LOCKED_CLOSING : undefined,
-  };
 }
