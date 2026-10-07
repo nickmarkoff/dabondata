@@ -9,6 +9,10 @@ export default function HomePage() {
         Public archive of the {SITE.date} <strong>DAB on Data</strong> packet.
         Neighbors with a plan — not a campaign committee.
       </p>
+      <p className="text-center text-[0.85rem] text-[var(--color-ink-soft)] mb-3">
+        Stay. Don’t sell. Meter credits for the rural box that hosts the campus —
+        so neighbors can keep living here while steel goes up next door.
+      </p>
       <p className="involve-banner" style={{ marginBottom: "1rem" }}>
         <span className="dab-iron-phrase">
           Our community knows better than the candidates!

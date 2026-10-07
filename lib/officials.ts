@@ -70,7 +70,7 @@ export function mailBody(siteUrl: string, pdfUrl: string): string {
     "",
     "Please attach the DAB ENERGY TRUST (DABonData) meter-credit Trust as a ride-on to the next datacenter agreement / community-benefits package (DRRA) for Critical Digital Infrastructure in Frederick County.",
     "",
-    "Host communities Doubs, Adamstown, and Buckeystown are asking for operator-funded meter credits and a grandfather clause that keeps Frederick looking like Frederick.",
+    "Host communities Doubs, Adamstown, and Buckeystown are asking for operator-funded meter credits so farmers and rural neighbors can stay in their homes — not sell — and a grandfather clause that keeps Frederick looking like Frederick. Stay incentive, not a growth subsidy.",
     "",
     `Site: ${siteUrl}`,
     "Packet PDF (public on the site — download, attach, or forward):",

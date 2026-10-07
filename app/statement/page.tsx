@@ -20,6 +20,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "I am not running for office." }} />
         <p dangerouslySetInnerHTML={{ __html: "I am fighting for my community anyway." }} />
         <p dangerouslySetInnerHTML={{ __html: "This packet is that path: a DAB ENERGY TRUST for Doubs, Adamstown, and Buckeystown \u2014 operator-funded meter credits for the host communities that live next to the Critical Digital Infrastructure overlay, with a grandfather clause that rewards keeping the Frederick we already have, and a public declaration that the host-community rebate is due because Winchester Hall\u2019s numbers came off Manor Woods ground." }} />
+        <p dangerouslySetInnerHTML={{ __html: "We want farmers and rural neighbors to remain in their homes \u2014 not put land or houses up for sale because the overlay and the sprawl wave make selling look like the only move. The Grandfather Clause is a stay incentive: reward the Frederick that already exists (cutoff January 20, 2026), not a subsidy for new pads after that date. Exclusive host-community meter credits belong here because the CDI overlay sits in this rural road-box; keep Frederick rural, keep the boundary the wall." }} />
         <p dangerouslySetInnerHTML={{ __html: "Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee." }} />
         <p dangerouslySetInnerHTML={{ __html: "All we need is emails and signatures these days, no muskets! So, are there really any excuses?" }} />
         <p dangerouslySetInnerHTML={{ __html: "Respectfully," }} />

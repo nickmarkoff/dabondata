@@ -74,10 +74,12 @@ export function SignatureWall() {
           neighbors — that I am a resident of the proposed{" "}
           <strong>DAB ENERGY TRUST</strong> area:{" "}
           <strong>Doubs</strong>, <strong>Adamstown</strong>, or{" "}
-          <strong>Buckeystown</strong> (Adamstown CDP, Buckeystown CDP, or a
-          Doubs service address on the published Doubs list when Council adopts
-          it). I am not signing for Frederick City or any place outside these
-          three communities.
+          <strong>Buckeystown</strong>, inside the rural road-box — west
+          Basford Road, east the Monocacy River, south Tuscarora Road, north
+          the Elmer Derr / Harshman / New Design / Lime Kiln Road belt, short
+          of the Ballenger Creek suburban mass. Lime Kiln Run is a creek, not a
+          road. ZIP codes are not the lock. I am not signing for Frederick City
+          or any place outside this box.
         </p>
         <p>
           I understand this Trust is exclusive by design — for our home, our
