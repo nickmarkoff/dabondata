@@ -157,7 +157,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "other communities",
     ],
     answer:
-      "These three places sit on the rural-industrial and grid edge of the CDI overlay (Ord. 26-01-001, effective Jan 20, 2026). Exclusive by design — not Frederick City. The boundary is a wall against freeloaders and the apartment/sprawl wave that tends to follow.",
+      "These three places sit in the tight rural road-box that holds the CDI overlay (Ord. 26-01-001, effective Jan 20, 2026): west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt, short of the Ballenger Creek suburban mass. Exclusive by design — not Frederick City. The credits are so farmers and residents can stay in their homes. The boundary is a wall against freeloaders and the apartment/sprawl wave that tends to follow.",
     links: [LINK.plan, LINK.grandfather],
   },
   {
@@ -196,7 +196,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "census",
     ],
     answer:
-      "The dividend is due to residential meters in the **Adamstown CDP**, **Buckeystown CDP**, or on a **published Doubs list** (Doubs is a hamlet, not a Census CDP). ZIP codes are **not** the eligibility lock (21710/21717/21704 are too messy). Hard Census for the two CDPs: 710 + 499 = **1,209** households; Doubs count TBD when the list exists.",
+      "The dividend is due to residential meters in the tight rural road-box: west **Basford Road**, east the **Monocacy River**, south **Tuscarora Road**, north the **Elmer Derr Rd / Harshman Way / New Design Rd / Lime Kiln Rd** belt — **Doubs, Adamstown, and Buckeystown**, short of the Ballenger Creek suburban mass. **Lime Kiln Run** is a creek, not a road. About **2,000** homes and about **5,500** residents (Medium confidence; roughly 1,700–2,500 housing units and 4,600–6,700 residents until the exact GIS clip). ZIP codes are **not** the lock — ZIP **21704** is far too broad, and so is any ZIP. Adamstown / Buckeystown CDP 2020 stats (not the Trust base): 710 + 499 = **1,209** households. Doubs is a hamlet, not a Census CDP, and is folded into the road-box.",
     links: [LINK.plan, LINK.attachments],
   },
   {
@@ -239,7 +239,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "tax hike",
     ],
     answer:
-      "**Proposed** (not law): the annual credit shall be **$1 per MWh** of prior-12-month campus IT load, **not less than $250** and **not more than $1,000** per meter per year. Do **not** say “varies with usage” in formal voice — the formula carries it. Funded by operators, not by raising local property-tax rates.",
+      "**Proposed** (not law): the annual credit shall be **$1 per MWh** of prior-12-month campus IT load, **not less than $250** and **not more than $1,000** per meter per year. On about **2,000** meters the floor pool is about **$500,000** a year and the cap pool about **$2,000,000** a year. One 72 MW hall at 70% load is about **$441,000** a year company-side, about **$221** per meter on that base — an illustration, not a tariff. Do not describe the credit as floating with a household’s own use; the formula is campus IT load between those rails. Funded by operators, not by raising local property-tax rates. Rates are not lowered for passage.",
     links: [LINK.plan, LINK.attachments],
   },
   {
@@ -292,6 +292,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
     keywords: [
       "110",
       "111",
+      "solar",
       "catellus",
       "benefits",
       "package",
@@ -307,7 +308,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "one-time",
     ],
     answer:
-      "The County Executive rejected that one-time DRRA package (Sept 14, 2026). The Trust is a different instrument: an ongoing megawatt-funded meter credit for DAB, not a one-time benefits list or a multi-year zoning freeze swap.",
+      "The County Executive rejected that one-time DRRA package (Sept 14, 2026), including its $5 million community-solar line. That project was never sized; an estimate of what $5 million of solar would cover is on the Plan page, and every figure in it is labeled as an estimate. A one-time solar grant does not offset the host burden. The Trust is a different instrument: an ongoing megawatt-funded meter credit for the rural road-box, not a one-time benefits list or a multi-year zoning freeze swap.",
     links: [LINK.plan, LINK.rebate, LINK.sources],
   },
   {
@@ -337,7 +338,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "existing buildings",
     ],
     answer:
-      "Keep this version of Frederick. Only **existing** buildings, dwellings, and lawful uses as of **Jan 20, 2026** receive grandfather preference; new construction and apartments after that cutoff are not grandfathered. Tier 1 geography is still required. See /grandfather.",
+      "Keep this version of Frederick. Grandfather is a **stay incentive**, not a growth subsidy: only **existing** buildings, dwellings, and lawful uses as of **Jan 20, 2026** receive that preference, so farmers and residents can remain in their homes. New construction and apartments after that cutoff are not grandfathered. Tier 1 geography — the rural road-box — is still required. See /grandfather.",
     links: [LINK.grandfather, LINK.plan],
   },
   {

@@ -28,6 +28,8 @@ I am fighting for my community anyway.
 
 This packet is that path: a DAB ENERGY TRUST for Doubs, Adamstown, and Buckeystown — operator-funded meter credits for the host communities that live next to the Critical Digital Infrastructure overlay, with a grandfather clause that rewards keeping the Frederick we already have, and a public declaration that the host-community rebate is due because Winchester Hall’s numbers came off Manor Woods ground.
 
+We want farmers and rural neighbors to remain in their homes — not put land or houses up for sale because the overlay and the sprawl wave make selling look like the only move. The Grandfather Clause is a stay incentive: reward the Frederick that already exists (cutoff January 20, 2026), not a subsidy for new pads after that date. Exclusive host-community meter credits belong here because the CDI overlay sits in this rural road-box; keep Frederick rural, keep the boundary the wall.
+
 Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee.
 
 All we need is emails and signatures these days, no muskets! So, are there really any excuses?
@@ -47,20 +49,14 @@ September 18, 2026
 **TO:** County Executive; County Council; Planning Commission  
 **FROM:** Nicholas M., DAB ENERGY TRUST (Doubs · Adamstown · Buckeystown), Frederick County, MD  
 **DATE:** September 18, 2026  
-**RE:** DAB ENERGY TRUST — condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for Doubs, Adamstown, and Buckeystown only  
+**RE:** DAB ENERGY TRUST — condition new CDI load and any DRRA on a local energy dividend, infrastructure leasehold, and residual interest for the rural host-community road-box of Doubs, Adamstown, and Buckeystown only  
 **ACTION:** Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan
 
 **Subtitle:** Doubs · Adamstown · Buckeystown — Our Home, Our Coalition
 
 ## 1. Request
 
-Enact a **DAB ENERGY TRUST** for residential electric meters whose service address lies within:
-
-- (a) the **Adamstown Census Designated Place (CDP)**,
-- (b) the **Buckeystown CDP** (2020 Census places), or
-- (c) a **Doubs** service address on a **published Doubs parcel / service-address list** to be adopted by County Council ordinance.
-
-**Doubs is an unincorporated populated place / hamlet (GNIS Class U6), not a Census CDP.** Until that Doubs list exists, public materials may describe Tier 1 as: Adamstown CDP + Buckeystown CDP (**1,209 Census households**) plus Doubs addresses on the published Doubs list.
+Enact a **DAB ENERGY TRUST** for residential electric meters whose service address sits in the tight rural host-community road-box — west **Basford Road**, east the **Monocacy River**, south **Tuscarora Road**, north the **Elmer Derr Rd / Harshman Way / New Design Rd / Lime Kiln Rd** belt — covering **Doubs, Adamstown, and Buckeystown**, and staying short of the Ballenger Creek suburban mass. **Lime Kiln Run** is a creek, not a road.
 
 Condition certificates of occupancy for additional Critical Digital Infrastructure (CDI) electrical load, and any Development Rights and Responsibilities Agreement, on three tools:
 
@@ -70,23 +66,27 @@ Condition certificates of occupancy for additional Critical Digital Infrastructu
 
 **Do not** fund the dividend by raising the real-property tax rate in these three communities. **Do not** exchange a multi-year zoning freeze for a one-time community-benefits package.
 
-**Exclusive by design.** This Trust is for Doubs, Adamstown, and Buckeystown only — **not Frederick City**. No freeloader expansion without a board vote **AND** a new County Council ordinance titled as an expansion (plus elder consult under Article IX-A). No matter who residents vote for, data centers are still going to be built here — a slogan does not stop steel. Get what is due: operator-funded meter credits (more money in household pockets) and a boundary that protects these places from freeloaders and the apartment/sprawl wave that tends to follow. Dividend = floor; boundary = wall.
+**Purpose.** Keep Frederick rural. The Trust pays operator-funded meter credits to host-community households so farmers and rural residents can **remain in their homes** and are less pressed to put land or houses up for sale under sprawl and data-center edge pressure. Grandfather = **stay incentive**, not a growth subsidy. **Exclusive by design.** Credits for meters in this rural road-box only — the CDI overlay sits here — **not Frederick City**. No freeloader expansion without a board vote **AND** a new County Council ordinance titled as an expansion (plus elder consult under Article IX-A). No matter who residents vote for, data centers are still going to be built here — a slogan does not stop steel. Get what is due: operator-funded meter credits (more money in household pockets) and a boundary that protects these places from freeloaders and the apartment/sprawl wave that tends to follow. Dividend = floor; boundary = wall.
 
-**Elder consult on geography changes (bylaws Article IX-A).** Before the board votes on any Tier 1 geography change — adopting or majorly amending the Doubs list, expanding Tier 1 to another community, or otherwise amending the Article III geography lock — it must consult in good faith with ten residents age 65 or older who have lived in Doubs, Adamstown, or Buckeystown for at least ten years. The consult is advisory, on the record, and not a veto; a short summary goes with the minutes. It does not apply to routine clerical addressing corrections that do not enlarge Tier 1, or to automatic Census sync of Adamstown/Buckeystown CDP lines.
+**Elder consult on geography changes (bylaws Article IX-A).** Before the board votes on any Tier 1 geography change — expanding Tier 1 beyond this rural road-box, or otherwise amending the Article III geography lock — it must consult in good faith with ten residents age 65 or older who have lived in Doubs, Adamstown, or Buckeystown for at least ten years. The consult is advisory, on the record, and not a veto; a short summary goes with the minutes. It does not apply to routine clerical addressing corrections that do not enlarge Tier 1.
 
-**Board representation lock (bylaws Article IV).** Five voting members; each of the three communities must hold at least one voting seat at all times. Default apportionment 2 Adamstown / 2 Buckeystown / 1 Doubs; Council may change the split by ordinance only if each town still has at least one seat. Until the Doubs list is adopted, the Doubs seat may be held on an interim basis by a Doubs-hamlet-area resident; once the list is live, that seat is Doubs-list only.
+**Board representation lock (bylaws Article IV).** Five voting members; each of the three communities must hold at least one voting seat at all times. Default apportionment 2 Adamstown / 2 Buckeystown / 1 Doubs; Council may change the split by ordinance only if each town still has at least one seat. The Doubs seat is held by a resident of Doubs inside the road-box. Doubs is folded into the box with Adamstown and Buckeystown. This filing does not state a separate Doubs-only census count.
 
 ## 2. Why these three communities
 
-Ordinance **26-01-001** (effective **January 20, 2026**) mapped the CDI overlay — approximately **2,614.9 acres** (Maryland Supreme Court figure) — onto the former Eastalco plant north of Adamstown. Those acres are roughly described by the industrial and grid edge around New Design Road, Manor Woods Road, Adamstown Road, Ballenger Creek Pike, and Digital Drive (see the Ord. 26-01-001 map exhibit). Buckeystown and Doubs (unincorporated populated place / hamlet, not a Census CDP) sit on that same rural-industrial and grid edge.
+Ordinance **26-01-001** (effective **January 20, 2026**) placed the CDI overlay — approximately **2,614.9 acres** (Maryland Supreme Court figure) — on the former Eastalco plant north of Adamstown. Those acres are roughly described by the industrial and grid edge around New Design Road, Manor Woods Road, Adamstown Road, Ballenger Creek Pike, and Digital Drive. Buckeystown and Doubs (unincorporated populated place / hamlet, not a Census CDP) sit on that same rural-industrial and grid edge. The road-box that hosts them is described in words in §1 and under Tier 1 below.
 
 This is not for city folk up in Frederick who have been moving in and changing everything. It is for people who actually live here — Doubs, Adamstown, Buckeystown — Our Home, Our Coalition. We are neighbors with a plan, not a protest.
 
 Lived impact in Buckeystown is not a sterile statistic. MD 85 is Buckeystown Pike — a state highway through the Buckeystown Historic District. Residents pull out onto that road the way you would time a gap in freeway traffic. That is morning life on the overlay’s doorstep.
 
-**Tier 1:** residential meters in the Adamstown CDP, Buckeystown CDP, or on the published Doubs list. Hard Census total for the two CDPs: **710 + 499 = 1,209** households. No Doubs household count is asserted in this filing.
+**Tier 1:** residential meters whose service address sits in the tight rural host-community road-box — west **Basford Road**, east the **Monocacy River**, south **Tuscarora Road**, north the **Elmer Derr Rd / Harshman Way / New Design Rd / Lime Kiln Rd** belt — covering **Doubs, Adamstown, and Buckeystown**, and staying short of the Ballenger Creek suburban mass. **Lime Kiln Run** is a creek line, not a road. The CDI overlay (~**2,612** acres) and the Quantum / Catellus campus (~**2,100** acres) sit inside this box. About **2,000** homes and about **5,500** residents (Medium confidence; exact GIS clip pending). **ZIP codes are not the eligibility lock** — including ZIP **21704**, which is far too broad.
 
-**ZIP codes are not the eligibility lock.** ZIP 21710 may roughly track Adamstown street delivery, but ZIP 21717 is a USPS PO Box–only ZIP and does not cover Buckeystown street addresses. Many Buckeystown street addresses use ZIP 21704, a large delivery area with thousands of households — far too broad for a three-community Trust. Before the first payment, the County Council shall publish a meter eligibility list mapped to Adamstown and Buckeystown CDP boundaries and parcels, and to the adopted Doubs list.
+*CDP note (not Trust base):* Adamstown CDP **710** + Buckeystown CDP **499** = **1,209** Census households remain **place statistics only** — Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, and is folded into the road-box.
+
+Roughly **1,700–2,500** housing units and **4,600–6,700** residents until the exact clip. Working print: about **2,000** homes / about **5,500** residents. Not any ZIP. Rates below are proposed, not enacted law; do not lower the **$250** floor or the **$1,000** cap. The 72 MW hall figure is an illustration, not a tariff. Road-box framing uses about **2,612** acres for the overlay; the court figure remains about **2,614.9** acres.
+
+**ZIP codes are not the eligibility lock.** ZIP 21710 may roughly track Adamstown street delivery, but ZIP 21717 is a USPS PO Box–only ZIP and does not cover Buckeystown street addresses. Many Buckeystown street addresses use ZIP 21704, a large delivery area with thousands of households — far too broad for this Trust. Eligibility is the road-box, not any ZIP. Before the first payment, the County Council shall publish a meter eligibility list mapped to the road-box (and any parcel refinements by ordinance).
 
 ## 3. Money already collected — not a local energy credit
 
@@ -95,6 +95,14 @@ HR&A Advisors (October 30, 2025), Tables 3 and 14, report Quantum-related record
 Recordation is split by formula among agricultural preservation, parks, schools, housing, and the general fund; a 2 percent transit share begins in FY2027 under Bill 26-03. That money does not appear as a power-bill credit on Adamstown, Buckeystown, or Doubs meters.
 
 On **September 1, 2026**, the County Executive announced a Catellus community-benefits package headlined as **“$110 million”** and tied to a proposed Development Rights and Responsibilities Agreement. The published line items were $30 million for Carroll Manor Elementary School renovations; $40 million for a community center and recreational space; $14.5 million for workforce development and career and technical education; $10.5 million for agricultural land preservation; $10 million for perimeter berming, planting, and trails; $5 million for a community solar project to reduce energy bills for Adamstown residents; and $1 million for a fire engine for the Carroll Manor Volunteer Fire Company — **$111.0 million** if those figures are added as printed — together with roughly a 20 percent reduction in planned square footage, an 80 percent reduction in potable water use, and a 433-acre nature reserve on campus. This filing uses the county’s “$110 million” headline and notes the $111.0 million line-item sum. The County Executive **rejected** that package on **September 14, 2026**. New CDI applications remain paused through July 1, 2027 (executive-order extension of September 14, 2026). Vested and under-construction work continues.
+
+### Estimate — what $5M of solar would cover
+
+The $5 million community solar project in that rejected package was never sized. As an estimate, $5 million buys about 2–3 MW of solar (assumes roughly $1.7–$2.5 per watt installed), making about 3,000–4,500 MWh a year in Maryland (assumes ~17% capacity factor).
+
+Under those assumptions, that estimate covers roughly 14–20% of the about 2,000 homes’ own use (assumes ~11 MWh per home per year), about 0.7–1% of one 72 MW hall at 70% load (~441,500 MWh/yr), and about 0.02–0.03% of the full 2.4 GW campus at 70% load (~14.7 million MWh/yr).
+
+A one-time solar grant does not offset the host burden. An ongoing meter credit is the fix.
 
 The Trust is a different instrument: an ongoing, megawatt-funded meter credit for the three host communities, not a one-time DRRA package. This filing does not propose exchanging a multi-year zoning freeze for that package or any successor one-time list.
 
@@ -114,15 +122,19 @@ The campus was not at stabilized operations as of mid-2026; construction is unde
 
 ## 5. Proposed dividend (policy illustration — not enacted law)
 
-The **$250 floor** and **$1,000 cap** below are a **proposed** ordinance floor and cap for Council to enact. They are **not current law**.
+The **$250 floor** and **$1,000 cap** below are a **proposed** ordinance floor and cap for Council to enact. They are **not current law**. Rates are not lowered for passage.
 
-| Rule | About 1,209 CDP homes (Adamstown + Buckeystown); Doubs meters TBD on published list | Notes |
-|------|--------------------------------------------------------------------------------------|-------|
-| Proposed floor **$250** / meter / year after first hall energized | ≈ $302,250 ≈ $302,000 / year to the two CDPs alone (Doubs add-on when list exists) | Proposed ordinance floor (annual) |
-| **$1 per MWh** of campus IT load, eligible DAB meters only | 72 MW hall @ 70% load ≈ $441,000 (≈ $365 / meter if only the 1,209 CDP meters) | Illustration, not a tariff — annual credit tracks prior-12-month campus IT load between floor and cap |
-| Proposed cap **$1,000** / meter until Council raises it | ≈ $1,209,000 ≈ $1.21 million / year on CDP-only base | Proposed ordinance cap (annual) |
+| Rule | About **2,000** eligible meters in the rural road-box (Doubs · Adamstown · Buckeystown) | Notes |
+|------|----------------------------------------------------------------------------------------|-------|
+| Proposed floor **$250** / meter / year after first hall energized | ≈ **$500,000** / year | Proposed ordinance floor (annual) |
+| **$1 per MWh** of campus IT load, eligible host-community meters only | 72 MW hall @ 70% load ≈ **$441,000** company / year (≈ **$221** / meter if only ~2,000 meters) | Illustration, not a tariff — annual credit tracks prior-12-month campus IT load between floor and cap |
+| Proposed cap **$1,000** / meter until Council raises it | ≈ **$2,000,000** / year | Proposed ordinance cap (annual) |
 
-Pay as a utility-bill credit if the county obtains a rider; otherwise a county rebate or property-tax credit labeled DAB Energy Dividend (Doubs · Adamstown · Buckeystown).
+Proposed floor **$250** and cap **$1,000** per eligible meter per year; **$1 per MWh** of campus IT load between those rails. On about **2,000** meters: floor pool ≈ **$500,000**/yr; cap pool ≈ **$2,000,000**/yr. Illustration: one **72 MW** hall at **70%** load ≈ **$441,000**/yr company-side (≈ **$221**/meter on the ~2,000-meter base). **Not law until Council enacts.** Do not fund by raising the local real-property tax rate.
+
+Pay as a utility-bill credit if the county obtains a rider; otherwise a county rebate or property-tax credit labeled DAB Energy Dividend (Doubs · Adamstown · Buckeystown). Exclusive host-community meter credits — because the overlay sits in this rural box.
+
+Medium confidence on the home and resident print; exact GIS clip pending. Roughly **1,700–2,500** housing units and **4,600–6,700** residents. Not ZIP **21704**, and not any ZIP. Adamstown **710** + Buckeystown **499** = **1,209** are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, included via the road-box (and any published address list), not via an invented Doubs CDP count. **Lime Kiln Run** is a creek. Stay short of the Ballenger Creek suburban mass. The 72 MW hall at 70% is an illustration, not a tariff.
 
 ## 6. Zoning and DRRA hook
 
@@ -204,8 +216,8 @@ I’m very busy with my newborn, but that doesn’t mean I can’t make a few mi
 - HR&A Advisors, Quantum Frederick Data Center Development Impact Analysis (Oct. 30, 2025)
 - County Executive Jessica Fitzwater, SB 427 testimony (Feb. 18, 2026)
 - Sage Policy Group / Maryland Tech Council, Data Center Impact Report (Oct. 2023)
-- Maryland State Data Center — Adamstown CDP 2020 Census profile (710 households)
-- Frederick County — Buckeystown CDP 2020 Census Profile (499 households)
+- Maryland State Data Center — Adamstown CDP 2020 Census profile (710 households; Adamstown / Buckeystown CDP 2020 stats, not the Trust base)
+- Frederick County — Buckeystown CDP 2020 Census Profile (499 households; Adamstown / Buckeystown CDP 2020 stats, not the Trust base)
 - Frederick County Data Centers page (application pause)
 - Catellus hyperscale campus program (2.4 GW / 17.4M SF / ~2,100 acres)
 
@@ -217,7 +229,9 @@ I’m very busy with my newborn, but that doesn’t mean I can’t make a few mi
 
 We like it here. Keep Frederick looking like Frederick.
 
-The Grandfather Clause is an incentive to keep existing look, scale, and character in Doubs, Adamstown, and Buckeystown. It rewards households and lawful uses that already exist — the communities as they stand — rather than subsidizing a growth wave that would change what these places are.
+**Grandfather — Keep This Version of Frederick.** Stay incentive, not growth subsidy. Existing homes and lawful uses as of January 20, 2026; no new construction after the cutoff rides the Trust preference.
+
+We want farmers and rural neighbors to **remain in their homes** — not put land or houses up for sale because the overlay and the sprawl wave make selling look like the only move. The Grandfather Clause rewards the Frederick that already exists (cutoff **January 20, 2026**), not a subsidy for new pads after that date. Exclusive host-community meter credits belong here because the CDI overlay sits in this rural road-box; keep Frederick rural, keep the boundary the wall.
 
 ## Cutoff date
 
@@ -227,7 +241,7 @@ The Grandfather Clause is an incentive to keep existing look, scale, and charact
 
 Only **existing buildings, dwellings, and lawful uses as of the cutoff** may qualify for Trust eligibility, meter-credit / DAB Energy Dividend participation, and existing-community preference under Trust administration.
 
-Eligibility also requires a qualifying Tier 1 service address (Adamstown CDP, Buckeystown CDP, or published Doubs list) and the meter rules in the bylaws. The Grandfather Clause is an additional existing-community filter tied to the cutoff — not a substitute for geography.
+Eligibility also requires a qualifying Tier 1 service address inside the rural road-box — west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt, with Doubs folded in alongside Adamstown and Buckeystown, and staying short of the Ballenger Creek suburban mass — and the meter rules in the bylaws. Lime Kiln Run is a creek, not a road. ZIP codes are not the lock. The Grandfather Clause is an additional existing-community filter tied to the cutoff — a stay incentive, not a substitute for geography, and not a growth subsidy.
 
 ## What does not qualify
 
@@ -271,9 +285,9 @@ Neighbors with a plan. Not a lawsuit. Not a protest. Not a campaign committee.
 | Article | Highlight |
 |---------|-----------|
 | **I — Name** | DAB ENERGY TRUST (Doubs · Adamstown · Buckeystown). Seat in Doubs, Adamstown, or Buckeystown — not confined to Winchester Hall. |
-| **II — Purpose** | Energy dividend to Tier 1 residential meters; funded by CDI load and infrastructure rent. ZIP codes are not the eligibility lock. Exclusive by design — not Frederick City. |
-| **III — Beneficiaries** | Adamstown CDP + Buckeystown CDP + published Doubs list. Hard Census: **710 + 499 = 1,209**. Doubs is not a CDP. Expansion only by board vote, new expansion ordinance, and elder consult where applicable. |
-| **IV — Board** | Five voting members; at least one seat per town; default **2 / 2 / 1**. Doubs interim seat until the Doubs list is adopted. |
+| **II — Purpose** | Keep Frederick rural. Energy dividend to Tier 1 residential meters so farmers and residents can stay in their homes; funded by CDI load and infrastructure rent. Grandfather = stay incentive, not a growth subsidy. ZIP codes are not the eligibility lock. Exclusive by design — not Frederick City. |
+| **III — Beneficiaries** | Tier 1 only: a residential meter whose service address lies in the rural road-box (west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt), including Doubs, Adamstown, and Buckeystown, short of the Ballenger Creek suburban mass. Soft print: about **2,000** meters / about **5,500** residents (Medium confidence; exact GIS clip pending). Adamstown **710** + Buckeystown **499** = **1,209** are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Expansion only by board vote, new expansion ordinance, and elder consult where applicable. |
+| **IV — Board** | Five voting members; at least one seat per town; default **2 / 2 / 1**. Doubs seat held by a Doubs resident inside the road-box. |
 | **IV-A — Elections** | Weekend town hall; preferred location Adamstown Park or Buckeystown Park. Proof of residency: license, utility bill, or lease. |
 | **V–VIII** | Duties (megawatt reports; publish by March 31); restricted funds; quarterly meetings under the Open Meetings Act; conflicts and recusal. |
 | **IX / IX-A** | Amendment lock; elder consult — ten residents age 65 or older with at least ten years in Doubs, Adamstown, or Buckeystown before Tier 1 geography-change votes; advisory, not a veto. |
@@ -293,11 +307,11 @@ Why we’re doing this — my wife pulls out of our driveway onto MD 85 with our
 
 MD 85 is Buckeystown Pike — a state highway through the Buckeystown Historic District. We are Doubs, Adamstown, Buckeystown — Our Home, Our Coalition. We like it here. Keep Frederick looking like Frederick.
 
-About twelve hundred census households in Adamstown and Buckeystown, plus Doubs on a published address list. The CDI overlay is mapped. Catellus is planned at two-point-four gigawatts. Construction is underway. About fifty-three million in Quantum-related recordation already collected — and it is not paying our electric bills.
+About two thousand homes in the rural road-box — Doubs, Adamstown, and Buckeystown — and about fifty-five hundred residents. Stay. Don’t sell. The overlay is already on the books. Catellus is planned at two-point-four gigawatts. Construction is underway. About fifty-three million in Quantum-related recordation already collected — and it is not paying our electric bills.
 
 No matter who you vote for, data centers are still going to be built here. A slogan does not stop steel. What we need is what we are due — a host-community rebate through a Trust we control: operator-funded meter credits. Nobody else generated this. Winchester Hall numbers came off Manor Woods ground.
 
-Proposed floor two hundred fifty a year; proposed cap one thousand a year — dollar per megawatt-hour on prior-twelve-month campus IT load between those rails — not law until you pass it. Grandfather the buildings and lawful uses that existed on January twentieth, twenty twenty-six. No new buildings after that cutoff. Dividend is the floor; boundary is the wall — three communities only, not Frederick City.
+Proposed floor two hundred fifty a year; proposed cap one thousand a year — dollar per megawatt-hour on prior-twelve-month campus IT load between those rails — not law until you pass it. On about two thousand meters that is a floor pool of about five hundred thousand a year and a cap pool of about two million. One seventy-two megawatt hall at seventy percent load is about four hundred forty-one thousand a year on the company side, about two hundred twenty-one dollars a meter — an illustration, not a tariff. Grandfather the buildings and lawful uses that existed on January twentieth, twenty twenty-six. That grandfather is a stay incentive, not a growth subsidy. No new buildings after that cutoff. Dividend is the floor; boundary is the wall — this rural road-box only, not Frederick City.
 
 Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan.
 
@@ -307,18 +321,18 @@ Doubs, Adamstown, Buckeystown first. That is the ask.
 
 | | |
 |--|--|
-| **Who** | Residential meters in Adamstown CDP, Buckeystown CDP, or on the published Doubs list (Doubs is a hamlet, not a Census CDP). Not ZIP-locked. Grandfather: existing buildings, dwellings, and lawful uses as of **January 20, 2026** only. |
-| **How many** | Adamstown **710** + Buckeystown **499** = **1,209** Census households. No Doubs household count is asserted. |
+| **Who** | Residential meters in the rural road-box — west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt — Doubs, Adamstown, and Buckeystown, short of the Ballenger Creek suburban mass. Lime Kiln Run is a creek, not a road. Not ZIP-locked (not ZIP 21704, and not any ZIP). Grandfather: existing buildings, dwellings, and lawful uses as of **January 20, 2026** only — stay incentive, not a growth subsidy. |
+| **How many** | About **2,000** homes / meters and about **5,500** residents in the rural road-box (Doubs · Adamstown · Buckeystown). Medium confidence; roughly **1,700–2,500** housing units and **4,600–6,700** residents; exact GIS clip pending. Adamstown / Buckeystown CDP 2020 stats (not the Trust base): **710** + **499** = **1,209**. No separate Doubs census count. |
 | **Campus** | Planned **2.4 GW** · about **17.4 million square feet** · about **2,100 acres** (CDI overlay about **2,614.9 acres**) · construction underway |
 | **County collected** | About **$53 million** Quantum-related recordation (HR&A $52.97 million). “$110 million” Catellus package rejected September 14, 2026. Countywide forecasts **$41M / $68.8M / $215M** are buildout forecasts, not DAB pocket money. |
-| **Proposed floor / cap** | **$250 / $1,000** per meter per year — **$1/MWh** between floor and cap — proposed, not enacted law |
+| **Proposed floor / cap** | **$250 / $1,000** per meter per year — **$1/MWh** between floor and cap — proposed, not enacted law. On about **2,000** meters: floor pool ≈ **$500,000**/yr; cap pool ≈ **$2,000,000**/yr. 72 MW hall at 70% load ≈ **$441,000**/yr company-side (≈ **$221** / meter). Illustration, not a tariff. Do not lower the rates for passage. |
 | **Rebate** | Host-community rebate for site, grid edge, roads, rural buffer, and lived impact. Nobody else generated this. Winchester Hall numbers came off Manor Woods ground. |
 | **Three tools** | Energy Trust · public infrastructure lease · residual / state equity authority |
 | **Boundary and board** | Expansion only by board vote, new ordinance, and elder consult. Board: five seats; each town at least one; default 2/2/1. |
 
 ### Ask of candidates and officials
 
-I will put a DAB ENERGY TRUST dividend — megawatts to meters in Adamstown CDP, Buckeystown CDP, and on the Doubs list, with grandfather cutoff January 20, 2026 — ahead of any countywide data-center benefit or zoning freeze, and condition new CDI occupancy and any DRRA on that Trust.
+I will put a DAB ENERGY TRUST dividend — megawatts to meters in the rural road-box of Doubs, Adamstown, and Buckeystown, with grandfather cutoff January 20, 2026 as a stay incentive — ahead of any countywide data-center benefit or zoning freeze, and condition new CDI occupancy and any DRRA on that Trust.
 
 ## Resident proposal letter
 
@@ -329,13 +343,13 @@ A note to our neighbors in Doubs, Adamstown, and Buckeystown
 
 Friends—
 
-I’m a mechanic, not a speechwriter, so I’ll keep this plain. Something big is landing on our edge of the county. No matter who you vote for, data centers are still going to be built here. The overlay is mapped. Construction is underway. A slogan does not stop steel.
+I’m a mechanic, not a speechwriter, so I’ll keep this plain. Something big is landing on our edge of the county. No matter who you vote for, data centers are still going to be built here. The overlay is already on the books. Construction is underway. A slogan does not stop steel.
 
 So we carve out something for ourselves — because we absolutely should. It’s our home. That carve-out is the **DAB ENERGY TRUST**: Doubs, Adamstown, and Buckeystown only — not Frederick City, not the whole county tagging along. Operators fund meter credits; we don’t raise our tax rate. Proposed floor **$250** and cap **$1,000** per meter per year — the yearly credit follows prior-twelve-month campus IT load under the dollar-per-megawatt-hour rule, between those rails — proposed, not law yet.
 
-We like it here. Keep Frederick looking like Frederick. Grandfather the buildings and lawful uses that already existed on **January 20, 2026**. No new construction after that cutoff gets Trust preference. And say it plain: host communities are why this revenue exists. About **$53 million** already collected on Quantum-related recordation is not a local meter credit. Countywide forecasts are Winchester Hall numbers — not Manor Woods numbers. Nobody else generated this. Winchester Hall numbers came off Manor Woods ground. That is a rebate and credit argument — not an accusation of crime.
+We like it here. Keep Frederick looking like Frederick. We want farmers and neighbors to stay in their homes, not sell because the sprawl wave makes selling look like the only move. Grandfather the buildings and lawful uses that already existed on **January 20, 2026**. That is a stay incentive, not a subsidy for new pads. No new construction after that cutoff gets Trust preference. And say it plain: host communities are why this revenue exists. About **$53 million** already collected on Quantum-related recordation is not a local meter credit. Countywide forecasts are Winchester Hall numbers — not Manor Woods numbers. Nobody else generated this. Winchester Hall numbers came off Manor Woods ground. That is a rebate and credit argument — not an accusation of crime.
 
-Hard Census numbers for the two census places: Adamstown **710** + Buckeystown **499** = **1,209** households. Doubs is a small unincorporated hamlet, not a census place — homes there join only on a published address list Council adopts by ordinance. We are not inventing a Doubs count.
+The count we are using is about **2,000** homes in the rural road-box — west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt — Doubs, Adamstown, and Buckeystown together, short of the Ballenger Creek suburbs. About **5,500** residents. Medium confidence until the exact line is clipped (roughly **1,700–2,500** homes and **4,600–6,700** people). Adamstown **710** and Buckeystown **499**, which is **1,209**, are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet inside the box. We are not inventing a separate Doubs census count. ZIP codes are not the lock. ZIP **21704** is far too broad. Lime Kiln Run is a creek, not a road.
 
 Even outside data centers, apartments tend to follow. A Trust we control gives us a business deal we can live with and a line against that next wave of sprawl. Keep home beautiful.
 
