@@ -34,7 +34,7 @@ export const SHAREABLE_ADS: ShareableAd[] = [
     src: "/art/ads/03-asking-for-a-deal.jpg",
     filename: "03-asking-for-a-deal.jpg",
     title: "We’re asking for a deal",
-    alt: "Handshake over a paper labeled Ordinance No. 2024-17. Title: We’re asking for a deal. Ordinance energy — not a lawsuit.",
+    alt: "Handshake over a paper labeled PROPOSED ORDINANCE. Title: We’re asking for a deal. Ordinance energy — not a lawsuit.",
     width: 1080,
     height: 1920,
   },

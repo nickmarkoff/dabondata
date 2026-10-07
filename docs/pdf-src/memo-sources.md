@@ -1,4 +1,4 @@
-### Source links (carried from the prior official memo)
+### Source links
 
 Maryland Supreme Court opinion (July 24, 2026), In re Frederick County Data Center Referendum Committee, No. 67, Sept. Term 2025: https://www.mdcourts.gov/data/opinions/coa/2026/67a25.pdf
 

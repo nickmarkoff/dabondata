@@ -12,6 +12,6 @@
 
 **ACTION:** Introduce, enact, and attach to any revived Quantum / Catellus DRRA or site plan
 
-Also known as / formerly styled Adamstown–Buckeystown Energy Trust in prior draft filings. Prefer DAB ENERGY TRUST in all public-facing materials going forward.
+Formerly styled Adamstown–Buckeystown Energy Trust.
 
 **Subtitle:** Doubs · Adamstown · Buckeystown — Our Home, Our Coalition

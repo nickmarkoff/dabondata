@@ -82,7 +82,7 @@ export default function Page() {
             </tr>
             <tr>
               <td dangerouslySetInnerHTML={{ __html: "<strong>$1 per MWh</strong> of campus IT load, eligible host-community meters only" }} />
-              <td dangerouslySetInnerHTML={{ __html: "72 MW hall @ 70% load \u2248 <strong>$441,000</strong> company / year (\u2248 <strong>$221</strong> / meter if only ~2,000 meters)" }} />
+              <td dangerouslySetInnerHTML={{ __html: "72 MW hall @ 70% load \u2248 <strong>$441,000</strong> / year (company-side) (\u2248 <strong>$221</strong> / meter if only ~2,000 meters)" }} />
               <td dangerouslySetInnerHTML={{ __html: "Illustration, not a tariff \u2014 annual credit tracks prior-12-month campus IT load between floor and cap" }} />
             </tr>
             <tr>
@@ -93,7 +93,7 @@ export default function Page() {
           </tbody></table></div>
         <p dangerouslySetInnerHTML={{ __html: "Proposed floor <strong>$250</strong> and cap <strong>$1,000</strong> per eligible meter per year; <strong>$1 per MWh</strong> of campus IT load between those rails. On about <strong>2,000</strong> meters: floor pool \u2248 <strong>$500,000</strong>/yr; cap pool \u2248 <strong>$2,000,000</strong>/yr. Illustration: one <strong>72 MW</strong> hall at <strong>70%</strong> load \u2248 <strong>$441,000</strong>/yr company-side (\u2248 <strong>$221</strong>/meter on the ~2,000-meter base). <strong>Not law until Council enacts.</strong> Do not fund by raising the local real-property tax rate." }} />
         <p dangerouslySetInnerHTML={{ __html: "Pay as a utility-bill credit if the county obtains a rider; otherwise a county rebate or property-tax credit labeled DAB Energy Dividend (Doubs \u00b7 Adamstown \u00b7 Buckeystown). Exclusive host-community meter credits \u2014 because the overlay sits in this rural box." }} />
-        <p dangerouslySetInnerHTML={{ __html: "Medium confidence on the home and resident print; exact GIS clip pending. Roughly <strong>1,700\u20132,500</strong> housing units and <strong>4,600\u20136,700</strong> residents. Not ZIP <strong>21704</strong>, and not any ZIP. Adamstown <strong>710</strong> + Buckeystown <strong>499</strong> = <strong>1,209</strong> are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, included via the road-box (and any published address list), not via an invented Doubs CDP count. <strong>Lime Kiln Run</strong> is a creek. Stay short of the Ballenger Creek suburban mass. The 72 MW hall at 70% is an illustration, not a tariff." }} />
+        <p dangerouslySetInnerHTML={{ __html: "Medium confidence on the home and resident print; exact GIS clip pending. Roughly <strong>1,700\u20132,500</strong> housing units and <strong>4,600\u20136,700</strong> residents. Not ZIP <strong>21704</strong>, and not any ZIP. Adamstown <strong>710</strong> + Buckeystown <strong>499</strong> = <strong>1,209</strong> are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, included via the road-box, not via an invented Doubs CDP count. <strong>Lime Kiln Run</strong> is a creek. Stay short of the Ballenger Creek suburban mass. The 72 MW hall at 70% is an illustration, not a tariff." }} />
         <h3>6. Zoning and DRRA hook</h3>
         <ul>
           <li dangerouslySetInnerHTML={{ __html: "\u00a7 1-19-10.1100 CDI overlay; LI/GI only; overlay less than 1% of county land." }} />
@@ -143,8 +143,9 @@ export default function Page() {
           <h3>Frederick County Code Chapter 1-25</h3>
           <ul>
             <li>
-              <strong>§ 1-25-2</strong> — Public principal: the County acts for
-              the public when it conditions development.
+              <strong>§ 1-25-2</strong> — Authority / public principal: the
+              County Executive negotiates, executes, and enforces an agreement;
+              the County Council holds the hearing and approves or rejects it.
             </li>
             <li>
               <strong>§ 1-25-4</strong> — Contents of a local DRRA — enhanced
@@ -170,7 +171,8 @@ export default function Page() {
           <h3>
             Maryland Supreme Court,{" "}
             <em>In re Frederick County Data Center Referendum Committee</em>,
-            No. 67, Sept. Term 2025 (June 30, 2026)
+            No. 67, Sept. Term 2025 (argued June 30, 2026; opinion filed
+            July 24, 2026)
           </h3>
           <p>
             The CDI overlay is <strong>not</strong> subject to referendum. Map
@@ -185,7 +187,7 @@ export default function Page() {
             <strong>2027 state bill</strong> to clear a county utility rider or
             a residual equity interest dedicated to a host-community trust.
           </p>
-          <h3>Legal-Risk</h3>
+          <h3>Legal Risk</h3>
           <p>
             The county utility rider and any residual equity interest likely
             need <strong>PSC approval</strong> and/or a{" "}
@@ -197,21 +199,10 @@ export default function Page() {
           <p>
             The Catellus <strong>$110 million</strong> community-benefits
             package was <strong>rejected September 14, 2026</strong>. New CDI
-            applications remain <strong>paused through July 2027</strong>. The
+            applications remain <strong>paused through July 1, 2027</strong>. The
             Trust is a different instrument: an ongoing, megawatt-funded meter
             credit for Doubs, Adamstown, and Buckeystown — not a one-time DRRA
             package.
-          </p>
-          <h3>Comparison to the current memo</h3>
-          <p>
-            The memorandum already cites <strong>Chapter 1-25</strong>, the{" "}
-            <strong>CDI overlay</strong>, and the{" "}
-            <strong>Maryland Supreme Court</strong> order on referendum. It
-            should be expanded to include the <strong>§ 4-212</strong>{" "}
-            cost-allocation argument and the <strong>Louisiana Act 434</strong>{" "}
-            precedent for the rider and equity tools — so County Attorney and
-            Council see both the local DRRA hook and the state/utility path in
-            one place.
           </p>
         </section>
         <h3>7. What this filing is not</h3>
