@@ -213,7 +213,7 @@ export default function Page() {
         <p dangerouslySetInnerHTML={{ __html: "Respectfully submitted," }} />
         <p dangerouslySetInnerHTML={{ __html: "Nicholas M." }} />
         <p dangerouslySetInnerHTML={{ __html: "Buckeystown / DAB area, Frederick County, MD" }} />
-        <p dangerouslySetInnerHTML={{ __html: "I\u2019m very busy with my newborn, but that doesn\u2019t mean I can\u2019t make a few minutes of my time available to quickly handle this. A mechanic\u2019s habit: when something is broken on our road home, you fix it \u2014 you don\u2019t wait for Winchester Hall to invent a feeling about it." }} />
+        <p dangerouslySetInnerHTML={{ __html: "I\u2019m very busy with my six-month-old, but that doesn\u2019t mean I can\u2019t make a few minutes of my time available to quickly handle this. A mechanic\u2019s habit: when something is broken on our road home, you fix it \u2014 you don\u2019t wait for Winchester Hall to invent a feeling about it." }} />
         <h3>Sources (selected)</h3>
         <ul>
           <li dangerouslySetInnerHTML={{ __html: "Maryland Supreme Court opinion (July 24, 2026), In re Frederick County Data Center Referendum Committee, No. 67, Sept. Term 2025" }} />
