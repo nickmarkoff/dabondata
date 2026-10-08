@@ -201,7 +201,7 @@ Respectfully submitted,
 Nicholas M.  
 Buckeystown / DAB area, Frederick County, MD
 
-I’m very busy with my newborn, but that doesn’t mean I can’t make a few minutes of my time available to quickly handle this. A mechanic’s habit: when something is broken on our road home, you fix it — you don’t wait for Winchester Hall to invent a feeling about it.
+I’m very busy with my six-month-old, but that doesn’t mean I can’t make a few minutes of my time available to quickly handle this. A mechanic’s habit: when something is broken on our road home, you fix it — you don’t wait for Winchester Hall to invent a feeling about it.
 
 ### Sources (selected)
 
@@ -349,7 +349,7 @@ The count we are using is about **2,000** homes in the rural road-box — west B
 
 Even outside data centers, apartments tend to follow. A Trust we control gives us a business deal we can live with and a line against that next wave of sprawl. Keep home beautiful.
 
-Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan. I’m very busy with my newborn; that doesn’t mean I can’t make a few minutes for this. If you’re in Doubs, Adamstown, or Buckeystown, read this packet and help us get the ordinance introduced.
+Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan. I’m very busy with my six-month-old; that doesn’t mean I can’t make a few minutes for this. If you’re in Doubs, Adamstown, or Buckeystown, read this packet and help us get the ordinance introduced.
 
 Our home. Our coalition.
 
