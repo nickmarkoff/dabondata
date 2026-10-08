@@ -21,13 +21,58 @@ import re
 from pathlib import Path
 
 from docx import Document
-from docx.shared import Inches, Pt
+from docx.shared import Inches, Pt, RGBColor
 from fpdf import FPDF
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "public" / "docs"
 SRC = ROOT / "docs" / "pdf-src"
 FONT = Path("/usr/share/fonts/truetype/macos")
+NAVY = (23, 54, 93)
+SECTION_BLUE = (79, 129, 189)
+INK = (20, 16, 12)
+
+
+def asterisks_to_fpdf(text: str) -> str:
+    """fpdf2 markdown italics use __, not *single asterisks*."""
+    bolds: list[str] = []
+
+    def stash(match: re.Match[str]) -> str:
+        bolds.append(match.group(0))
+        return f"\x00B{len(bolds) - 1}\x00"
+
+    text = re.sub(r"\*\*[^*]+\*\*", stash, text)
+    text = re.sub(r"\*([^*\n]+)\*", r"__\1__", text)
+
+    def restore(match: re.Match[str]) -> str:
+        return bolds[int(match.group(1))]
+
+    return re.sub(r"\x00B(\d+)\x00", restore, text)
+
+
+RUN_RE = re.compile(r"\*\*([^*]+)\*\*|\*([^*\n]+)\*")
+
+
+def add_md_runs(paragraph, text: str, *, force_bold: bool = False) -> None:
+    pos = 0
+    for match in RUN_RE.finditer(text):
+        if match.start() > pos:
+            run = paragraph.add_run(text[pos : match.start()])
+            if force_bold:
+                run.bold = True
+        if match.group(1) is not None:
+            run = paragraph.add_run(match.group(1))
+            run.bold = True
+        else:
+            run = paragraph.add_run(match.group(2))
+            run.italic = True
+            if force_bold:
+                run.bold = True
+        pos = match.end()
+    if pos < len(text):
+        run = paragraph.add_run(text[pos:])
+        if force_bold:
+            run.bold = True
 
 PACKET = (DOCS / "DABonData.md").read_text(encoding="utf-8")
 
@@ -50,6 +95,7 @@ class PacketPDF(FPDF):
         self.add_font("Inter", "", str(FONT / "Inter-Regular.ttf"))
         self.add_font("Inter", "B", str(FONT / "Inter-Bold.ttf"))
         self.add_font("Inter", "I", str(FONT / "Inter-Italic.ttf"))
+        self.add_font("Inter", "BI", str(FONT / "Inter-BoldItalic.ttf"))
         self.set_auto_page_break(auto=True, margin=18)
         self.set_margins(16, 16, 16)
 
@@ -66,21 +112,69 @@ class PacketPDF(FPDF):
         self.set_text_color(20, 16, 12)
 
     def heading(self, text: str, level: int) -> None:
-        sizes = {1: 16, 2: 13, 3: 11}
-        self.ln(2 if level > 1 else 1)
-        self.set_font("Inter", "B", sizes.get(level, 11))
-        self.multi_cell(0, 6.2, text, markdown=True, new_x="LMARGIN", new_y="NEXT")
-        self.ln(1)
+        text = asterisks_to_fpdf(text)
+        plain = re.sub(r"[*_]", "", text).strip()
+        self.ln(3 if level > 1 else 1)
+        if plain.upper() == "FREDERICK COUNTY, MARYLAND":
+            self._county_title(text)
+        elif level == 1 and plain.isupper() and len(plain) < 48:
+            self.set_text_color(0, 0, 0)
+            self.set_font("Inter", "B", 13)
+            self.multi_cell(0, 6.4, text, align="C", markdown=True, new_x="LMARGIN", new_y="NEXT")
+            self.ln(1.4)
+        elif level == 2:
+            self.set_text_color(*SECTION_BLUE)
+            self.set_font("Inter", "B", 13)
+            self.multi_cell(0, 6.2, text, align="L", markdown=True, new_x="LMARGIN", new_y="NEXT")
+            self.ln(1)
+        else:
+            self.set_text_color(*NAVY if level >= 3 else (0, 0, 0))
+            self.set_font("Inter", "B", 11 if level >= 3 else 15)
+            self.multi_cell(0, 5.8, text, align="L", markdown=True, new_x="LMARGIN", new_y="NEXT")
+            self.ln(0.8)
+        self.set_text_color(*INK)
         self.set_font("Inter", "", 10.5)
 
+    def _county_title(self, text: str) -> None:
+        self.set_text_color(*NAVY)
+        self.set_font("Inter", "B", 13)
+        self.multi_cell(0, 6.6, text, align="C", markdown=True, new_x="LMARGIN", new_y="NEXT")
+        y = self.get_y() + 0.8
+        self.set_draw_color(*SECTION_BLUE)
+        self.set_line_width(0.5)
+        inset = 22
+        self.line(self.l_margin + inset, y, self.w - self.r_margin - inset, y)
+        self.ln(3.2)
+        self.set_text_color(*INK)
+
     def rich(self, text: str, size: float = 10.5, h: float = 5.2) -> None:
+        plain = re.sub(r"[*_]", "", text).strip()
+        if plain.upper() == "FREDERICK COUNTY, MARYLAND":
+            self._county_title(asterisks_to_fpdf(text))
+            return
+        self.set_text_color(*INK)
         self.set_font("Inter", "", size)
-        self.multi_cell(0, h, text, markdown=True, new_x="LMARGIN", new_y="NEXT")
+        rendered = asterisks_to_fpdf(text)
+        # A URL on the same line as its label otherwise justifies the label
+        # across the full measure.
+        align = "L" if "://" in rendered else "J"
+        self.multi_cell(
+            0, h, rendered, align=align, markdown=True, new_x="LMARGIN", new_y="NEXT"
+        )
         self.ln(1.4)
 
     def bullet(self, text: str) -> None:
+        self.set_text_color(*INK)
         self.set_font("Inter", "", 10.5)
-        self.multi_cell(0, 5.2, "•  " + text, markdown=True, new_x="LMARGIN", new_y="NEXT")
+        self.multi_cell(
+            0,
+            5.2,
+            "•  " + asterisks_to_fpdf(text),
+            align="L",
+            markdown=True,
+            new_x="LMARGIN",
+            new_y="NEXT",
+        )
         self.ln(0.6)
 
     def render_table(self, rows: list[list[str]]) -> None:
@@ -108,7 +202,7 @@ class PacketPDF(FPDF):
             for i, row in enumerate(rows):
                 pdf_row = tbl.row()
                 for cell in row:
-                    pdf_row.cell(cell, align="L")
+                    pdf_row.cell(asterisks_to_fpdf(cell), align="L")
                 if i == 0:
                     pass
         self.ln(2)
@@ -194,26 +288,55 @@ def write_docx(path: Path, markdown: str) -> None:
     style = doc.styles["Normal"]
     style.font.name = "Times New Roman"
     style.font.size = Pt(11)
-    for raw in markdown.splitlines():
-        line = raw.strip()
+    for level, size in ((1, 16), (2, 13), (3, 12)):
+        heading_style = doc.styles[f"Heading {level}"]
+        heading_style.font.color.rgb = RGBColor(0x17, 0x36, 0x5D)
+        heading_style.font.size = Pt(size)
+    sep = re.compile(r"^\s*\|(?:\s*:?-{1,}:?\s*\|)+\s*$")
+    lines = markdown.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
         if not line or line == "---" or line.startswith("<"):
+            i += 1
             continue
-        if re.match(r"^\|?(?:\s*:?-{1,}:?\s*\|)+\s*$", line):
-            continue
-        if line.startswith("|"):
-            cells = [c.strip() for c in line.strip("|").split("|")]
-            doc.add_paragraph("  |  ".join(cells))
+        if (
+            line.startswith("|")
+            and i + 1 < len(lines)
+            and sep.match(lines[i + 1])
+        ):
+            rows: list[list[str]] = []
+            while i < len(lines) and lines[i].strip().startswith("|"):
+                if not sep.match(lines[i]):
+                    cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+                    rows.append(cells)
+                i += 1
+            cols = max(len(r) for r in rows)
+            table = doc.add_table(rows=len(rows), cols=cols)
+            table.style = "Table Grid"
+            for ri, row in enumerate(rows):
+                for ci in range(cols):
+                    cell_text = row[ci] if ci < len(row) else ""
+                    paragraph = table.cell(ri, ci).paragraphs[0]
+                    add_md_runs(paragraph, cell_text, force_bold=(ri == 0))
             continue
         if line.startswith("#"):
             level = min(3, len(line) - len(line.lstrip("#")))
-            text = re.sub(r"\*\*", "", line.lstrip("#").strip())
-            doc.add_heading(text, level=level)
+            text = line.lstrip("#").strip()
+            heading = doc.add_heading("", level=level)
+            for run in list(heading.runs):
+                run._element.getparent().remove(run._element)
+            add_md_runs(heading, text)
+            i += 1
             continue
-        text = re.sub(r"\*\*", "", line)
-        if text.startswith("- "):
-            doc.add_paragraph(text[2:], style="List Bullet")
-        else:
-            doc.add_paragraph(text)
+        if line.startswith("- "):
+            paragraph = doc.add_paragraph(style="List Bullet")
+            add_md_runs(paragraph, line[2:])
+            i += 1
+            continue
+        paragraph = doc.add_paragraph()
+        add_md_runs(paragraph, line)
+        i += 1
     doc.save(path)
     print(f"wrote {path.relative_to(ROOT)}")
 
@@ -231,7 +354,7 @@ def main() -> None:
         "Read at the mic. Leave the handout on the table.\n\n"
         + slice_between(PACKET, "## Resident handout / script", "## Resident proposal letter")
     )
-    letter = slice_between(PACKET, "## Resident proposal letter", None)
+    letter = slice_between(PACKET, "## Resident proposal letter", "## Sources")
 
     write_pdf(DOCS / "DABonData.pdf", PACKET)
     write_docx(DOCS / "DABonData.docx", PACKET)

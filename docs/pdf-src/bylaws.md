@@ -4,7 +4,7 @@
 
 Doubs · Adamstown · Buckeystown — Our Home, Our Coalition
 
-Draft governing instrument to be adopted by County Council ordinance and attached to any CDI site-plan condition or Development Rights and Responsibilities Agreement. Not legal advice. Formerly styled Adamstown–Buckeystown Energy Trust in prior draft filings; prefer DAB ENERGY TRUST in all public-facing materials.
+Draft governing instrument to be adopted by County Council ordinance and attached to any CDI site-plan condition or Development Rights and Responsibilities Agreement. Not legal advice. Formerly styled Adamstown–Buckeystown Energy Trust.
 
 ## Article I — Name and seat
 
@@ -18,7 +18,7 @@ Exclusive by design. Tier 1 is the rural road-box of Doubs, Adamstown, and Bucke
 
 ## Article III — Beneficiaries
 
-**Article III — Beneficiaries (conceptual rewrite, for Council to enact with the ordinance).** Tier 1 only: a homestead or a residential lease of twelve months or more at a residential electric meter whose USPS street-delivery service address lies within the Trust’s rural host-community road-box in Frederick County — west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt — including Doubs, Adamstown, and Buckeystown addresses in that box, and staying short of the Ballenger Creek suburban mass. Lime Kiln Run is a creek, not a road boundary. One share per electric meter. Excluded: campus owners and affiliates. The Council may exclude non-homestead second homes. No commercial account except a farm or home-based account at a residence.
+Tier 1 only: a homestead or a residential lease of twelve months or more at a residential electric meter whose USPS street-delivery service address lies within the Trust’s rural host-community road-box in Frederick County — west Basford Road, east the Monocacy River, south Tuscarora Road, north the Elmer Derr / Harshman / New Design / Lime Kiln Road belt — including Doubs, Adamstown, and Buckeystown addresses in that box, and staying short of the Ballenger Creek suburban mass. Lime Kiln Run is a creek, not a road boundary. One share per electric meter. Excluded: campus owners and affiliates. The Council may exclude non-homestead second homes. No commercial account except a farm or home-based account at a residence.
 
 Soft public illustration (not a survey metes-and-bounds): about **2,000** eligible meters / about **5,500** residents (Medium confidence; exact GIS clip pending). Ranges until that clip: roughly **1,700–2,500** housing units and **4,600–6,700** residents. Census Designated Place figures for Adamstown (**710** households) and Buckeystown (**499** households) — **1,209** together — are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). They are place statistics only and are not the Article III Trust base. Doubs is not a Census CDP; Doubs addresses in the road-box are Tier 1 with the rest of the box. This instrument does not state a separate Doubs-only census count.
 
@@ -78,7 +78,7 @@ On dissolution, remaining funds pay one last dividend to eligible meters in the 
 
 ## Schedule A — Payment rule (proposed with the ordinance; not enacted law until adopted)
 
-Proposed floor: **$250** per eligible meter per year once any CDI hall on the overlay is energized. Formula: **$1 per megawatt-hour** of campus IT load in the prior twelve months, allocated only to eligible meters in the rural road-box (Doubs, Adamstown, and Buckeystown). The annual credit is the formula result, not less than the floor and not more than the cap. Proposed cap: **$1,000** per meter per year until the Council raises it by resolution. Rates are not lowered for passage.
+Proposed floor: **$250** per eligible meter per year once any CDI hall on the overlay is energized. Formula: **$1 per megawatt-hour** of campus IT load in the prior twelve months, allocated only to eligible meters in the rural road-box (Doubs, Adamstown, and Buckeystown). The annual credit is the formula result, not less than the floor and not more than the cap. Proposed cap: **$1,000** per meter per year until the Council raises it by ordinance. Rates are not lowered for passage.
 
 Illustration, not a tariff, on the soft print of about **2,000** meters: floor pool ≈ **$500,000** / year; cap pool ≈ **$2,000,000** / year. One **72 MW** hall at **70%** load ≈ **$441,000** / year company-side (≈ **$221** / meter). Not law until Council enacts.
 

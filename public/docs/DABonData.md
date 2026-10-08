@@ -20,7 +20,7 @@ I live in the Buckeystown / DAB area of Frederick County, Maryland. I am a worki
 
 My vote in the local election will be tied solely to attaching this Memo to the datacenter agreement.
 
-I am offering a clear path. No other candidate I have seen is offering one.
+I am offering a clear path. No candidate I have seen is offering one.
 
 I am not running for office.
 
@@ -127,14 +127,14 @@ The **$250 floor** and **$1,000 cap** below are a **proposed** ordinance floor a
 | Rule | About **2,000** eligible meters in the rural road-box (Doubs · Adamstown · Buckeystown) | Notes |
 |------|----------------------------------------------------------------------------------------|-------|
 | Proposed floor **$250** / meter / year after first hall energized | ≈ **$500,000** / year | Proposed ordinance floor (annual) |
-| **$1 per MWh** of campus IT load, eligible host-community meters only | 72 MW hall @ 70% load ≈ **$441,000** company / year (≈ **$221** / meter if only ~2,000 meters) | Illustration, not a tariff — annual credit tracks prior-12-month campus IT load between floor and cap |
+| **$1 per MWh** of campus IT load, eligible host-community meters only | 72 MW hall @ 70% load ≈ **$441,000** / year (company-side) (≈ **$221** / meter if only ~2,000 meters) | Illustration, not a tariff — annual credit tracks prior-12-month campus IT load between floor and cap |
 | Proposed cap **$1,000** / meter until Council raises it | ≈ **$2,000,000** / year | Proposed ordinance cap (annual) |
 
 Proposed floor **$250** and cap **$1,000** per eligible meter per year; **$1 per MWh** of campus IT load between those rails. On about **2,000** meters: floor pool ≈ **$500,000**/yr; cap pool ≈ **$2,000,000**/yr. Illustration: one **72 MW** hall at **70%** load ≈ **$441,000**/yr company-side (≈ **$221**/meter on the ~2,000-meter base). **Not law until Council enacts.** Do not fund by raising the local real-property tax rate.
 
 Pay as a utility-bill credit if the county obtains a rider; otherwise a county rebate or property-tax credit labeled DAB Energy Dividend (Doubs · Adamstown · Buckeystown). Exclusive host-community meter credits — because the overlay sits in this rural box.
 
-Medium confidence on the home and resident print; exact GIS clip pending. Roughly **1,700–2,500** housing units and **4,600–6,700** residents. Not ZIP **21704**, and not any ZIP. Adamstown **710** + Buckeystown **499** = **1,209** are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, included via the road-box (and any published address list), not via an invented Doubs CDP count. **Lime Kiln Run** is a creek. Stay short of the Ballenger Creek suburban mass. The 72 MW hall at 70% is an illustration, not a tariff.
+Medium confidence on the home and resident print; exact GIS clip pending. Roughly **1,700–2,500** housing units and **4,600–6,700** residents. Not ZIP **21704**, and not any ZIP. Adamstown **710** + Buckeystown **499** = **1,209** are Adamstown / Buckeystown CDP 2020 stats (not the Trust base). Doubs is a hamlet, not a Census CDP, included via the road-box, not via an invented Doubs CDP count. **Lime Kiln Run** is a creek. Stay short of the Ballenger Creek suburban mass. The 72 MW hall at 70% is an illustration, not a tariff.
 
 ## 6. Zoning and DRRA hook
 
@@ -161,7 +161,7 @@ The Trust rests on tools Maryland already gives counties — Development Rights 
 
 ### Frederick County Code Chapter 1-25
 
-- **§ 1-25-2** — Public principal: the County acts for the public when it conditions development.
+- **§ 1-25-2** — Authority / public principal: the County Executive negotiates, executes, and enforces an agreement; the County Council holds the hearing and approves or rejects it.
 - **§ 1-25-4** — Contents of a local DRRA — enhanced public benefits and their value belong in the agreement text (dividend + infrastructure lease + residual tools).
 
 ### Public Utilities Article § 4-212
@@ -172,7 +172,7 @@ Residential customers must not bear large-load financial risks. Data centers and
 
 Lowered the large-load threshold to **25 MW** and strengthened Public Service Commission oversight. Brings more CDI-scale load squarely under PSC review when financing or tariff tools are used.
 
-### Maryland Supreme Court, *In re Frederick County Data Center Referendum Committee*, No. 67, Sept. Term 2025 (June 30, 2026)
+### Maryland Supreme Court, *In re Frederick County Data Center Referendum Committee*, No. 67, Sept. Term 2025 (argued June 30, 2026; opinion filed July 24, 2026)
 
 The CDI overlay is **not** subject to referendum. Map fights stay in plan-and-zoning acts; community benefit and Trust conditions attach through ordinance, DRRA, and site conditions — not a ballot veto of the overlay map.
 
@@ -180,15 +180,11 @@ The CDI overlay is **not** subject to referendum. Map fights stay in plan-and-zo
 
 State enabling legislation before local tax credits drawn from data-center revenue. Useful precedent when Maryland needs a **2027 state bill** to clear a county utility rider or a residual equity interest dedicated to a host-community trust.
 
-### Legal-Risk
+### Legal Risk
 
 The county utility rider and any residual equity interest likely need **PSC approval** and/or a **2027 state enabling bill**. Conditioning only **new load** and **new DRRAs** — not confiscating 2021 vested rights — is the path that avoids takings claims on vested entitlements.
 
-The Catellus **$110 million** community-benefits package was **rejected September 14, 2026**. New CDI applications remain **paused through July 2027**. The Trust is a different instrument: an ongoing, megawatt-funded meter credit for Doubs, Adamstown, and Buckeystown — not a one-time DRRA package.
-
-### Comparison to the current memo
-
-The memorandum already cites **Chapter 1-25**, the **CDI overlay**, and the **Maryland Supreme Court** order on referendum. It should be expanded to include the **§ 4-212** cost-allocation argument and the **Louisiana Act 434** precedent for the rider and equity tools — so County Attorney and Council see both the local DRRA hook and the state/utility path in one place.
+The Catellus **$110 million** community-benefits package was **rejected September 14, 2026**. New CDI applications remain **paused through July 1, 2027**. The Trust is a different instrument: an ongoing, megawatt-funded meter credit for Doubs, Adamstown, and Buckeystown — not a one-time DRRA package.
 
 ## 7. What this filing is not
 
@@ -311,7 +307,7 @@ About two thousand homes in the rural road-box — Doubs, Adamstown, and Buckeys
 
 No matter who you vote for, data centers are still going to be built here. A slogan does not stop steel. What we need is what we are due — a host-community rebate through a Trust we control: operator-funded meter credits. Nobody else generated this. Winchester Hall numbers came off Manor Woods ground.
 
-Proposed floor two hundred fifty a year; proposed cap one thousand a year — dollar per megawatt-hour on prior-twelve-month campus IT load between those rails — not law until you pass it. On about two thousand meters that is a floor pool of about five hundred thousand a year and a cap pool of about two million. One seventy-two megawatt hall at seventy percent load is about four hundred forty-one thousand a year on the company side, about two hundred twenty-one dollars a meter — an illustration, not a tariff. Grandfather the buildings and lawful uses that existed on January twentieth, twenty twenty-six. That grandfather is a stay incentive, not a growth subsidy. No new buildings after that cutoff. Dividend is the floor; boundary is the wall — this rural road-box only, not Frederick City.
+Proposed floor two hundred fifty a year; proposed cap one thousand a year — dollar per megawatt-hour on prior-twelve-month campus IT load between those rails — not law until you pass it. On about two thousand meters that is a floor pool of about five hundred thousand a year and a cap pool of about two million. One seventy-two megawatt hall at seventy percent load is about four hundred forty-one thousand a year on the company side, about two hundred twenty-one dollars a meter — an illustration, not a tariff. Grandfather the buildings and lawful uses that existed on January twentieth, twenty twenty-six. That grandfather is a stay incentive, not a growth subsidy. No new buildings after that cutoff qualify. Dividend is the floor; boundary is the wall — this rural road-box only, not Frederick City.
 
 Not a lawsuit. Not a protest. Not a political campaign. Neighbors with a plan.
 
@@ -363,3 +359,28 @@ Nicholas M.
 Buckeystown / DAB area, Frederick County, MD
 
 P.S. Preferred town-hall location: Adamstown Park or Buckeystown Park. Bring a license, utility bill, or lease.
+
+## Sources
+
+Maryland Supreme Court opinion (July 24, 2026), In re Frederick County Data Center Referendum Committee, No. 67, Sept. Term 2025: https://www.mdcourts.gov/data/opinions/coa/2026/67a25.pdf
+
+Frederick County CDI Overlay (Ord. 26-01-001): https://frederickcountymd.gov/9128/Critical-Digital-Infrastructure-Overlay-
+
+County Executive rejects Catellus community-benefits agreement (Sept. 14, 2026): https://www.einpresswire.com/article/942204478/county-executive-rejects-community-benefits-agreement
+
+Catellus $110M community-benefit announcement (Sept. 1, 2026): https://frederickcountymd.gov/DocumentCenter/View/374893/Community-Benefit-Agreement-Announcement-090126
+
+HR&A Advisors, Quantum Frederick Data Center Development Impact Analysis (Oct. 30, 2025): https://bloximages.newyork1.vip.townnews.com/fredericknewspost.com/content/tncms/assets/v3/editorial/1/7d/17d3c08c-90fa-587d-b431-92996256a37d/6914c7db4c674.file.pdf
+
+County Executive Jessica Fitzwater, SB 427 testimony (Feb. 18, 2026): https://mgaleg.maryland.gov/cmte_testimony/2026/bat/33952_02172026_152711-782.pdf
+
+Sage Policy Group / Maryland Tech Council, Data Center Impact Report (Oct. 2023): https://mdtechcouncil.com/wp-content/uploads/2023/10/Sage-MDTC-Data-Center-Impact-Report.pdf
+
+Maryland State Data Center — Adamstown CDP 2020 Census profile (710 households; Adamstown / Buckeystown CDP 2020 stats, not the Trust base): https://planning.maryland.gov/MSDC/SiteAssets/Census_2020/Data_Profiles/Reports/PLACE_2400350_DP_2020_Census.aspx
+
+Frederick County — Buckeystown CDP 2020 Census Profile (499 households; Adamstown / Buckeystown CDP 2020 stats, not the Trust base): https://www.frederickcountymd.gov/DocumentCenter/View/345841/Buckeystown-2020-Census-Profile-of-General-Population-and-Housing
+
+Frederick County Data Centers page (application pause): https://frederickcountymd.gov/9310/Data-Centers
+
+Catellus hyperscale campus program (2.4 GW / 17.4M SF / ~2,100 acres): https://www.catellus.com/hyperscale-data-center-campus
+

@@ -50,7 +50,7 @@ export const FEATURED_CARDS: DocLink[] = [
     href: "/attachments#script",
     title: "Example script",
     short: "Script",
-    blurb: "Spoken remarks / handout script from the packet — unchanged.",
+    blurb: "Spoken remarks / handout script from the packet.",
   },
   {
     href: "/involve#example-email",
